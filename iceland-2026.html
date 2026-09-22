@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<title>冰島五人自由行｜2026 秋・冰島 13 天公路探險 </title>
+<style>
+:root{--ink:#1f2d33;--muted:#63737a;--paper:#f5f3ed;--card:#fffdf8;--line:#d9d8cf;--ice:#dbecef;--ocean:#6f9da8;--deep:#274b55;--sand:#d9c6a0;--lava:#8f6956;--warn:#fff0d6;--danger:#8b3d36;--green:#dfe8df}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.68}
+a{color:inherit} .hero{padding:56px max(24px,calc((100vw - 1180px)/2));background:linear-gradient(145deg,#e8f1f1 0%,#f5f0e5 55%,#e9e3d5 100%);border-bottom:1px solid var(--line)}
+.eyebrow{letter-spacing:.12em;font-weight:800;color:var(--deep);font-size:13px}h1{font-size:clamp(32px,5vw,58px);line-height:1.08;margin:12px 0 14px;max-width:920px}.subtitle{font-size:18px;color:var(--muted);max-width:900px;margin:0}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.pill{background:rgba(255,255,255,.68);border:1px solid #cdd9da;padding:8px 12px;border-radius:999px;font-size:14px;font-weight:700}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}button,.btn{border:0;border-radius:12px;padding:11px 16px;font-weight:800;cursor:pointer;text-decoration:none;background:var(--deep);color:white}.btn.secondary{background:white;color:var(--deep);border:1px solid #bccdce}
+.quicknav-wrap{position:sticky;top:0;z-index:20;background:rgba(245,243,237,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.quicknav{max-width:1180px;margin:auto;padding:10px 16px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:thin}.date-chip{min-width:70px;text-align:center;text-decoration:none;padding:7px 10px;border:1px solid var(--line);border-radius:10px;background:white;line-height:1.2}.date-chip b{display:block;font-size:14px}.date-chip span{font-size:10px;color:var(--muted)}
+main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{display:grid;grid-template-columns:1fr;gap:16px;margin:8px 0 24px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 7px 22px rgba(31,45,51,.035)}.card h3{margin:0 0 12px;font-size:18px}
+.overview-map{min-height:0;padding-top:14px}.map-caption{font-size:12px;color:var(--muted);margin-top:4px}.overview-map svg{width:100%;height:auto;display:block}.island{fill:#eef0e9;stroke:#b9c0b7;stroke-width:3}.journey{fill:none;stroke:#527a85;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:6 7}.map-pin circle{fill:#274b55;stroke:white;stroke-width:2}.map-pin text{font-size:13px;font-weight:800;fill:#243a40;paint-order:stroke;stroke:#fffdf8;stroke-width:4;stroke-linejoin:round}.map-pin .map-date{font-size:10px;font-weight:700;fill:#677a7f}
+.day{padding:38px 0 18px;border-top:1px solid var(--line);scroll-margin-top:82px}.day:first-of-type{border-top:0}.day-head{display:flex;gap:20px;align-items:flex-start}.day-number{min-width:92px;background:var(--deep);color:white;border-radius:16px;padding:15px 10px;text-align:center;font-weight:900;letter-spacing:.08em}.day-title-wrap{flex:1}.day-date{font-size:14px;font-weight:800;color:var(--lava);letter-spacing:.06em}h2{font-size:clamp(25px,3.4vw,38px);line-height:1.2;margin:4px 0 10px}.meta-row{display:flex;gap:8px 16px;flex-wrap:wrap;color:var(--muted);font-size:14px}.lead{font-size:16px;margin:18px 0 18px;max-width:1000px}
+.day-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:16px;align-items:start}.side-stack{display:grid;gap:16px}.time-row{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:12px 0;border-top:1px dashed #d9d8cf}.time-row:first-of-type{border-top:0}.time{font-weight:900;color:var(--deep);font-variant-numeric:tabular-nums}.time-row p{margin:2px 0 0;color:var(--muted);font-size:14px}.wear-card{background:#f2f6f4}.wear-title{font-weight:900;margin-bottom:5px}.feel{font-size:13px;color:#53666c;background:#fff;padding:8px 10px;border-radius:10px;margin:8px 0 12px}.wear-list,.alert-list{margin:0;padding-left:20px}.wear-list li,.alert-list li{margin:5px 0}.info-card p{margin:9px 0;color:#4f5f64}.info-card b{color:var(--ink)}
+.route-card{margin-top:16px;overflow:hidden}.card-title-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.map-btn{font-size:13px;text-decoration:none;background:#e7f0f1;color:var(--deep);border:1px solid #c8d9dc;padding:8px 11px;border-radius:10px;font-weight:800}.route-line{display:flex;gap:0;overflow-x:auto;padding:12px 2px 6px;align-items:center}.route-stop{display:flex;flex-direction:column;justify-content:center;min-width:145px;max-width:180px;padding:11px;border-radius:13px;background:#f4f3ed;border:1px solid #dad9d2;position:relative;margin-right:24px;font-size:11px;color:var(--muted)}.route-stop b{font-size:13px;color:var(--ink);margin-top:2px}.route-stop:not(:last-child):after{content:'→';position:absolute;right:-21px;top:50%;transform:translateY(-50%);color:#77939a;font-size:18px;font-weight:900}.online-note{font-size:12px;color:var(--muted);margin-top:8px}.mini-link{display:inline-block;margin:3px 4px 0 0;color:#436d77;text-decoration:underline;text-underline-offset:2px}.alert-card{margin-top:16px;background:var(--warn);border-color:#e5ca96}.alert-card h3{color:#79552c}
+.top-btn{position:fixed;right:18px;bottom:18px;width:50px;height:50px;border-radius:50%;background:var(--deep);color:white;border:2px solid white;box-shadow:0 8px 24px rgba(31,45,51,.25);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:20px;z-index:30}
+.print-note{font-size:13px;color:var(--muted);margin-top:8px}footer{max-width:1180px;margin:0 auto 50px;padding:0 18px;color:var(--muted);font-size:12px}
+@media(max-width:820px){.overview-grid,.day-grid{grid-template-columns:1fr}.day-head{gap:12px}.day-number{min-width:72px;padding:12px 6px;font-size:12px}.time-row{grid-template-columns:88px 1fr}.quicknav-wrap{position:relative}.day{scroll-margin-top:10px}}
+
+:root{--sky:#447f9b;--mint:#4f806f;--berry:#9c5f72;--sun:#b97935;--violet:#6d668e;--soft-blue:#eef7fb;--soft-pink:#fbf1f3;--soft-yellow:#fff6df;--soft-green:#eef7f2;--soft-violet:#f3f0f8}
+.focus-card{margin:14px 0 18px;background:linear-gradient(135deg,var(--soft-blue),#fffdf8 55%,var(--soft-yellow));border-color:#cadde4;position:relative;overflow:hidden}.focus-card:after{content:"";position:absolute;right:-30px;top:-32px;width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,.55)}.focus-card h3{color:var(--sky)}.focus-chips{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 8px}.focus-chip{display:inline-flex;align-items:center;padding:7px 10px;border-radius:999px;font-size:13px;font-weight:900;border:1px solid transparent;background:white}.focus-chip:nth-child(5n+1){color:#2f718e;border-color:#c7dfe8}.focus-chip:nth-child(5n+2){color:#8d5b26;border-color:#ead6b8}.focus-chip:nth-child(5n+3){color:#4b7867;border-color:#cee2d9}.focus-chip:nth-child(5n+4){color:#8e5368;border-color:#ead0da}.focus-chip:nth-child(5n){color:#6a5989;border-color:#d7cbe8}.focus-note{margin:5px 0 0;color:#4b5f66;font-size:14px}
+.timeline-card h3{color:var(--sky)}.wear-card h3{color:var(--mint)}.route-card h3{color:#446f78}.alert-card h3{color:#9a562f}
+.meta-row span:nth-child(1){color:#367691;font-weight:800}.meta-row span:nth-child(2){color:#9a6a2d;font-weight:800}.meta-row span:nth-child(3){color:#597a67;font-weight:800}.day-date{color:#9a5f72}.time{color:#397e9a}.time-row b{color:#283b42}.route-stop b{color:#335b65}.online-note{color:#66767b}.map-btn{background:#edf7fa;color:#30687a}.alert-card{background:#fff6e8;border-color:#edd3aa}
+.hl{background:linear-gradient(transparent 46%,#ffe8a8 46%,#ffe8a8 92%,transparent 92%);font-weight:800}.hl-blue{background:linear-gradient(transparent 46%,#cfeaf4 46%,#cfeaf4 92%,transparent 92%);font-weight:800}.hl-pink{background:linear-gradient(transparent 46%,#f4dce4 46%,#f4dce4 92%,transparent 92%);font-weight:800}
+
+.daily-info-card{padding:0;overflow:hidden;background:#fffdfa;border-color:#dedbd1}
+.daily-info-card>h3{margin:0;padding:15px 18px;background:linear-gradient(120deg,#fff3d8 0%,#eef6f5 48%,#f4eef9 100%);color:#43545b;border-bottom:1px solid #dedbd1}
+.daily-info-section{padding:14px 18px;border-top:1px dashed #ddd8cd}
+.daily-info-card>h3+.daily-info-section{border-top:0}
+.daily-info-section h4{margin:0 0 9px;font-size:14px;letter-spacing:.02em}
+.meals-section h4{color:#96642d}.stay-section h4{color:#8b5870}.booking-section h4{color:#66538d}
+.daily-meal-list{display:grid;gap:7px}
+.daily-meal-row{display:grid;grid-template-columns:88px 1fr;gap:9px;align-items:start;padding:8px 10px;border-radius:11px;background:#fff8e9;border:1px solid #eee0c2}
+.daily-meal-label{font-size:12px;font-weight:900;color:#8a5b2c;white-space:nowrap}
+.daily-meal-value{font-size:13px;color:#555e61;line-height:1.48}
+.stay-section{background:#fff7f9}.stay-section p,.booking-section p{margin:0;color:#536066;font-size:13px;line-height:1.58}
+.stay-section .confirmed-five{display:inline-block;margin-top:8px;padding:4px 8px;border-radius:8px;background:#fff;border:1px solid #e6d1d9;color:#87576a;font-size:12px;font-weight:900}
+.booking-section{background:#f8f5fc}.booking-section p{padding-left:10px;border-left:3px solid #c7b6dc}
+@media(max-width:760px){.daily-meal-row{grid-template-columns:82px 1fr}}
+
+.timing-card{margin:0 0 18px;background:linear-gradient(135deg,#f7fbfd 0%,#fffdf8 52%,#fff8e9 100%);border-color:#cfdde1}
+.timing-card h3{color:#3f7287;margin-bottom:5px}.timing-sub{font-size:12px;color:#748087;margin:0 0 12px}
+.timing-columns{display:grid;grid-template-columns:1fr 1fr;gap:12px}.timing-group{background:rgba(255,255,255,.78);border:1px solid #dde2df;border-radius:14px;padding:12px}
+.timing-group.move{border-top:4px solid #6f9fb4}.timing-group.stay{border-top:4px solid #d0a35d}.timing-group-title{font-size:14px;font-weight:900;margin-bottom:8px}.timing-group.move .timing-group-title{color:#3f7287}.timing-group.stay .timing-group-title{color:#9a6a28}
+.timing-list{display:grid;gap:7px}.timing-item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:9px;align-items:start;padding:8px 9px;border-radius:10px;background:#fff;border:1px solid #ebe9e2;font-size:13px;line-height:1.45}
+.timing-item .route-text{color:#43545b}.timing-badge{white-space:nowrap;font-weight:900;border-radius:999px;padding:3px 8px;font-variant-numeric:tabular-nums}.move .timing-badge{background:#e7f3f8;color:#316b83}.stay .timing-badge{background:#fff0cf;color:#8a5c1e}.timing-note{grid-column:1/-1;color:#758086;font-size:11px;margin-top:-2px}
+@media(max-width:720px){.timing-columns{grid-template-columns:1fr}}
+
+.photo-gallery-card{margin-top:16px;padding:16px;border:1px solid #dce6ef;border-radius:18px;background:linear-gradient(180deg,#ffffff 0%,#f8fbfd 100%);box-shadow:0 8px 22px rgba(40,65,80,.06)}
+.photo-gallery-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.photo-gallery-title{font-weight:850;color:#254b5f;font-size:1.02rem}
+.photo-online-note{font-size:.73rem;color:#7b8790;background:#eef4f7;border-radius:999px;padding:4px 8px;white-space:nowrap}
+.photo-strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.photo-item{min-width:0;overflow:hidden;border:1px solid #d8d7cf;border-radius:14px;background:#fff;box-shadow:0 4px 14px rgba(41,63,74,.055)}
+.photo-frame{position:relative;height:90px;background:#eef2f4;overflow:hidden}
+.photo-frame img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s ease}
+.photo-item:hover .photo-frame img{transform:scale(1.03)}
+.photo-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:8px;text-align:center;color:#72808a;font-size:.78rem;line-height:1.4;z-index:0}
+.photo-caption{padding:7px 8px 8px;display:block}
+.photo-caption>div:first-child{display:block;width:100%;font-size:10.5px;font-weight:800;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-left:6px;border-left:3px solid #7397a4}
+.photo-item:nth-child(4n+2) .photo-caption>div:first-child{border-left-color:#b58d4d}
+.photo-item:nth-child(4n+3) .photo-caption>div:first-child{border-left-color:#7c9b72}
+.photo-item:nth-child(4n) .photo-caption>div:first-child{border-left-color:#a67483}
+.photo-caption .poi-chip{display:inline-flex;align-items:center;justify-content:center;width:17px;height:17px;border-radius:999px;margin-right:4px;background:#eef5f7;font-size:10px;vertical-align:middle}
+.photo-links{display:flex;width:100%;margin-top:6px;justify-content:flex-start;align-items:center}
+.photo-map{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;min-height:26px;padding:4px 8px;border-radius:999px;background:#edf5f6;border:1px solid #d2e2e5;color:#356b79;font-size:9.5px;font-weight:800;text-decoration:none}
+.photo-map:hover{background:#e3f0f2}
+
+@media(max-width:820px){
+  .photo-strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .photo-frame{height:96px}
+  .photo-caption>div:first-child{font-size:10.5px}
+  .photo-map{min-height:28px;font-size:9.5px}
+}
+
+.hero{padding:42px max(22px,calc((100vw - 1180px)/2)) 30px;background:radial-gradient(circle at 18% 14%,rgba(111,157,168,.10),transparent 30%),radial-gradient(circle at 82% 8%,rgba(217,198,160,.13),transparent 26%),#fbfaf6;border-bottom:1px solid #deddd5;text-align:center}
+.hero-brandline{display:flex;align-items:center;justify-content:center;gap:14px;color:#5b7773;margin-bottom:18px}
+.hero-mountain{width:34px;height:28px;display:block;flex:none}
+.hero-tree{width:24px;height:29px;color:#816e5e;transform:translateY(-1px)}
+.hero-badge{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:6px 17px;border:1px solid #78958f;border-radius:999px;background:#f3f7f4;color:#55746e;font-size:13px;font-weight:800;letter-spacing:.025em}
+.hero h1{margin:0 auto 11px;font-size:clamp(31px,4.2vw,50px);font-weight:900;letter-spacing:.025em;line-height:1.22;color:#2d3639}
+.hero .subtitle{margin:0 auto;max-width:820px;color:#697477;font-size:15.5px;line-height:1.7;font-weight:600}
+.hero .subtitle strong{color:#3e5f5b}
+.hero-stats{max-width:930px;margin:23px auto 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.hero-stat{min-width:0;min-height:124px;padding:16px 12px 13px;border:1px solid #dddcd4;border-radius:14px;background:rgba(250,249,245,.88);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 2px 9px rgba(45,54,57,.025)}
+.hero-stat-icon{width:25px;height:25px;color:#607f78;margin-bottom:7px}
+.hero-stat-value{font-size:20px;line-height:1.25;font-weight:900;color:#57736e;font-variant-numeric:tabular-nums}
+.hero-stat-label{margin-top:5px;color:#8a8580;font-size:11.5px;font-weight:700;line-height:1.45}
+.hero-stat-label.names{font-size:10.5px;letter-spacing:.01em}
+
+@media(max-width:720px){
+  .hero{padding:30px 16px 22px}
+  .hero h1{font-size:30px;line-height:1.25}
+  .hero .subtitle{font-size:13px;line-height:1.65}
+  .hero-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:18px}
+  .hero-stat{min-height:102px;padding:12px 9px}
+  .hero-stat-value{font-size:18px}
+}
+
+.overview-grid > .card:first-child{padding:18px 22px;background:linear-gradient(135deg,#f7f6ef 0%,#eef5f2 100%);display:grid;grid-template-columns:180px 1fr;gap:18px;align-items:center}
+.overview-grid > .card:first-child:before{content:"🧥";display:flex;align-items:center;justify-content:center;width:130px;height:130px;border-radius:24px;background:linear-gradient(135deg,#dbeae2,#f7fbf8);font-size:56px;box-shadow:inset 0 0 0 1px #d1ddd7;grid-row:1 / span 3;margin:auto}
+@media(max-width:820px){.overview-grid > .card:first-child{grid-template-columns:1fr}.overview-grid > .card:first-child:before{width:70px;height:70px;font-size:32px;grid-row:auto;margin:0 auto 8px}}
+.overview-map h3{color:#557680;margin-bottom:8px}
+.overview-map .map-caption{margin-top:10px;padding:12px 14px;border-radius:14px;background:linear-gradient(135deg,#eef6fb,#f7f3ea);color:#51656d;border:1px solid #d9e5ea}
+.route-legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.route-pill{display:inline-flex;align-items:center;padding:7px 11px;border-radius:999px;font-size:13px;font-weight:800;color:#fff}
+.route-pill.kev{background:#5e8794}.route-pill.west{background:#7d8d5d}.route-pill.gold{background:#bb8a4a}.route-pill.south{background:#ae6c60}.route-pill.east{background:#7a6ea8}.route-pill.city{background:#4c7b7c}.route-pill.uk{background:#8f617f}
+
+.sources-card{margin-top:34px;background:#fffdf8;border:1px solid var(--line);border-radius:18px;padding:22px}
+.sources-card h3{margin:0 0 6px;font-size:17px;color:var(--deep)}
+.sources-card .sources-note{font-size:12.5px;color:var(--muted);margin:0 0 16px}
+.sources-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.source-box{display:block;text-decoration:none;border:1px solid #e1ded5;background:#ffffff;border-radius:13px;padding:12px 14px;transition:border-color .2s ease,box-shadow .2s ease}
+.source-box:hover{border-color:#397e9a;box-shadow:0 3px 12px rgba(40,65,80,.07)}
+.source-box span{font-weight:850;font-size:14px;color:#274b55;display:block;margin-bottom:3px}
+.source-box small{color:#76848a;font-size:11px;word-break:break-all}
+@media(max-width:760px){.sources-grid{grid-template-columns:1fr}}
+
+.group-info-card{margin-top:24px;background:linear-gradient(135deg,#ffffff 0%,#f4f8f8 100%);border:1px solid #c9dade;border-radius:18px;padding:24px 22px;box-shadow:0 8px 24px rgba(39,75,85,.06)}
+.group-info-card h3{margin:0 0 8px;font-size:19px;color:var(--deep);display:flex;align-items:center;gap:8px}
+.group-info-card .group-intro{margin:0 0 16px;font-size:13.5px;color:var(--muted)}
+.group-links-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.group-link-item{background:#ffffff;border:1px solid #dce4e6;border-radius:14px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 2px 8px rgba(0,0,0,.03);transition:transform .2s ease,border-color .2s ease}
+.group-link-item:hover{transform:translateY(-3px);border-color:#92b8bf}
+.group-link-head{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px}
+.group-link-icon{font-size:26px;line-height:1}
+.group-link-title{font-size:15px;font-weight:850;color:var(--ink);line-height:1.4}
+.group-link-desc{font-size:12.5px;color:var(--muted);margin-top:3px}
+.group-link-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#eef6f7;color:var(--deep);border:1px solid #c8dce0;padding:9px 14px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:800}
+.group-link-btn:hover{background:var(--deep);color:#ffffff}
+</style>
+</head>
+<body id="top">
+
+<header class="hero">
+<div aria-label="Iceland Trip 2026" class="hero-brandline">
+<svg aria-hidden="true" class="hero-mountain" viewBox="0 0 42 34"><path d="M4 29 18 6l10 16 4-6 6 13" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg>
+<span class="hero-badge">Iceland Trip 2026</span>
+<span aria-hidden="true" class="hero-tree">♟</span>
+</div>
+<h1>2026 冰島極光與壯麗公路之旅</h1>
+<p class="subtitle">5 人同行｜<strong>藍冰洞健行・冰河湖快艇・南岸瀑布・東部峽灣</strong><br>從 Reykjavík 到 London，把每天的路線、預訂與沿途風景收進同一本旅行手冊。</p>
+<div aria-label="旅程摘要" class="hero-stats">
+<div class="hero-stat">
+<svg aria-hidden="true" class="hero-stat-icon" viewBox="0 0 24 24"><path d="M18.5 15.5A7 7 0 0 1 8.5 5a7.5 7.5 0 1 0 10 10.5Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+<div class="hero-stat-value">13 天</div><div class="hero-stat-label">10/02 – 10/14</div>
+</div>
+<div class="hero-stat">
+<svg aria-hidden="true" class="hero-stat-icon" viewBox="0 0 24 24"><circle cx="9" cy="7" fill="none" r="3" stroke="currentColor" stroke-width="1.8"></circle><path d="M3.5 19v-2.2A4.8 4.8 0 0 1 8.3 12h1.4a4.8 4.8 0 0 1 4.8 4.8V19M16.5 5.5a2.5 2.5 0 0 1 0 5M17 13a4 4 0 0 1 3.5 4v2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg>
+<div class="hero-stat-value">5 位</div><div class="hero-stat-label names">K&C / N / J / B </div>
+</div>
+<div class="hero-stat">
+<svg aria-hidden="true" class="hero-stat-icon" viewBox="0 0 24 24"><path d="M4 6h11v9H4zM15 9h3l2 3v3h-5zM7 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg>
+<div class="hero-stat-value">2 台車</div><div class="hero-stat-label">10/03 – 10/11</div>
+</div>
+<div class="hero-stat">
+<svg aria-hidden="true" class="hero-stat-icon" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v9H4zM9 20v-6h6v6" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path></svg>
+<div class="hero-stat-value">冰島＋倫敦</div><div class="hero-stat-label">環島公路 × 城市快閃</div>
+</div>
+</div>
+</header>
+
+<nav aria-label="日期快速跳轉" class="quicknav-wrap">
+<div class="quicknav">
+<a class="date-chip" href="#day-1"><b>10/02</b><span>Day 1</span></a>
+<a class="date-chip" href="#day-2"><b>10/03</b><span>Day 2</span></a>
+<a class="date-chip" href="#day-3"><b>10/04</b><span>Day 3</span></a>
+<a class="date-chip" href="#day-4"><b>10/05</b><span>Day 4</span></a>
+<a class="date-chip" href="#day-5"><b>10/06</b><span>Day 5</span></a>
+<a class="date-chip" href="#day-6"><b>10/07</b><span>Day 6</span></a>
+<a class="date-chip" href="#day-7"><b>10/08</b><span>Day 7</span></a>
+<a class="date-chip" href="#day-8"><b>10/09</b><span>Day 8</span></a>
+<a class="date-chip" href="#day-9"><b>10/10</b><span>Day 9</span></a>
+<a class="date-chip" href="#day-10"><b>10/11</b><span>Day 10</span></a>
+<a class="date-chip" href="#day-11"><b>10/12</b><span>Day 11</span></a>
+<a class="date-chip" href="#day-12"><b>10/13</b><span>Day 12</span></a>
+<a class="date-chip" href="#day-13"><b>10/14</b><span>Day 13</span></a>
+</div>
+</nav>
+
+<main>
+<div class="overview-grid">
+<section class="card">
+<h3>10 月冰島穿搭基準</h3>
+<p>Reykjavík 十月常見平均溫度約 2–7°C；冰島官方 SafeTravel 強調風、雨與低溫同時出現時很容易低估失溫風險。戶外以「機能／羊毛底層＋保暖中層＋防風防水外層」為基本組合，鞋襪也要保暖防水，盡量不要用棉質作戶外底層。</p>
+<p><b>這份每日穿搭是活動情境預估，不是 10 月的實際天氣預報。</b> 出發前一週、每天早上仍要重新看 vedur.is、umferdin.is 與 SafeTravel。</p>
+</section>
+</div>
+
+<section class="card overview-map" id="overview-map">
+<h3>全程離線路線示意</h3>
+<svg aria-label="冰島旅程主要停留點示意圖" role="img" viewBox="0 55 1000 560">
+<path class="island" d="M98,337 C126,289 164,267 210,263 C242,219 302,197 358,212 C405,172 472,167 524,192 C562,162 627,165 668,203 C717,196 779,214 811,251 C855,261 899,295 911,340 C883,364 866,389 833,400 C800,437 751,445 710,433 C674,469 616,482 564,461 C510,488 451,480 412,453 C357,471 299,450 273,417 C221,414 177,389 161,358 C131,359 110,351 98,337 Z"></path>
+<polyline class="journey" points="220.5,433.1 232.3,448.2 289.4,407.1 167.6,296.1 394.2,386.6 343.8,427.3 417.9,486.0 453.9,498.1 489.0,516.4 705.3,424.1 778.5,394.7 868.9,250.4 839.9,249.4 270.4,409.9"></polyline>
+<g class="map-pin"><circle cx="220.5" cy="433.1" r="7"></circle><text text-anchor="start" x="228.5" y="424.1">KEF</text><text class="map-date" text-anchor="start" x="228.5" y="441.1">10/2–3</text></g>
+<g class="map-pin"><circle cx="232.3" cy="448.2" r="7"></circle><text text-anchor="start" x="240.3" y="439.2">Blue Lagoon</text><text class="map-date" text-anchor="start" x="240.3" y="456.2">10/3</text></g>
+<g class="map-pin"><circle cx="289.4" cy="407.1" r="7"></circle><text text-anchor="start" x="297.4" y="398.1">Mosfellsbær</text><text class="map-date" text-anchor="start" x="297.4" y="415.1">10/3</text></g>
+<g class="map-pin"><circle cx="167.6" cy="296.1" r="7"></circle><text text-anchor="start" x="175.6" y="287.1">Kirkjufell</text><text class="map-date" text-anchor="start" x="175.6" y="304.1">10/4</text></g>
+<g class="map-pin"><circle cx="394.2" cy="386.6" r="7"></circle><text text-anchor="start" x="402.2" y="377.6">Geysir</text><text class="map-date" text-anchor="start" x="402.2" y="394.6">10/5</text></g>
+<g class="map-pin"><circle cx="343.8" cy="427.3" r="7"></circle><text text-anchor="start" x="351.8" y="418.3">ION</text><text class="map-date" text-anchor="start" x="351.8" y="435.3">10/5</text></g>
+<g class="map-pin"><circle cx="417.9" cy="486.0" r="7"></circle><text text-anchor="start" x="425.9" y="477.0">Seljalandsfoss</text><text class="map-date" text-anchor="start" x="425.9" y="494.0">10/6</text></g>
+<g class="map-pin"><circle cx="453.9" cy="498.1" r="7"></circle><text text-anchor="start" x="461.9" y="489.1">Skógafoss</text><text class="map-date" text-anchor="start" x="461.9" y="506.1">10/6</text></g>
+<g class="map-pin"><circle cx="489.0" cy="516.4" r="7"></circle><text text-anchor="start" x="497.0" y="507.4">Reynisfjara</text><text class="map-date" text-anchor="start" x="497.0" y="524.4">10/7</text></g>
+<g class="map-pin"><circle cx="705.3" cy="424.1" r="7"></circle><text text-anchor="start" x="713.3" y="415.1">Jökulsárlón</text><text class="map-date" text-anchor="start" x="713.3" y="432.1">10/7–9</text></g>
+<g class="map-pin"><circle cx="778.5" cy="394.7" r="7"></circle><text text-anchor="end" x="770.5" y="385.7">Höfn</text><text class="map-date" text-anchor="end" x="770.5" y="402.7">10/9</text></g>
+<g class="map-pin"><circle cx="868.9" cy="250.4" r="7"></circle><text text-anchor="end" x="860.9" y="241.4">Seyðisfjörður</text><text class="map-date" text-anchor="end" x="860.9" y="258.4">10/10</text></g>
+<g class="map-pin"><circle cx="839.9" cy="249.4" r="7"></circle><text text-anchor="end" x="831.9" y="240.4">Egilsstaðir</text><text class="map-date" text-anchor="end" x="831.9" y="257.4">10/10–11</text></g>
+<g class="map-pin"><circle cx="270.4" cy="409.9" r="7"></circle><text text-anchor="start" x="278.4" y="400.9">Reykjavík</text><text class="map-date" text-anchor="start" x="278.4" y="417.9">10/11–12</text></g>
+<text fill="#718087" font-size="13" text-anchor="middle" x="500" y="590">位置為離線概略示意，用來理解西 → 南 → 東 → 飛回 Reykjavík 的方向；實際導航請以 Google Maps / 車機與道路資訊為準。</text>
+</svg>
+<div class="map-caption"><strong>旅程主線</strong>：KEF → Blue Lagoon → Snæfellsnes → Golden Circle → South Coast → Jökulsárlón → Höfn → Eastfjords → EGS ✈ RKV → KEF。<div class="route-legend"><span class="route-pill kev">KEF／藍湖</span><span class="route-pill west">西部半島</span><span class="route-pill gold">黃金圈</span><span class="route-pill south">南岸冰河湖</span><span class="route-pill east">東部峽灣</span><span class="route-pill city">Reykjavík</span><span class="route-pill uk">London</span></div></div>
+</section>
+
+<!-- DAY 1 -->
+<section class="day" id="day-1">
+<div class="day-head">
+<div class="day-number">DAY 01</div>
+<div class="day-title-wrap">
+<div class="day-date">2026 / 10/02（五）</div>
+<h2>桃園啟程 → 倫敦轉機 → 深夜抵達冰島</h2>
+<div class="meta-row"><span>📍 TPE → LHR → KEF</span><span>☀️ 冰島約 07:38 / 18:56</span><span>🚗 無自駕</span></div>
+</div>
+</div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">✈️ TPE → LHR → KEF</span><span class="focus-chip">🔁 Heathrow 換航廈</span><span class="focus-chip">🏨 深夜住機場旁</span></div><p class="focus-note">今天只處理長途移動與轉機，把體力留給正式環島第一天。</p></div>
+<div class="card route-card">
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Heathrow+Airport+Terminal+3" rel="noopener noreferrer">📍 手機開啟 Heathrow T3 地圖 ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>Taiwan Taoyuan International Airport</b></span><span class="route-stop">2<b>Heathrow Airport Terminal 3</b></span><span class="route-stop">3<b>Heathrow Airport Terminal 2</b></span><span class="route-stop">4<b>Keflavík International Airport</b></span></div>
+<div class="online-note">✈️ 飛行日不使用開車導航；有網路時可直接開啟各機場位置。</div>
+</div>
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">以下時間直接依「冰島的主行程表」原訂內容整理，旅行現場可快速抓移動節奏。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">台北桃園 TPE → 倫敦希斯洛 LHR T3</span><span class="timing-badge">✈️ 14 小時 10 分</span><span class="timing-note">CI0081</span></div><div class="timing-item"><span class="route-text">LHR T3 → LHR T2 航廈接駁／轉機預留</span><span class="timing-badge">🚶 4.5 小時</span><span class="timing-note">含採買、安檢與候機緩衝</span></div><div class="timing-item"><span class="route-text">倫敦希斯洛 LHR T2 → 冰島 KEF</span><span class="timing-badge">✈️ 3 小時 10 分</span><span class="timing-note">FI0455</span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">今日以航班移動為主，沒有另外安排景點停留。</span></div></div></div></div></div>
+<p class="lead">第一天的重點是把轉機做得從容。去程只有約 4 小時 55 分的 LHR 轉機，不安排入境倫敦。抵達 KEF 已接近午夜，住宿直接選機場旁是正確安排。</p>
+<div class="day-grid">
+<div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
+<div class="time-row"><div class="time">05:20</div><div><b>桃園機場集合</b><p>建議國際線起飛前約 3 小時抵達。護照、ETA 狀態、冰島航班訂位資料放在隨身包。</p></div></div>
+<div class="time-row"><div class="time">08:20</div><div><b>CI0081 起飛</b><p>TPE → LHR T3，飛行約 14 小時 10 分。</p></div></div>
+<div class="time-row"><div class="time">16:30</div><div><b>抵達 London Heathrow T3</b><p>不要入境市區；依機場指標轉往 T2，預留航廈移動、安檢、採買與晚餐時間。</p></div></div>
+<div class="time-row"><div class="time">19:30</div><div><b>回到登機節奏</b><p>確認 FI0455 登機門、補水、換上抵達冰島後可直接禦寒的衣物。</p></div></div>
+<div class="time-row"><div class="time">21:25</div><div><b>FI0455 起飛</b><p>LHR T2 → KEF，飛行約 3 小時 10 分。</p></div></div>
+<div class="time-row"><div class="time">23:35</div><div><b>抵達 KEF</b><p>入境後步行前往 Aurora Hotel；今晚不再安排其他活動。</p></div></div>
+</div>
+<div class="side-stack">
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">機艙舒適＋落地立即禦寒</div><div class="feel">體感規劃：落地後以 2–7°C、風大與可能下雨來準備；機上則可逐層脫掉。</div><ul class="wear-list"><li>排汗或薄長袖打底</li><li>針織／刷毛中層</li><li>輕羽絨或保暖外套放隨身行李</li><li>長褲＋好走鞋</li><li>毛帽／薄手套放手提包</li></ul></div>
+<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">機上餐／出發前自行補充</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">LHR 轉機期間用餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">機上餐；抵達 KEF 後以休息為主</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Aurora Hotel at Reykjavik-Keflavik Airport Terminal KEF｜機場旁</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>✈️ CI0081 08:20 → 16:30；FI0455 21:25 → 23:35。住宿依各自已完成訂單。</p></div></div>
+</div>
+</div>
+<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li>去程不建議嘗試倫敦入境快閃。</li><li>保暖外套不要托運，KEF 深夜下機即可穿。</li></ul></div>
+</section>
+
+<!-- DAY 2 -->
+<section class="day" id="day-2">
+<div class="day-head">
+<div class="day-number">DAY 02</div>
+<div class="day-title-wrap">
+<div class="day-date">2026 / 10/03（六）</div>
+<h2> 取車 → 藍湖 → Icewear Outlet & Store → 超市補給(Bónus) → Black Diamond Villa</h2>
+<div class="meta-row"><span>📍 Reykjanes → Mosfellsbær</span><span>☀️ 約 07:41 / 18:52</span><span>🚗 約 2 小時＋停留</span></div>
+</div>
+</div>
+
+<div class="card focus-card">
+<h3>✨ 行程焦點</h3>
+<div class="focus-chips">
+<span class="focus-chip">🚙 兩台 取車</span>
+<span class="focus-chip">♨️ Blue Lagoon 11:00</span>
+<span class="focus-chip">🍽️ LAVA 13:30</span>
+<span class="focus-chip">🛍️ Icewear Outlet 14:45</span>
+<span class="focus-chip">🛒 Bónus 補給 15:30</span>
+</div>
+<p class="focus-note">藍湖與午餐是固定時間點；午後先前往 Icewear Outlet 添購保暖服飾，接著至 Bónus 採買食材，傍晚抵達 Villa 悠閒自炊。</p>
+</div>
+
+<div class="card photo-gallery-card">
+<div class="photo-gallery-head">
+<div class="photo-gallery-title">📸 今日沿途景點</div>
+<div class="photo-online-note">有網路時載入縮圖</div>
+</div>
+<div class="photo-strip">
+  <div class="photo-item">
+    <div class="photo-frame">
+      <div class="photo-fallback">♨️ 藍湖 Blue Lagoon</div>
+      <img alt="♨️ 藍湖 Blue Lagoon" loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700" onerror="this.style.display='none'" decoding="async">
+    </div>
+    <div class="photo-caption">
+      <div><span class="poi-chip">♨️</span>藍湖 Blue Lagoon</div>
+      <div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Blue+Lagoon+Iceland">📍 Google Map</a></div>
+    </div>
+  </div>
+
+  <div class="photo-item">
+    <div class="photo-frame">
+      <div class="photo-fallback">🛍️ Icewear Outlet & Store</div>
+      <img alt="🛍️ Icewear Outlet & Store" loading="lazy" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=700" onerror="this.style.display='none'" decoding="async">
+    </div>
+    <div class="photo-caption">
+      <div><span class="poi-chip">🛍️</span>Icewear Outlet & Store</div>
+      <div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Icewear+Outlet+%26+store">📍 Google Map</a></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="card route-card">
+<div class="card-title-row">
+<h3>🗺️ 路線與地圖</h3>
+<a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Keflav%C3%ADk+International+Airport&amp;destination=Black+Diamond+Villa+Mosfellsb%C3%A6r&amp;travelmode=driving&amp;waypoints=Blue+Lagoon+Iceland%7CIcewear+Outlet+%26+store%7CB%C3%B3nus+Mosfellsb%C3%A6r" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a>
+</div>
+<div class="route-line">
+<span class="route-stop">1<b>Keflavík Airport</b></span>
+<span class="route-stop">2<b>Blue Lagoon</b></span>
+<span class="route-stop">3<b>Icewear Outlet & Store</b></span>
+<span class="route-stop">4<b>Bónus Supermarket</b></span>
+<span class="route-stop">5<b>Black Diamond Villa</b></span>
+</div>
+<div class="online-note">快速查點：<a class="mini-link" href="https://www.google.com/maps/search/?api=1&amp;query=Blue+Lagoon+Iceland" rel="noopener" target="_blank">Blue Lagoon Iceland</a> <a class="mini-link" href="https://www.google.com/maps/search/?api=1&amp;query=Icewear+Outlet+%26+store" rel="noopener" target="_blank">Icewear Outlet & store</a> <a class="mini-link" href="https://www.google.com/maps/search/?api=1&amp;query=B%C3%B3nus+Mosfellsb%C3%A6r" rel="noopener" target="_blank">Bónus Mosfellsbær</a></div>
+</div>
+
+<div class="card timing-card">
+<h3>🚗 車程＆⏱️ 景點停留</h3>
+<p class="timing-sub">以下時間直接依「冰島的主行程表」最新調整內容整理，現場快速掌握行車移動。</p>
+<div class="timing-columns">
+  <div class="timing-group move">
+    <div class="timing-group-title">🚗 從哪裡到哪裡</div>
+    <div class="timing-list">
+      <div class="timing-item"><span class="route-text">KEF 機場 → Blue Lagoon</span><span class="timing-badge">約 20 分鐘</span><span class="timing-note">21 km</span></div>
+      <div class="timing-item"><span class="route-text">Blue Lagoon → Icewear Outlet & Store</span><span class="timing-badge">約 40 分鐘</span><span class="timing-note">45 km</span></div>
+      <div class="timing-item"><span class="route-text">Icewear Outlet → Bónus 小豬超市</span><span class="timing-badge">約 15 分鐘</span><span class="timing-note">12 km</span></div>
+      <div class="timing-item"><span class="route-text">Bónus → Black Diamond Villa</span><span class="timing-badge">約 25 分鐘</span><span class="timing-note">20 km</span></div>
+    </div>
+  </div>
+  <div class="timing-group stay">
+    <div class="timing-group-title">⏱️ 這一站待多久</div>
+    <div class="timing-list">
+      <div class="timing-item"><span class="route-text">Blue Lagoon</span><span class="timing-badge">11:00–13:00</span><span class="timing-note">泡湯放鬆；13:30 接續 LAVA 餐廳午餐</span></div>
+      <div class="timing-item"><span class="route-text">Icewear Outlet & Store</span><span class="timing-badge">約 45 分鐘</span><span class="timing-note">採買冰島羊毛防風外套、保暖毛帽及手套配件</span></div>
+      <div class="timing-item"><span class="route-text">Bónus 小豬超市</span><span class="timing-badge">約 45 分鐘</span><span class="timing-note">採買今晚火鍋/自炊食材、早餐與公路補給零食</span></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<p class="lead"><span class="hl">11:00 藍湖</span>與 <span class="hl">13:30 LAVA 午餐</span>為固定時間點。餐後先前往 <span class="hl-blue">Icewear Outlet & Store</span> 補齊禦寒裝備，再到 Bónus 超市採買食材，預計 17:00 前後天黑前入住 Villa，節奏充裕從容。</p>
+
+<div class="day-grid">
+<div class="card timeline-card">
+<h3>⏱️ 當日時間軸</h3>
+<div class="time-row"><div class="time">07:45</div><div><b>Aurora 早餐＋退房</b><p>把泳衣、換洗內著、保濕用品單獨放隨身小袋，避免在停車場翻行李。</p></div></div>
+<div class="time-row"><div class="time">09:00</div><div><b>前往 租車 櫃檯</b><p>兩台車一起確認車況、輪胎、刮痕、油量、道路救援與駕駛資料。09:30 統一取車。</p></div></div>
+<div class="time-row"><div class="time">09:30</div><div><b>兩台 租車 取車</b><p>KEF → Blue Lagoon 車程約 20 分鐘。</p></div></div>
+<div class="time-row"><div class="time">10:15</div><div><b>藍湖報到／寄放行李</b><p>11:00 入場，先沖洗淋浴；長髮建議先抹大量潤髮乳並綁起保護髮質。</p></div></div>
+<div class="time-row"><div class="time">11:00–13:00</div><div><b>Blue Lagoon 藍湖溫泉</b><p>享受火山地熱溫泉、矽泥面膜敷臉；出水後沖洗抹乳液，換穿乾爽保暖衣物。</p></div></div>
+<div class="time-row"><div class="time">13:30</div><div><b>LAVA Restaurant 午餐</b><p>預訂 2 courses 饗宴（已由 Nicole 預訂完成）。</p></div></div>
+<div class="time-row"><div class="time">14:45</div><div><b>前往 Icewear Outlet & Store</b><p>自駕前往，預計停留約 45 分鐘，添購冰島高品質羊毛排汗衣、防風防水手套與禦寒保暖層。</p></div></div>
+<div class="time-row"><div class="time">15:30</div><div><b>前往 Bónus 採買</b><p>採買晚餐自炊食材、Day 3 早餐、飲用水與車上乾糧零食，預估停留約 45 分鐘。</p></div></div>
+<div class="time-row"><div class="time">16:30後</div><div><b>前往 Black Diamond Villa</b><p>出發前往 Mosfellsbær 景觀別墅，天黑前完成辦理入住手續，放鬆煮晚餐享受私人空間。</p></div></div>
+</div>
+
+<div class="side-stack">
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">溫泉日＋市區購物，重點防著涼</div><div class="feel">體感規劃：戶外約 2–7°C；出溫泉水後遇風體感偏低，泡完立即戴毛帽與厚外套。</div><ul class="wear-list"><li>泳衣、防霧眼鏡直接放隨身包</li><li>薄羊毛／機能發熱打底衣</li><li>刷毛保暖中層或輕羽絨</li><li>防風防水外層衝鋒衣</li><li>防水健行鞋＋保暖羊毛襪</li></ul></div>
+<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3>
+<div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4>
+<div class="daily-meal-list">
+<div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Aurora Hotel 早餐</div></div>
+<div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">LAVA Restaurant 13:30</div></div>
+<div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Black Diamond Villa 廚房自炊火鍋料理</div></div>
+</div>
+</div>
+<div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Black Diamond Villa｜整棟獨棟別墅、含齊全廚房設備</p><span class="confirmed-five">👥 5 人住宿已安排</span></div>
+<div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>🚙 租車：5 人共 2 台車，KC Confirm、JC Confirm；10/3 09:30 於 KEF 同步取車。♨️ Blue Lagoon 11:00；🍽️ LAVA 13:30；🏡 Villa 16:30 後入住。</p></div>
+</div>
+</div>
+</div>
+<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li>藍湖泡湯長髮請塗滿潤髮乳保護，避免礦物質結晶讓頭髮乾澀打結。</li><li>5 人共租 2 台車，取車時雙方駕駛共同核對全車防刮損與保險條款，沿途全程保持前後跟車同步移動。</li></ul></div>
+</section>
+
+<!-- DAY 3 -->
+<section class="day" id="day-3">
+<div class="day-head">
+<div class="day-number">DAY 03</div>
+<div class="day-title-wrap">
+<div class="day-date">2026 / 10/04（日）</div>
+<h2>斯奈山半島：海豹沙灘 → 黑教堂 → 海崖 → 教堂山</h2>
+<div class="meta-row"><span>📍 Snæfellsnes</span><span>☀️ 約 07:44 / 18:49</span><span>🚗 約 4 小時 10 分</span></div>
+</div>
+</div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🦭 Ytri Tunga 海豹</span><span class="focus-chip">⛪ Búðakirkja 黑教堂</span><span class="focus-chip">🌊 Arnarstapi 海崖</span><span class="focus-chip">🏔️ Kirkjufell</span><span class="focus-chip">🏡 Berg 2</span></div><p class="focus-note">斯奈山半島一路順遊，下午把光線留給教堂山；今晚固定入住 Berg 2。</p></div>
+
+<div class="card photo-gallery-card">
+<div class="photo-gallery-head"><div class="photo-gallery-title">📸 今日沿途景點</div><div class="photo-online-note">有網路時載入縮圖</div></div>
+<div class="photo-strip">
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🦭 Ytri Tunga 海豹沙灘</div><img alt="🦭 Ytri Tunga 海豹沙灘" loading="lazy" src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🦭</span>Ytri Tunga 海豹沙灘</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Ytri+Tunga+Beach+Iceland">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">⛪ Búðakirkja 黑教堂</div><img alt="⛪ Búðakirkja 黑教堂" loading="lazy" src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">⛪</span>Búðakirkja 黑教堂</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Budakirkja+Iceland">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🌊 Arnarstapi 海崖</div><img alt="🌊 Arnarstapi 海崖" loading="lazy" src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🌊</span>Arnarstapi 海崖</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Arnarstapi+Cliff+Iceland">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">⛪ Ingjaldshóll Church</div><img alt="⛪ Ingjaldshóll Church" loading="lazy" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">⛪</span>Ingjaldshóll Church</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Ingjaldsholl+church+Iceland">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🏔️ Kirkjufell 教堂山</div><img alt="🏔️ Kirkjufell 教堂山" loading="lazy" src="https://images.unsplash.com/photo-1529963183134-61a90db47eaf?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🏔️</span>Kirkjufell 教堂山</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Kirkjufell+Iceland">📍 Google Map</a></div></div></div>
+</div>
+</div>
+
+<div class="card route-card">
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Black+Diamond+Villa+Mosfellsb%C3%A6r&amp;destination=Berg+2+Guesthouse+Iceland&amp;travelmode=driving&amp;waypoints=Ytri+Tunga+Beach+Iceland%7CBudakirkja+Iceland%7CArnarstapi+Cliff+Iceland%7CIngjaldsholl+church%7CKirkjufell+Iceland" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>Black Diamond Villa</b></span><span class="route-stop">2<b>Ytri Tunga Beach</b></span><span class="route-stop">3<b>Búðakirkja</b></span><span class="route-stop">4<b>Arnarstapi</b></span><span class="route-stop">5<b>Ingjaldshóll Church</b></span><span class="route-stop">6<b>Kirkjufell</b></span><span class="route-stop">7<b>Berg 2</b></span></div>
+</div>
+
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">以下時間直接依「冰島的主行程表」原訂內容整理，旅行現場可快速抓移動節奏。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Black Diamond Villa → Ytri Tunga 海豹沙灘</span><span class="timing-badge">約 2 小時 20 分</span><span class="timing-note">175 km</span></div><div class="timing-item"><span class="route-text">Ytri Tunga → Búðakirkja 黑教堂</span><span class="timing-badge">約 20 分鐘</span><span class="timing-note">20 km</span></div><div class="timing-item"><span class="route-text">Búðakirkja → Arnarstapi Cliff</span><span class="timing-badge">約 15 分鐘</span><span class="timing-note">15 km</span></div><div class="timing-item"><span class="route-text">Arnarstapi → Ingjaldshóll Church</span><span class="timing-badge">約 35 分鐘</span><span class="timing-note">35 km</span></div><div class="timing-item"><span class="route-text">Ingjaldshóll → Kirkjufell 教堂山</span><span class="timing-badge">約 35 分鐘</span><span class="timing-note">38 km</span></div><div class="timing-item"><span class="route-text">Kirkjufell → Berg 2</span><span class="timing-badge">約 15 分鐘</span><span class="timing-note">12 km</span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">Ytri Tunga 海豹沙灘</span><span class="timing-badge">約 30 分鐘</span></div><div class="timing-item"><span class="route-text">Búðakirkja 黑教堂</span><span class="timing-badge">約 40 分鐘</span></div><div class="timing-item"><span class="route-text">Arnarstapi 海崖</span><span class="timing-badge">約 40 分鐘</span><span class="timing-note">玄武岩海蝕柱與拱門</span></div><div class="timing-item"><span class="route-text">Ingjaldshóll Church</span><span class="timing-badge">約 40 分鐘</span></div><div class="timing-item"><span class="route-text">Kirkjufell 教堂山</span><span class="timing-badge">約 1 小時</span><span class="timing-note">白天拍攝</span></div></div></div></div></div>
+
+<div class="day-grid">
+<div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
+<div class="time-row"><div class="time">07:30</div><div><b>Villa 自理早餐</b><p>退房前把午餐與熱飲裝好。</p></div></div>
+<div class="time-row"><div class="time">08:30</div><div><b>出發前往 Snæfellsnes</b><p>Black Diamond Villa → Ytri Tunga 約 2 小時 20 分。</p></div></div>
+<div class="time-row"><div class="time">10:50</div><div><b>Ytri Tunga 海豹沙灘</b><p>約 30 分鐘；保持距離、不追逐海豹，海風通常很強。</p></div></div>
+<div class="time-row"><div class="time">11:40</div><div><b>Búðakirkja 黑教堂</b><p>停留約 40 分鐘。</p></div></div>
+<div class="time-row"><div class="time">12:35</div><div><b>Arnarstapi 海崖</b><p>玄武岩海蝕景觀；主行程表預留約 40 分鐘。</p></div></div>
+<div class="time-row"><div class="time">14:10</div><div><b>Ingjaldshóll Church</b><p>停留約 40 分鐘。</p></div></div>
+<div class="time-row"><div class="time">15:20</div><div><b>Kirkjufell / Kirkjufellsfoss</b><p>主行程表預留約 1 小時；下午光線可依天氣調整。</p></div></div>
+<div class="time-row"><div class="time">16:45</div><div><b>抵達 Berg 2 辦理入住</b><p>入住、自炊。若夜間放晴，可直接在農場附近等極光。</p></div></div>
+</div>
+<div class="side-stack">
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">海岸強風日，防風比厚度更重要</div><div class="feel">體感規劃：約 1–7°C；海邊陣風會明顯拉低體感。</div><ul class="wear-list"><li>羊毛／機能發熱打底</li><li>抓絨或薄羽絨中層</li><li>有帽防風防水外套</li><li>防水長褲或快乾長褲</li><li>防水登山鞋、毛帽、手套、脖圍</li></ul></div>
+<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Villa 自炊</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">自備或 Arnarstapi 簡餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Berg 2 自炊</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Berg 2 Grundarfjörður ｜含廚房</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>10/4 住宿固定為 Berg 2。5 人住宿皆已安排。</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- DAY 4 -->
+<section class="day" id="day-4">
+<div class="day-head">
+<div class="day-number">DAY 04</div>
+<div class="day-title-wrap">
+<div class="day-date">2026 / 10/05（一）</div>
+<h2>斯奈山 → 秘境藍瀑布(Brúarfoss) → 間歇泉(Geysir) → 黃金瀑布(Gullfoss) → ION</h2>
+<div class="meta-row"><span>📍 Golden Circle</span><span>☀️ 約 07:47 / 18:45</span><span>🚗 約 4 小時 15 分</span></div>
+</div>
+</div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🌊 Brúarfoss 秘境瀑布</span><span class="focus-chip">💥 Strokkur 間歇泉</span><span class="focus-chip">💦 Gullfoss 壯觀大瀑布</span><span class="focus-chip">🏨 ION Adventure 溫泉放鬆</span></div><p class="focus-note">動線特別將 Gullfoss 安排在最後一站：穿著雨衣全套防護近距離感受大瀑布的震撼水氣，被水霧洗禮濕透後直接驅車前往 ION 入住，換穿乾爽衣物、泡湯暖身，節奏最舒適！</p></div>
+
+<div class="card photo-gallery-card">
+<div class="photo-gallery-head"><div class="photo-gallery-title">📸 今日沿途景點</div><div class="photo-online-note">有網路時載入縮圖</div></div>
+<div class="photo-strip">
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🌊 Brúarfoss</div><img alt="🌊 Brúarfoss" loading="lazy" src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🌊</span>Brúarfoss 藍色秘境</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Bruarfoss">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">💥 Strokkur / Geysir</div><img alt="💥 Strokkur / Geysir" loading="lazy" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">💥</span>Strokkur / Geysir</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Strokkur+Geysir+Iceland">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">💦 Gullfoss 黃金瀑布</div><img alt="💦 Gullfoss 黃金瀑布" loading="lazy" src="https://images.unsplash.com/photo-1508873696983-2df5293cb32f?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">💦</span>Gullfoss 黃金瀑布</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Gullfoss+Waterfall">📍 Google Map</a></div></div></div>
+</div>
+</div>
+
+<div class="card route-card">
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Berg+2+Guesthouse+Iceland&amp;destination=ION+Adventure+Hotel+Nesjavellir&amp;travelmode=driving&amp;waypoints=Bruarfoss%7CStrokkur+Geysir+Iceland%7CGullfoss+Waterfall" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>Berg 2</b></span><span class="route-stop">2<b>Brúarfoss</b></span><span class="route-stop">3<b>Strokkur Geysir</b></span><span class="route-stop">4<b>Gullfoss</b></span><span class="route-stop">5<b>ION Adventure Hotel</b></span></div>
+</div>
+
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">依「先看藍瀑布、再訪間歇泉、最後在黃金瀑布感受水氣後直奔飯店」順序調整行車動線。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Berg 2 → Brúarfoss 秘境瀑布</span><span class="timing-badge">約 2 小時 30 分</span><span class="timing-note">195 km</span></div><div class="timing-item"><span class="route-text">Brúarfoss → Strokkur / Geysir 間歇泉</span><span class="timing-badge">約 15 分鐘</span><span class="timing-note">15 km</span></div><div class="timing-item"><span class="route-text">Strokkur → Gullfoss 黃金瀑布</span><span class="timing-badge">約 10 分鐘</span><span class="timing-note">10 km</span></div><div class="timing-item"><span class="route-text">Gullfoss → ION Adventure Hotel</span><span class="timing-badge">約 1 小時 15 分</span><span class="timing-note">75 km</span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">Brúarfoss 藍色秘境瀑布</span><span class="timing-badge">約 40 分鐘</span><span class="timing-note">停車場步行約 10 分鐘可達，欣賞純淨冰川藍水流</span></div><div class="timing-item"><span class="route-text">Strokkur 間歇泉＋午餐</span><span class="timing-badge">約 1 小時</span><span class="timing-note">每 6–10 分鐘噴發一次；可在 Geysir Center 用餐休息</span></div><div class="timing-item"><span class="route-text">Gullfoss 黃金瀑布＋紀念品店</span><span class="timing-badge">約 1 小時 15 分</span><span class="timing-note">穿雨衣近距離看水霧噴濺，參觀後逛紀念品店採買羊毛髮帶</span></div></div></div></div></div>
+
+<div class="day-grid">
+<div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
+<div class="time-row"><div class="time">07:30</div><div><b>Berg 2 早餐</b><p>簡單吃飽、補足熱水熱飲，整裝退房。</p></div></div>
+<div class="time-row"><div class="time">08:30</div><div><b>出發前往黃金圈</b><p>自斯奈山出發經公路南下，車程約 2 小時 30 分。</p></div></div>
+<div class="time-row"><div class="time">11:00</div><div><b>Brúarfoss 秘境藍瀑布</b><p>造訪著名的牛奶Tiffany藍水流。步道好走，停留約 40 分鐘拍照欣賞。</p></div></div>
+<div class="time-row"><div class="time">12:00</div><div><b>Strokkur / Geysir 間歇泉 ＆ 午餐</b><p>車程約 15 分鐘即達。近距離觀看數次地熱噴發的震撼瞬間，隨後在遊客中心享用午餐與熱湯。</p></div></div>
+<div class="time-row"><div class="time">13:30</div><div><b>Gullfoss 黃金瀑布（雨衣装備全開）</b><p>車程僅 10 分鐘。<b>穿戴好完整雨衣與防雨配備</b>走向懸崖步道，感受雙層瀑布轟鳴與磅礴水霧的極致包覆！逛完紀念品店後準備離開。</p></div></div>
+<div class="time-row"><div class="time">15:00</div><div><b>出發直奔 ION Adventure Hotel</b><p>從黃金瀑布開車約 1 小時 15 分鐘直接返回飯店，衣服濕透正好回房沖熱水澡換裝。</p></div></div>
+<div class="time-row"><div class="time">16:15</div><div><b>ION Adventure 辦理入住</b><p>入住放鬆，在招牌露天溫泉池中邊泡湯邊欣賞苔原火山景致、整理照片。</p></div></div>
+<div class="time-row"><div class="time">晚間</div><div><b>Silfra / ION 晚餐</b><p>原表 Nicole 預定；晚間若天候晴朗無雲，直接在飯店周遭守候極光。</p></div></div>
+</div>
+<div class="side-stack">
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">瀑布水氣激盪＋結束後直接泡湯</div><div class="feel">體感規劃：約 1–7°C；Gullfoss 水霧區風強水氣密，體感會大幅下降。</div><ul class="wear-list"><li>保暖排汗底層＋刷毛中層</li><li><b>高規格防水雨衣／硬殼衝鋒衣＋防水雨褲（Gullfoss 必備）</b></li><li>防滑防水登山鞋＋保暖毛帽手套</li><li>泳衣放在隨身包內，抵達 ION 後可直接泡湯</li></ul></div>
+<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Berg 2 自炊</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">Geysir Center 遊客中心簡餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">ION Silfra 精緻晚餐</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>ION Adventure Hotel 黃金圈</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>ION Adventure：5 人住宿皆已安排；房型依各自已完成訂單。Silfra 晚餐依原行程預定。</p></div></div>
+</div>
+</div>
+<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li>動線調整後先看 Brúarfoss 與 Geysir，<b>最後造訪 Gullfoss</b>。黃金瀑布水氣極大、極易濕透，剛好走完就可以上車直奔 ION 換裝洗熱水澡，最為舒爽。</li><li>前往 Gullfoss 觀景平台前，請務必先將全套雨衣、雨褲穿妥，相機與手機做好防水防霧保護。</li></ul></div>
+</section>
+
+<!-- DAY 5 -->
+<section class="day" id="day-5">
+<div class="day-head">
+<div class="day-number">DAY 05</div>
+<div class="day-title-wrap">
+<div class="day-date">2026 / 10/06（二）</div>
+<h2>Kerið 火山口湖 → Hvolsvöllur 超市補給 → 水簾洞瀑布 → DC-3 → Skógafoss</h2>
+<div class="meta-row"><span>📍 South Coast</span><span>☀️ 約 07:50 / 18:42</span><span>🚗 約 2 小時 30 分</span></div>
+</div>
+</div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🌋 Kerið 火山口湖</span><span class="focus-chip">🛒 Krónan Hvolsvelli</span><span class="focus-chip">🚶 Seljalandsfoss 水簾洞</span><span class="focus-chip">✈️ DC-3</span><span class="focus-chip">🌈 Skógafoss</span></div><p class="focus-note">火山口湖出發後，先至 1 號公路必經中繼站 Krónan Hvolsvelli 採買生鮮食材，隨後前往水簾洞瀑布。今天是水氣最重的一天，防水裝備請穿戴齊全。</p></div>
+
+<div class="card photo-gallery-card">
+<div class="photo-gallery-head"><div class="photo-gallery-title">📸 今日沿途景點</div><div class="photo-online-note">有網路時載入縮圖</div></div>
+<div class="photo-strip">
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🌋 Kerið 火山口湖</div><img alt="🌋 Kerið 火山口湖" loading="lazy" src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🌋</span>Kerið 火山口湖</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Kerid+Iceland">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🛒 Krónan Hvolsvelli</div><img alt="🛒 Krónan Hvolsvelli" loading="lazy" src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🛒</span>Krónan Hvolsvelli</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Kronan+Hvolsvelli">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🚶 Seljalandsfoss 塞里雅蘭</div><img alt="🚶 Seljalandsfoss" loading="lazy" src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🚶</span>Seljalandsfoss 塞里雅蘭</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Seljalandsfoss">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">✈️ Sólheimasandur DC-3</div><img alt="✈️ Sólheimasandur DC-3" loading="lazy" src="https://images.unsplash.com/photo-1508873696983-2df5293cb32f?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">✈️</span>Sólheimasandur DC-3</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Eyvindarholt+Plane+Wreck">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🌈 Skógafoss 斯科加瀑布</div><img alt="🌈 Skógafoss" loading="lazy" src="https://images.unsplash.com/photo-1520769669658-f07657f5a307?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🌈</span>Skógafoss 斯科加瀑布</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Skogafoss">📍 Google Map</a></div></div></div>
+</div>
+</div>
+
+<div class="card route-card">
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=ION+Adventure+Hotel+Nesjavellir&amp;destination=Seljalandsfoss+Horizons&amp;travelmode=driving&amp;waypoints=Kerid%7CKronan+Hvolsvelli%7CSeljalandsfoss%7CEyvindarholt+Plane+Wreck%7CSkogafoss" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>ION Hotel</b></span><span class="route-stop">2<b>Kerið</b></span><span class="route-stop">3<b>Krónan Hvolsvelli</b></span><span class="route-stop">4<b>Seljalandsfoss</b></span><span class="route-stop">5<b>Eyvindarholt Plane Wreck</b></span><span class="route-stop">6<b>Skógafoss</b></span><span class="route-stop">7<b>Seljalandsfoss Horizons</b></span></div>
+</div>
+
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">以下時間直接依「冰島的主行程表」最新調整內容整理，旅行現場可快速抓移動節奏。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">ION Hotel → Kerið 火山口湖</span><span class="timing-badge">約 35 分鐘</span><span class="timing-note">35 km</span></div><div class="timing-item"><span class="route-text">Kerið → Krónan Hvolsvelli 超市</span><span class="timing-badge">約 45–50 分鐘</span><span class="timing-note">54 km；1 號公路必經</span></div><div class="timing-item"><span class="route-text">Krónan Hvolsvelli → Seljalandsfoss 水簾洞</span><span class="timing-badge">約 15–18 分鐘</span><span class="timing-note">21 km</span></div><div class="timing-item"><span class="route-text">Seljalandsfoss → DC-3 飛機殘骸</span><span class="timing-badge">約 10 分鐘</span><span class="timing-note">8 km</span></div><div class="timing-item"><span class="route-text">DC-3 → Skógafoss</span><span class="timing-badge">約 25 分鐘</span><span class="timing-note">28 km</span></div><div class="timing-item"><span class="route-text">Skógafoss → Seljalandsfoss Horizons</span><span class="timing-badge">約 25 分鐘</span><span class="timing-note">28 km</span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">Kerið 火山口湖</span><span class="timing-badge">約 50 分鐘</span></div><div class="timing-item"><span class="route-text">Krónan Hvolsvelli 超市採買</span><span class="timing-badge">約 35 分鐘</span><span class="timing-note">09:00–19:00 營業；採買牛排海鮮、微波即食與早餐蛋奶</span></div><div class="timing-item"><span class="route-text">Seljalandsfoss 水簾洞瀑布</span><span class="timing-badge">約 1 小時</span></div><div class="timing-item"><span class="route-text">DC-3 飛機殘骸</span><span class="timing-badge">約 30 分鐘</span></div><div class="timing-item"><span class="route-text">Skógafoss 彩虹瀑布</span><span class="timing-badge">約 1 小時</span></div></div></div></div></div>
+
+<div class="day-grid">
+<div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
+<div class="time-row"><div class="time">08:00</div><div><b>ION 早餐</b><p>早餐加購原表 ISK 4,200。</p></div></div>
+<div class="time-row"><div class="time">09:15</div><div><b>Kerið 火山口湖</b><p>主行程表預留約 50 分鐘。</p></div></div>
+<div class="time-row"><div class="time">10:15</div><div><b>出發前往 Hvolsvöllur</b><p>沿 1 號公路南下約 45–50 分鐘。</p></div></div>
+<div class="time-row"><div class="time">11:05</div><div><b>Krónan Hvolsvelli 超市採買</b><p>最理想的中繼補給站（營業時間 09:00–19:00）。規模適中、品項齊全，備齊今晚 Villa 牛排、海鮮、蔬菜、微波即食與明日早餐蛋奶，停留約 35 分鐘。</p></div></div>
+<div class="time-row"><div class="time">11:55</div><div><b>Seljalandsfoss 水簾洞瀑布</b><p>從超市出發開車僅需 15–18 分鐘即達。若步道開放且安全，繞行瀑布後方水霧極大，請務必做好防水。</p></div></div>
+<div class="time-row"><div class="time">13:10</div><div><b>Eyvindarholt DC-3</b><p>主行程表預留約 30 分鐘；依現場停車／場域規則。</p></div></div>
+<div class="time-row"><div class="time">14:00</div><div><b>Skógafoss 彩虹瀑布</b><p>主行程表預留約 1 小時；瀑布底端與上方階梯視體力取捨。</p></div></div>
+<div class="time-row"><div class="time">15:30</div><div><b>返回 Seljalandsfoss Horizons</b><p>提早入住享受豪華 Villa 廚房，使用剛剛在 Krónan 採買的頂級生鮮自炊料理。</p></div></div>
+</div>
+<div class="side-stack">
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">全套雨裝日</div><div class="feel">體感規劃：約 1–7°C；Seljalandsfoss、Skógafoss 水霧接近「被雨打」的程度。</div><ul class="wear-list"><li>機能／羊毛打底＋保暖中層</li><li>連帽防水外套＋防水長褲</li><li>高筒防水登山鞋＋備用羊毛襪</li><li>相機／手機防水袋</li></ul></div>
+<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">ION 早餐 (原表加購 ISK 4,200)</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">自備／Hvolsvöllur 採買簡餐點心</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Seljalandsfoss Horizons 自炊（牛排、海鮮與生鮮蔬食）</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Seljalandsfoss Horizons ｜豪華 Villa、含廚房</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>Seljalandsfoss Horizons：5 人住宿皆已安排。</p></div></div>
+</div>
+</div>
+<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li>Krónan Hvolsvelli 就位在火山口湖前往水濂洞的 1 號公路必經路上，營業至 19:00，正午抵達採買時間充裕。</li><li>Seljalandsfoss 與 Skógafoss 水氣極大，進水簾洞前後切記收妥相機手機並穿戴雨褲雨鞋。</li></ul></div>
+</section>
+
+<!-- DAY 6 -->
+<section class="day" id="day-6">
+<div class="day-head">
+<div class="day-number">DAY 06</div>
+<div class="day-title-wrap">
+<div class="day-date">2026 / 10/07（三）</div>
+<h2>Reynisfjara 黑沙灘 → 冰川舌 → Jökulsárlón → Diamond Beach</h2>
+<div class="meta-row"><span>📍 Vík → Glacier Lagoon</span><span>☀️ 約 07:53 / 18:38</span><span>🚗 約 4 小時</span></div>
+</div>
+</div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🌊 Reynisfjara 黑沙灘</span><span class="focus-chip">🧊 冰川舌</span><span class="focus-chip">🚤 Jökulsárlón</span><span class="focus-chip">💎 Diamond Beach</span></div><p class="focus-note">南岸一路往冰河湖移動；黑沙灘安全優先，冰川舌視時間與天候彈性停靠。</p></div>
+
+<div class="card photo-gallery-card">
+<div class="photo-gallery-head"><div class="photo-gallery-title">📸 今日沿途景點</div><div class="photo-online-note">有網路時載入縮圖</div></div>
+<div class="photo-strip">
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🌊 Reynisfjara 黑沙灘</div><img alt="🌊 Reynisfjara 黑沙灘" loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🌊</span>Reynisfjara 黑沙灘</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Reynisfjara+Black+Sand+Beach">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">⛰️ Skaftafell 國家公園機動</div><img alt="⛰️ Skaftafell 國家公園" loading="lazy" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">⛰️</span>Skaftafell 國家公園機動</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Skaftafell+National+Park">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">💦 Svartifoss 黑瀑布機動</div><img alt="💦 Svartifoss 黑瀑布" loading="lazy" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">💦</span>Svartifoss 黑瀑布機動</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Svartifoss+Waterfall">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🧊 Svínafellsjökull 冰川舌</div><img alt="🧊 Svínafellsjökull 冰川舌" loading="lazy" src="https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🧊</span>Svínafellsjökull 冰川舌</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Svinafellsjokull">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">⛪ Hofskirkja 草皮教堂機動</div><img alt="⛪ Hofskirkja 草皮教堂" loading="lazy" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">⛪</span>Hofskirkja 草皮教堂機動</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Hofskirkja+Iceland">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🚤 Fjallsárlón 冰河湖機動</div><img alt="🚤 Fjallsárlón 冰河湖" loading="lazy" src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🚤</span>Fjallsárlón 冰河湖機動</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Fjallsarlon">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🚤 Jökulsárlón 冰河湖</div><img alt="🚤 Jökulsárlón 冰河湖" loading="lazy" src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🚤</span>Jökulsárlón 冰河湖</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Jokulsarlon">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">💎 Diamond Beach 鑽石沙灘</div><img alt="💎 Diamond Beach 鑽石沙灘" loading="lazy" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">💎</span>Diamond Beach 鑽石沙灘</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Diamond+Beach+Iceland">📍 Google Map</a></div></div></div>
+</div>
+</div>
+
+<div class="card route-card">
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Seljalandsfoss+Horizons&amp;destination=Hotel+Jokulsarlon&amp;travelmode=driving&amp;waypoints=Reynisfjara+Black+Sand+Beach%7CSvinafellsjokull+Parking%7CJokulsarlon+Glacier+Lagoon%7CDiamond+Beach" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>Seljalandsfoss Horizons</b></span><span class="route-stop">2<b>Reynisfjara</b></span><span class="route-stop">3<b>Svínafellsjökull</b></span><span class="route-stop">4<b>Jökulsárlón</b></span><span class="route-stop">5<b>Diamond Beach</b></span><span class="route-stop">6<b>Hótel Jökulsárlón</b></span></div>
+</div>
+
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">以下時間直接依「冰島的主行程表」原訂內容整理，旅行現場可快速抓移動節奏。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Seljalandsfoss Horizons → Reynisfjara</span><span class="timing-badge">約 50 分鐘</span><span class="timing-note">60 km</span></div><div class="timing-item"><span class="route-text">Reynisfjara → Jökulsárlón 冰河湖</span><span class="timing-badge">約 2 小時 30 分</span><span class="timing-note">190 km (途中另排 Svínafellsjökull)</span></div><div class="timing-item"><span class="route-text">Jökulsárlón → Diamond Beach</span><span class="timing-badge">步行約 2 分鐘</span><span class="timing-note">出海口對面</span></div><div class="timing-item"><span class="route-text">Diamond Beach → Hótel Jökulsárlón</span><span class="timing-badge">約 12 分鐘</span><span class="timing-note">15 km</span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">Reynisfjara 黑沙灘</span><span class="timing-badge">約 1 小時</span></div><div class="timing-item"><span class="route-text">Jökulsárlón 冰河湖</span><span class="timing-badge">約 30 分鐘</span></div><div class="timing-item"><span class="route-text">Diamond Beach 鑽石沙灘</span><span class="timing-badge">約 1 小時</span><span class="timing-note">主表希望抓夕陽時段</span></div><div class="timing-item"><span class="route-text">Svínafellsjökull 冰川舌</span><span class="timing-badge">彈性停留</span></div></div></div></div></div>
+
+<div class="day-grid">
+<div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
+<div class="time-row"><div class="time">07:30</div><div><b>住宿早餐／退房</b><p>午餐建議直接做成車上可吃的餐盒。</p></div></div>
+<div class="time-row"><div class="time">08:30</div><div><b>出發前往 Vík</b><p>約 50 分鐘。</p></div></div>
+<div class="time-row"><div class="time">09:20</div><div><b>Reynisfjara 黑沙灘</b><p>主行程表預留約 1 小時；先看入口警示燈，與海浪保持大距離。</p></div></div>
+<div class="time-row"><div class="time">10:20</div><div><b>往東長途移動</b><p>沿 Ring Road 1 前往冰川區。</p></div></div>
+<div class="time-row"><div class="time">12:45</div><div><b>Svínafellsjökull (彈性)</b><p>只走官方可開放的短步道觀景區；若天候差或道路慢，直接略過。</p></div></div>
+<div class="time-row"><div class="time">14:15</div><div><b>Jökulsárlón 冰河湖</b><p>主行程表預留約 30 分鐘。</p></div></div>
+<div class="time-row"><div class="time">16:30</div><div><b>Diamond Beach</b><p>主行程表預留約 1 小時，盡量放在低角度光線／夕陽時段。</p></div></div>
+<div class="time-row"><div class="time">18:15</div><div><b>抵達 Hótel Jökulsárlón</b><p>晚餐以輕食為主，入住後若晴朗再泡湯／等極光。</p></div></div>
+</div>
+<div class="side-stack">
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">黑沙灘與冰河湖的強風保暖</div><div class="feel">體感規劃：約 0–6°C；冰河湖與海邊風強時體感接近 0°C 以下。</div><ul class="wear-list"><li>羊毛底層＋抓絨＋輕羽絨</li><li>防風防水硬殼＋防水登山鞋</li><li>厚襪＋保暖帽＋手套＋脖圍</li></ul></div>
+<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">住宿早餐／自炊</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">自備餐盒或沿途簡餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Hótel Jökulsárlón 輕食</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Hótel Jökulsárlón - Glacier Lagoon Hotel 冰川景觀</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>Hótel Jökulsárlón：5 人住宿皆已安排。</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- DAY 7 -->
+<section class="day" id="day-7">
+<div class="day-head">
+<div class="day-number">DAY 07</div>
+<div class="day-title-wrap">
+<div class="day-date">2026 / 10/08（四）</div>
+<h2>重頭戲: Vatnajökull 藍冰洞＋冰川健行 → 慶功晚宴</h2>
+<div class="meta-row"><span>📍 Hali / Vatnajökull</span><span>☀️ 約 07:56 / 18:35</span><span>🚗 短程接駁</span></div>
+</div>
+</div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🧊 Vatnajökull 藍冰洞＋健行</span><span class="focus-chip">⏰ 09:10 報到</span><span class="focus-chip">🍽️ 19:00 慶功晚宴</span></div><p class="focus-note">全程最重點的戶外活動日。白天不要再塞景點，體力與保暖都留給冰川。</p></div>
+
+<div class="card photo-gallery-card">
+<div class="photo-gallery-head"><div class="photo-gallery-title">📸 今日沿途景點</div><div class="photo-online-note">有網路時載入縮圖</div></div>
+<div class="photo-strip">
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🧊 Vatnajökull 藍冰洞</div><img alt="🧊 Vatnajökull 藍冰洞" loading="lazy" src="https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🧊</span>Vatnajökull 藍冰洞</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Vatnajokull+Ice+Cave">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">💎 Diamond Beach 鑽石沙灘</div><img alt="💎 Diamond Beach 鑽石沙灘" loading="lazy" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">💎</span>Diamond Beach 鑽石沙灘</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Diamond+Beach+Iceland">📍 Google Map</a></div></div></div>
+</div>
+</div>
+
+<div class="card route-card">
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Jokulsarlon&amp;destination=Hotel+Jokulsarlon&amp;travelmode=driving&amp;waypoints=Glacier+Adventure+Base+Camp+Hali+Iceland%7CDiamond+Beach+Iceland" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>Hótel Jökulsárlón</b></span><span class="route-stop">2<b>Glacier Adventure Base Camp</b></span><span class="route-stop">3<b>Diamond Beach</b></span><span class="route-stop">4<b>Hótel Jökulsárlón</b></span></div>
+</div>
+
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">以下時間直接依「冰島的主行程表」原訂內容整理，旅行現場可快速抓移動節奏。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Hótel Jökulsárlón → Base Camp (Hali)</span><span class="timing-badge">約 15 分鐘</span><span class="timing-note">15 km</span></div><div class="timing-item"><span class="route-text">冰川團集合換裝 → 冰川入口</span><span class="timing-badge">團內車程約 50 分鐘</span><span class="timing-note">包含在 6 小時活動內</span></div><div class="timing-item"><span class="route-text">冰川行程結束 → Diamond Beach</span><span class="timing-badge">約 15 分鐘</span><span class="timing-note">主表安排視天氣看夕陽</span></div><div class="timing-item"><span class="route-text">Diamond Beach → Hótel Jökulsárlón</span><span class="timing-badge">約 10 分鐘</span><span class="timing-note">回飯店參加 19:00 晚宴</span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">Blue Ice Cave Adventure</span><span class="timing-badge">09:30–15:30</span><span class="timing-note">約 6 小時，含接駁、冰川健行與冰洞</span></div><div class="timing-item"><span class="route-text">Diamond Beach</span><span class="timing-badge">17:00–18:30</span><span class="timing-note">主表註記：視天氣安排夕陽</span></div></div></div></div></div>
+
+<div class="day-grid">
+<div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
+<div class="time-row"><div class="time">06:55</div><div><b>視天氣決定是否出門拍晨光</b><p>若雲厚就直接睡飽；若清朗，可到 Jökulsárlón 短拍後回飯店。</p></div></div>
+<div class="time-row"><div class="time">08:00</div><div><b>飯店早餐</b><p>以好消化、高熱量為主；把午間補給準備好。</p></div></div>
+<div class="time-row"><div class="time">08:50</div><div><b>從飯店出發</b><p>Hali 約 15 分鐘。</p></div></div>
+<div class="time-row"><div class="time">09:10</div><div><b>Glacier Adventure Base Camp 報到</b><p>依預訂備註，出發前 20 分鐘到。</p></div></div>
+<div class="time-row"><div class="time">09:30–15:30</div><div><b>Blue Ice Cave Adventure</b><p>換裝、改裝車接駁、步行至冰川、冰洞＋冰川健行。</p></div></div>
+<div class="time-row"><div class="time">16:10</div><div><b>回飯店／短休息</b><p>若體力與天氣都好，可再去 Diamond Beach 30–45 分鐘。</p></div></div>
+<div class="time-row"><div class="time">19:00</div><div><b>Gunna á Leiti 慶功晚宴</b><p>原表 Chun-Lee Chiang 預定。</p></div></div>
+</div>
+<div class="side-stack">
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">冰川健行專用：分層、無棉質</div><div class="feel">體感規劃：冰面接近或低於 0°C，風一吹更冷；避免穿到流汗。</div><ul class="wear-list"><li>羊毛／合成纖維貼身層</li><li>抓絨或保暖中層＋防水防風外殼</li><li>高筒防水登山鞋＋羊毛襪</li><li>保暖手套＋毛帽／脖圍＋太陽眼鏡</li></ul></div>
+<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Hótel Jökulsárlón 早餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">冰川上自備可攜食物</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Gunna á Leiti 19:00</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Hótel Jökulsárlón - Glacier Lagoon Hotel 連住第 2 晚</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>Glacier Adventure Confirmation: 56；09:10 前報到。Hótel Jökulsárlón 連住。</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- DAY 8 -->
+<section class="day" id="day-8">
+<div class="day-head">
+<div class="day-number">DAY 08</div>
+<div class="day-title-wrap">
+<div class="day-date">2026 / 10/09（五）</div>
+<h2>冰河湖晨光 → Zodiac 快艇 → 恩阿菲厄澤跨海大橋 → Vestrahorn → Höfn 龍蝦</h2>
+<div class="meta-row"><span>📍 Jökulsárlón → Höfn</span><span>☀️ 約 07:59 / 18:31</span><span>🚗 約 2 小時</span></div>
+</div>
+</div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🌅 冰河湖晨光</span><span class="focus-chip">🚤 Zodiac 11:40</span><span class="focus-chip">🌉 恩阿菲厄澤跨海大橋</span><span class="focus-chip">🏔️ Vestrahorn</span><span class="focus-chip">🦞 Höfn 龍蝦</span></div><p class="focus-note">上午留給冰河湖，午後自駕前往 Höfn 會途經 Hornafjörður 恩阿菲厄澤跨海大橋（9/1起收費），請駕駛人特別留意於規定時限內官網繳費。</p></div>
+
+<div class="card photo-gallery-card">
+<div class="photo-gallery-head"><div class="photo-gallery-title">📸 今日沿途景點</div><div class="photo-online-note">有網路時載入縮圖</div></div>
+<div class="photo-strip">
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🚤 Fjallsárlón 冰河湖機動</div><img alt="🚤 Fjallsárlón 冰河湖" loading="lazy" src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🚤</span>Fjallsárlón 冰河湖機動</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Fjallsarlon">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🚤 Jökulsárlón 冰河湖</div><img alt="🚤 Jökulsárlón 冰河湖" loading="lazy" src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🚤</span>Jökulsárlón 冰河湖</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Jokulsarlon">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🏔️ Vestrahorn x Stokksnes</div><img alt="🏔️ Vestrahorn" loading="lazy" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🏔️</span>Vestrahorn x Stokksnes</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Vestrahorn+Stokksnes">📍 Google Map</a></div></div></div>
+</div>
+</div>
+
+<div class="card route-card">
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Jokulsarlon&amp;destination=Hrafnavellir+Guest+House&amp;travelmode=driving&amp;waypoints=Jokulsarlon+Glacier+Lagoon+Boat+Tours%7CHornafj%C3%B6r%C3%B0ur%7CVestrahorn+Stokksnes%7CPakkhus+Restaurant+Hofn" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>Hótel Jökulsárlón</b></span><span class="route-stop">2<b>Jökulsárlón Boat Tours</b></span><span class="route-stop">3<b>Hornafjörður 跨海大橋</b></span><span class="route-stop">4<b>Vestrahorn Stokksnes</b></span><span class="route-stop">5<b>Pakkhús Restaurant</b></span><span class="route-stop">6<b>Hrafnavellir Guest House</b></span></div>
+</div>
+
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">以下時間直接依「冰島的主行程表」最新調整內容整理，旅行現場可快速抓移動節奏。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Hótel Jökulsárlón → 冰河湖晨拍</span><span class="timing-badge">約 10 分鐘</span><span class="timing-note">06:30 左右出門</span></div><div class="timing-item"><span class="route-text">Jökulsárlón → 跨越 Hornafjörður 跨海大橋 → Höfn / Vestrahorn</span><span class="timing-badge">約 1 小時 10 分</span><span class="timing-note">80 km；途經大橋單程 1,500 ISK</span></div><div class="timing-item"><span class="route-text">Vestrahorn → Pakkhús Restaurant</span><span class="timing-badge">約 15 分鐘</span><span class="timing-note">15 km</span></div><div class="timing-item"><span class="route-text">Pakkhús → Hrafnavellir Guest House</span><span class="timing-badge">約 25 分鐘</span><span class="timing-note">28 km</span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">Jökulsárlón 晨拍</span><span class="timing-badge">彈性</span><span class="timing-note">拍金山與湖面倒影</span></div><div class="timing-item"><span class="route-text">Jökulsárlón 快艇</span><span class="timing-badge">約 2.5 小時</span><span class="timing-note">11:40 出發；11:10 報到</span></div><div class="timing-item"><span class="route-text">Vestrahorn 蝙蝠山</span><span class="timing-badge">約 30 分鐘</span></div><div class="timing-item"><span class="route-text">Pakkhús 龍蝦晚餐</span><span class="timing-badge">約 1 小時</span></div></div></div></div></div>
+
+<div class="day-grid">
+<div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
+<div class="time-row"><div class="time">06:50</div><div><b>視天候出發拍晨光</b><p>Jökulsárlón / Diamond Beach 二選一；雲厚就留在飯店休息。</p></div></div>
+<div class="time-row"><div class="time">08:15</div><div><b>回飯店早餐</b><p>吃飽、退房、行李上車。</p></div></div>
+<div class="time-row"><div class="time">10:45</div><div><b>前往 Jökulsárlón Boat Tours</b><p>不要晚於 11:10 報到。</p></div></div>
+<div class="time-row"><div class="time">11:10</div><div><b>Zodiac check-in</b><p>官方要求出發前 30 分鐘完成報到。</p></div></div>
+<div class="time-row"><div class="time">11:40–13:00</div><div><b>冰河湖 Zodiac 快艇</b><p>穿救生衣深入冰湖深處近距離賞冰。</p></div></div>
+<div class="time-row"><div class="time">13:00–14:00</div><div><b>咖啡／簡單午餐＋緩衝</b><p>湖畔小憩熱身。</p></div></div>
+<div class="time-row"><div class="time">14:10</div><div><b>往 Höfn（通過恩阿菲厄澤跨海大橋）</b><p>車程約 1 小時 10 分。途經 Hornafjörður 跨海大橋，請於過橋後 5 小時內於官網繳費。</p></div></div>
+<div class="time-row"><div class="time">15:30</div><div><b>Vestrahorn 蝙蝠山</b><p>預留約 30 分鐘拍照欣賞黑沙灘倒影。</p></div></div>
+<div class="time-row"><div class="time">16:30</div><div><b>Pakkhús Restaurant 龍蝦餐</b><p>主行程表預留晚餐約 1 小時。</p></div></div>
+<div class="time-row"><div class="time">18:00</div><div><b>Hrafnavellir Guest House 入住</b><p>入住休息，確認兩台車大橋過路費繳款完成。</p></div></div>
+</div>
+<div class="side-stack">
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">快艇風寒最明顯的一天</div><div class="feel">體感規劃：岸上約 0–7°C；快艇移動時風寒體感會再下降。</div><ul class="wear-list"><li>保暖底層＋抓絨＋薄羽絨</li><li>防風防水外層＋防水鞋厚襪</li><li>毛帽／脖圍＋薄手套＋暖暖包</li><li>太陽眼鏡</li></ul></div>
+<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Hótel Jökulsárlón 早餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">Jökulsárlón Cafe / 自備</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Pakkhús Restaurant 龍蝦餐</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Hrafnavellir Guest House 含早餐</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>Jökulsárlón Book 1568。11:40 出發，11:10 報到。Hrafnavellir：5 人住宿皆已安排。</p></div></div>
+</div>
+</div>
+<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li><b>途經 Hornafjörður 恩阿菲厄澤跨海大橋 9/1 起收費：</b>3.5 噸以下車輛單程 1,500 ISK。通過大橋後 <b>5 小時內</b> 須至官網 <a href="https://spolur.is/en/" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;font-weight:900;">spolur.is/en/</a> 完成線上付款，避免產生租車公司代繳手續費。</li><li>兩台自駕車輛駕駛請記得於抵達 Höfn 或入住飯店後同步上網完成繳款。</li></ul></div>
+</section>
+
+<!-- DAY 9 (更新：改住 Lake Hótel Egilsstaðir，小鎮漫遊後16:30入住整理，5點多前往晚餐，餐後加油回飯店) -->
+<section class="day" id="day-9">
+<div class="day-head">
+<div class="day-number">DAY 09</div>
+<div class="day-title-wrap">
+<div class="day-date">2026 / 10/10（六）</div>
+<h2>東部峽灣 → 彩虹小鎮漫遊 → 埃基斯蒂爾湖濱飯店入住 → Aldan 晚餐 → 加油</h2>
+<div class="meta-row"><span>📍 Eastfjords → Seyðisfjörður → Egilsstaðir</span><span>☀️ 約 08:02 / 18:28</span><span>🚗 約 3 小時 40 分</span></div>
+</div>
+</div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🚗 東部峽灣海岸公路</span><span class="focus-chip">🌈 Seyðisfjörður 小鎮漫遊</span><span class="focus-chip">🏨 Lake Hótel Egilsstaðir</span><span class="focus-chip">🍽️ 18:00 Aldan 晚餐</span><span class="focus-chip">⛽ 餐後順路加油</span></div><p class="focus-note">午後漫步美麗的 Seyðisfjörður 彩虹小鎮，隨後翻越山口前往 Egilsstaðir 湖濱飯店辦理入住放鬆；17:15 前往小鎮享用已預訂的 Aldan 盛宴，餐後回飯店前先將兩台車加滿油，為隔日搭機還車做好萬全準備！</p></div>
+
+<div class="card photo-gallery-card">
+<div class="photo-gallery-head"><div class="photo-gallery-title">📸 今日沿途景點</div><div class="photo-online-note">有網路時載入縮圖</div></div>
+<div class="photo-strip">
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🌊 Hvalnes 燈塔機動</div><img alt="🌊 Hvalnes 燈塔" loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🌊</span>Hvalnes Lighthouse 機動</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Hvalnes+Lighthouse">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🥚 Eggin í Gleðivík 機動</div><img alt="🥚 巨蛋雕塑" loading="lazy" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🥚</span>Eggin í Gleðivík 機動</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Eggin+i+Gledivik">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🌈 Seyðisfjörður 彩虹街</div><img alt="🌈 彩虹街" loading="lazy" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🌈</span>Seyðisfjörður 彩虹街</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Seydisfjordur+Rainbow+Street">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">⛪ Seyðisfjörður 藍教堂</div><img alt="⛪ 藍教堂" loading="lazy" src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">⛪</span>Seyðisfjörður 藍教堂</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Seydisfjordur+Church">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🏨 Lake Hótel Egilsstaðir</div><img alt="🏨 Lake Hótel Egilsstaðir" loading="lazy" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🏨</span>Lake Hótel Egilsstaðir</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Lake+Hotel+Egilsstadir">📍 Google Map</a></div></div></div>
+</div>
+</div>
+
+<div class="card route-card">
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hrafnavellir+Guest+House&amp;destination=Gistihusid+-+Lake+Hotel+Egilsstadir&amp;travelmode=driving&amp;waypoints=Seydisfjordur+Rainbow+Street%7CGistihusid+-+Lake+Hotel+Egilsstadir%7CAldan+Restaurant+Seydisfjordur" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>Hrafnavellir</b></span><span class="route-stop">2<b>Seyðisfjörður 小鎮</b></span><span class="route-stop">3<b>Lake Hótel 入住</b></span><span class="route-stop">4<b>Aldan 晚宴</b></span><span class="route-stop">5<b>加油站 (Egilsstaðir)</b></span><span class="route-stop">6<b>Lake Hótel 休息</b></span></div>
+</div>
+
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">依「小鎮漫遊 ➔ 湖濱飯店入住 ➔ 前往晚宴 ➔ 餐後加油回飯店」動線整理行車節奏。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Hrafnavellir → Seyðisfjörður 小鎮</span><span class="timing-badge">約 3 小時</span><span class="timing-note">210 km；經 Egilsstaðir 翻越 Road 93</span></div><div class="timing-item"><span class="route-text">Seyðisfjörður → Lake Hótel Egilsstaðir</span><span class="timing-badge">約 30 分鐘</span><span class="timing-note">27 km；翻越山口返回市區辦理入住</span></div><div class="timing-item"><span class="route-text">Lake Hótel → Aldan Restaurant</span><span class="timing-badge">約 30 分鐘</span><span class="timing-note">27 km；17:15 出發前往用餐</span></div><div class="timing-item"><span class="route-text">Aldan → 加油站 (N1/Orkan) → Lake Hótel</span><span class="timing-badge">約 35 分鐘</span><span class="timing-note">餐後順道把兩台車加滿油再回飯店</span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">Seyðisfjörður 小鎮散步</span><span class="timing-badge">約 1.5–2 小時</span><span class="timing-note">彩虹街、藍教堂、港灣風景</span></div><div class="timing-item"><span class="route-text">Lake Hótel Egilsstaðir 入住整理</span><span class="timing-badge">16:30–17:15</span><span class="timing-note">卸行李、洗漱、換穿保暖整齊服裝</span></div><div class="timing-item"><span class="route-text">Aldan Restaurant 晚餐</span><span class="timing-badge">18:00–20:00</span><span class="timing-note">已訂位：5 位 (Camille Chu )</span></div></div></div></div></div>
+
+<div class="day-grid">
+<div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
+<div class="time-row"><div class="time">08:00</div><div><b>Hrafnavellir 早餐</b><p>退房前補足熱水與隨身乾糧。</p></div></div>
+<div class="time-row"><div class="time">09:00</div><div><b>沿 Ring Road 往東部峽灣前進</b><p>欣賞壯麗峽灣海景，中途短暫停靠觀景休整。</p></div></div>
+<div class="time-row"><div class="time">13:30</div><div><b>Seyðisfjörður 彩虹小鎮漫遊</b><p>翻越著名的白日夢冒險王滑板公路 Road 93 進入峽灣小鎮，漫步彩虹步道、拍攝經典藍色木造教堂與寧靜峽灣海港。</p></div></div>
+<div class="time-row"><div class="time">15:50</div><div><b>啟程前往埃伊爾斯塔濟</b><p>開車翻越山口返回 Egilsstaðir，車程約 30 分鐘。</p></div></div>
+<div class="time-row"><div class="time">16:30</div><div><b>埃基斯蒂爾湖濱飯店辦理入住</b><p>入住 Gistihúsið - Lake Hótel Egilsstaðir，房間開箱、卸下大件行李、稍作休息整理。</p></div></div>
+<div class="time-row"><div class="time">17:15</div><div><b>出發前往晚餐</b><p>再次出發翻越山口前往 Seyðisfjörður，車程約 30 分鐘。</p></div></div>
+<div class="time-row"><div class="time">18:00–20:00</div><div><b>Aldan Restaurant 晚餐（已訂位）</b><p>在典雅溫馨的木造建築中享用東部峽灣特色佳餚。5 位 訂位: Cami| Confirmation</p></div></div>
+<div class="time-row"><div class="time">20:15</div><div><b>返程並於 Egilsstaðir 加油</b><p>安全開回 Egilsstaðir，在市區加油站（如 N1 / Orkan）<b>先將兩台車油箱加滿</b>，避免隔天一早趕飛機匆忙。</p></div></div>
+<div class="time-row"><div class="time">21:00</div><div><b>返回 Lake Hótel Egilsstaðir</b><p>享受舒適的湖畔夜色，整理隔日搭機行李早點就寢。</p></div></div>
+</div>
+<div class="side-stack">
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">山口防風防凍＋晚宴舒適整齊</div><div class="feel">體感規劃：湖邊約 1–7°C；山口海拔高可能遇霧、風雪與黑冰。</div><ul class="wear-list"><li>保暖排汗打底＋羊毛針織中層</li><li>防風防水硬殼衝鋒衣＋好走防水鞋</li><li>毛帽、厚手套放車上隨時取用</li><li>晚餐可換穿保暖乾淨便服</li></ul></div>
+<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Hrafnavellir 早餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">Egilsstaðir 或小鎮特色輕食</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Aldan Restaurant 18:00–20:00 (已訂位)</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Gistihúsið - Lake Hótel Egilsstaðir（埃伊爾斯塔濟埃基斯蒂爾湖濱飯店）</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>Lake Hótel Egilsstaðir 住宿。Aldan Restaurant 18:00–20:00 已訂位。</p></div></div>
+</div>
+</div>
+<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li><b>16:30 先回飯店 Check-in 整理</b>：五點多再出門赴宴，避免帶著整車大件行李去餐廳。</li><li><b>今晚吃完飯務必先加油</b>：回飯店前在 Egilsstaðir 加滿兩台車的油箱，明天一早還車直奔機場不用再找加油站！</li><li>Road 93 山口入夜後氣溫驟降容易起霧或結冰，夜間行車請開啟霧燈並保持大車距。</li></ul></div>
+</section>
+
+<!-- DAY 10 (更新：06:30吃早餐、07:30退房開車還車、08:30到機場搭機；抵達雷克雅維克加入托寧湖、冰島國家美術館、Bæjarins Beztu Pylsur熱狗等) -->
+<section class="day" id="day-10">
+<div class="day-head">
+<div class="day-number">DAY 10</div>
+<div class="day-title-wrap">
+<div class="day-date">2026 / 10/11（日）</div>
+<h2>EGS 還車 → 國內線飛抵首都 → 托寧湖 × 國家美術館 → Bæjarins Beztu 熱狗 → 哈帕音樂廳</h2>
+<div class="meta-row"><span>📍 Egilsstaðir ✈️ Reykjavík</span><span>☀️ 約 08:05 / 18:24</span><span>🚗 機場短程＋市區漫步</span></div>
+</div>
+</div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🚙 兩台 還車 (EGS)</span><span class="focus-chip">✈️ FI061 飛抵首都</span><span class="focus-chip">🦆 托寧湖散步</span><span class="focus-chip">🎨 冰島國家美術館</span><span class="focus-chip">🌭 正宗 SS 羊肉熱狗堡</span><span class="focus-chip">🏛️ Harpa 音樂廳</span><span class="focus-chip">⛵ 太陽航海者</span></div><p class="focus-note">07:30 從 Lake Hótel 出發，08:30 前抵達 EGS 完成兩台車還車並搭乘國內線飛抵雷克雅維克。下午悠閒漫步托寧湖畔、參觀國家美術館，品嚐全冰島最知名的羊肉熱狗，夜宿市中心 Hotel Reykjavík Saga。</p></div>
+
+<div class="card photo-gallery-card">
+<div class="photo-gallery-head"><div class="photo-gallery-title">📸 今日沿途景點</div><div class="photo-online-note">有網路時載入縮圖</div></div>
+<div class="photo-strip">
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🦆 Tjörnin 托寧湖</div><img alt="🦆 托寧湖" loading="lazy" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🦆</span>Tjörnin 托寧湖</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Tjornin+Reykjavik">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🎨 冰島國家美術館</div><img alt="🎨 冰島國家美術館" loading="lazy" src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🎨</span>國家美術館 National Gallery</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=National+Gallery+of+Iceland">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🌭 Bæjarins Beztu Pylsur</div><img alt="🌭 著名熱狗攤" loading="lazy" src="https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🌭</span>Bæjarins Beztu 熱狗</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Baejarins+Beztu+Pylsur">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🏛️ Harpa 音樂廳</div><img alt="🏛️ Harpa 音樂廳" loading="lazy" src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🏛️</span>Harpa 音樂廳</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Harpa+Reykjavik">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">⛵ Sun Voyager 太陽航海者</div><img alt="⛵ Sun Voyager" loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">⛵</span>Sun Voyager 太陽航海者</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Sun+Voyager">📍 Google Map</a></div></div></div>
+</div>
+</div>
+
+<div class="card route-card">
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Gistihusid+-+Lake+Hotel+Egilsstadir&amp;destination=Hotel+Reykjavik+Saga&amp;travelmode=driving&amp;waypoints=Egilsstadir+Airport" rel="noopener noreferrer">📍 開啟 Lake Hótel - EGS 機場路線 ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>Lake Hótel</b></span><span class="route-stop">2<b>EGS 機場 (還車)</b></span><span class="route-stop">3<b>RKV 國內機場</b></span><span class="route-stop">4<b>Hotel Reykjavík Saga</b></span><span class="route-stop">5<b>托寧湖 & 國家美術館</b></span><span class="route-stop">6<b>Bæjarins Beztu 熱狗</b></span><span class="route-stop">7<b>Harpa & 太陽航海者</b></span><span class="route-stop">8<b>Sjávargrillið 晚餐</b></span></div>
+</div>
+
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">以下時間直接依據更新後的住宿點與航班時間安排，行進節奏井然有序。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Lake Hótel Egilsstaðir → EGS 機場</span><span class="timing-badge">約 6 分鐘</span><span class="timing-note">3.5 km；昨晚已加滿油，從容直達</span></div><div class="timing-item"><span class="route-text">EGS ✈ RKV 國內班機 (FI061)</span><span class="timing-badge">1 小時 5 分</span><span class="timing-note">10:05–11:10 飛行</span></div><div class="timing-item"><span class="route-text">RKV 國內機場 → Hotel Reykjavík Saga</span><span class="timing-badge">計程車約 8 分鐘</span><span class="timing-note">行李直達市區飯店</span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text"> 兩台車還車 ＆ 機場候機</span><span class="timing-badge">08:30–09:30</span><span class="timing-note">檢查車況核對收據，安心候機</span></div><div class="timing-item"><span class="route-text">托寧湖散步 ＆ 冰島國家美術館</span><span class="timing-badge">約 1.5 小時</span><span class="timing-note">飯店步行 5 分鐘即達，欣賞湖光天鵝與冰島頂級藝術品</span></div><div class="timing-item"><span class="route-text">Bæjarins Beztu Pylsur 美食朝聖</span><span class="timing-badge">約 30 分鐘</span><span class="timing-note">必點「一隻全加 (eina með öllu)」SS 羊肉熱狗腸</span></div></div></div></div></div>
+
+<div class="day-grid">
+<div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
+<div class="time-row"><div class="time">06:30</div><div><b>Lake Hótel 早餐</b><p>在飯店享用豐盛湖景早餐，確認行李全部收拾完畢。</p></div></div>
+<div class="time-row"><div class="time">07:30</div><div><b>辦理退房出發</b><p>退房後兩台車集合出發，昨晚已加滿油，直接開往機場。</p></div></div>
+<div class="time-row"><div class="time">08:30</div><div><b>抵達 EGS 機場、兩台車辦理還車</b><p>統一步行至 租車 櫃檯交回兩台車輛鑰匙，檢查車況，預留充足時間從容候機。</p></div></div>
+<div class="time-row"><div class="time">10:05–11:10</div><div><b>FI061 航班 EGS ✈ RKV</b><p>搭乘冰島國內線班機飛抵雷克雅維克國內機場。</p></div></div>
+<div class="time-row"><div class="time">11:35</div><div><b>抵達市中心飯店寄放行李</b><p>計程車直達 Hotel Reykjavík Saga 辦理寄放行李，一身輕裝出發漫遊。</p></div></div>
+<div class="time-row"><div class="time">12:15</div><div><b>托寧湖（Tjörnin）散步 ＆ 冰島國家美術館</b><p>沿著波光粼粼的托寧湖漫步賞水鳥，接著參觀湖畔的<b>冰島國家美術館（National Gallery of Iceland）</b>，欣賞珍貴的冰島現代繪畫與北歐雕塑收藏。</p></div></div>
+<div class="time-row"><div class="time">14:00</div><div><b>Bæjarins Beztu Pylsur 品嚐正宗 SS 熱狗</b><p>朝聖柯林頓也讚不絕口的百年熱狗老店！選用冰島老字號 <b>SS (Sláturfélag Suðurlands)</b> 羊肉熱狗腸，搭配炸洋蔥、生洋蔥、番茄醬與特調芥末甜醬，美味難忘。</p></div></div>
+<div class="time-row"><div class="time">15:00</div><div><b>Harpa 音樂廳 ＆ 太陽航海者（The Sun Voyager）</b><p>參觀 Harpa 令人驚豔的六角形幾何玻璃帷幕與舊港風景，隨後漫步至海邊與標誌性的維京維納斯「太陽航海者」鋼雕合影。</p></div></div>
+<div class="time-row"><div class="time">18:00</div><div><b>Sjávargrillið 晚餐</b><p>品嚐頂級冰島海鮮烤物料理，原表 Nicole 預定。</p></div></div>
+</div>
+<div class="side-stack">
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">搭機輕便＋城市質感散步</div><div class="feel">體感規劃：約 2–7°C；市區步行舒適，海邊 Harpa 仍有微風。</div><ul class="wear-list"><li>保暖透氣長袖打底＋輕盈針織衫</li><li>防風防水中長版大衣或防風外套</li><li>休閒好走的防水運動鞋或便鞋</li><li>隨身斜背包方便裝護照與戰利品</li></ul></div>
+<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐與特色美食</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Lake Hótel 06:30 早餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐/點心</div><div class="daily-meal-value">Bæjarins Beztu Pylsur 經典 SS 羊肉熱狗</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Sjávargrillið 18:00 (海鮮烤物)</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Hotel Reykjavík Saga / ODDSSON Reykjavík</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>兩台 租車 統一於 EGS 還車。FI061 10:05–11:10。Sjávargrillið 18:00。</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- DAY 11 (更新：哈爾格林教堂、彩虹街、MJÚK、雙肉桂捲Braud & Co.與Sandholt、主街、雷克雅維克藝術博物館Kjarvalsstadir) -->
+<section class="day" id="day-11">
+<div class="day-head">
+<div class="day-number">DAY 11</div>
+<div class="day-title-wrap">
+<div class="day-date">2026 / 10/12（一）</div>
+<h2>哈爾格林教堂 → 雙肉桂捲名店盲測 → 彩虹街 × MJÚK 設計店 → 藝術博物館 → 機場萬豪</h2>
+<div class="meta-row"><span>📍 Reykjavík → KEF</span><span>☀️ 約 08:08 / 18:21</span><span>🚗 計程車約 45–50 分</span></div>
+</div>
+</div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">⛪ 哈爾格林教堂頂樓俯瞰</span><span class="focus-chip">🥐 Braud & Co. 肉桂捲</span><span class="focus-chip">🌈 彩虹街 Skólavörðustígur</span><span class="focus-chip">🧣 MJÚK Iceland 獨立設計</span><span class="focus-chip">🥖 Sandholt 百年肉桂捲</span><span class="focus-chip">🛍️ Laugavegur 首都主街</span><span class="focus-chip">🖼️ 藝術博物館 Kjarvalsstaðir</span><span class="focus-chip">🍽️ 17:30 Grillmarkaðurinn</span></div><p class="focus-note">首都深度文藝與美食日：集齊雷克雅維克兩大傳奇肉桂捲（Braud & Co. vs Sandholt）、漫步彩虹街探訪獨立設計師品牌 MJÚK，造訪綠蔭環繞的雷克雅維克藝術博物館 Kjarvalsstaðir，傍晚大餐後前往機場萬豪飯店。</p></div>
+
+<div class="card photo-gallery-card">
+<div class="photo-gallery-head"><div class="photo-gallery-title">📸 今日沿途景點</div><div class="photo-online-note">有網路時載入縮圖</div></div>
+<div class="photo-strip">
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">⛪ 哈爾格林教堂</div><img alt="⛪ 哈爾格林教堂" loading="lazy" src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">⛪</span>哈爾格林教堂</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Hallgrimskirkja">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🥐 Braud & Co. 肉桂捲</div><img alt="🥐 Braud & Co." loading="lazy" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🥐</span>Braud & Co. 肉桂捲</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Braud+%26+Co+Reykjavik">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🧣 MJÚK Iceland</div><img alt="🧣 MJÚK Iceland" loading="lazy" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🧣</span>MJÚK Iceland 設計店</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=MJUK+Iceland+Reykjavik">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🥖 Sandholt 百年名店</div><img alt="🥖 Sandholt" loading="lazy" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🥖</span>Sandholt 經典肉桂捲</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Sandholt+Reykjavik">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🛍️ Laugavegur 商業街</div><img alt="🛍️ Laugavegur" loading="lazy" src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🛍️</span>主街 Laugavegur</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Laugavegur+Reykjavik">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🖼️ Kjarvalsstaðir 博物館</div><img alt="🖼️ Kjarvalsstadir" loading="lazy" src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🖼️</span>Kjarvalsstaðir 藝術館</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Kjarvalsstadir+Reykjavik+Art+Museum">📍 Google Map</a></div></div></div>
+</div>
+</div>
+
+<div class="card route-card">
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Reykjavik+Saga&amp;destination=Courtyard+by+Marriott+Reykjavik+Keflavik+Airport&amp;travelmode=driving&amp;waypoints=Hallgrimskirkja%7CBraud+%26+Co%7CMJUK+Iceland+Reykjavik%7CSandholt%7CKjarvalsstadir%7CGrillmarkadurinn" rel="noopener noreferrer">📍 開啟 Google Maps 市區自駕／接駁路線 ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>Hotel Reykjavík Saga</b></span><span class="route-stop">2<b>哈爾格林教堂</b></span><span class="route-stop">3<b>Braud & Co.</b></span><span class="route-stop">4<b>彩虹街 & MJÚK</b></span><span class="route-stop">5<b>Sandholt & Laugavegur</b></span><span class="route-stop">6<b>Kjarvalsstaðir 藝術館</b></span><span class="route-stop">7<b>Grillmarkaðurinn 晚餐</b></span><span class="route-stop">8<b>萬豪飯店 (KEF)</b></span></div>
+</div>
+
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">白天全區步行可達，傍晚行李裝車後搭乘計程車直奔機場飯店。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Reykjavík 市區 → Kjarvalsstaðir 藝術館</span><span class="timing-badge">步行約 15 分鐘</span><span class="timing-note">穿過市區林蔭公園</span></div><div class="timing-item"><span class="route-text">Reykjavík 市區 → Courtyard Marriott KEF</span><span class="timing-badge">車程約 45 分鐘</span><span class="timing-note">50 km；晚宴後專車接駁，約 7,000 ISK</span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">哈爾格林教堂 ＆ Braud & Co.</span><span class="timing-badge">約 1 小時</span><span class="timing-note">登塔鳥瞰彩色房舍，享用剛出爐肉桂捲</span></div><div class="timing-item"><span class="route-text">彩虹街、MJÚK 設計店 ＆ Sandholt</span><span class="timing-badge">約 2 小時</span><span class="timing-note">購買獨立設計羊毛配件，品嚐百年肉桂捲名店</span></div><div class="timing-item"><span class="route-text">雷克雅維克藝術博物館 (Kjarvalsstaðir)</span><span class="timing-badge">約 1 小時</span><span class="timing-note">北歐現代主義建築與冰島傳奇大師畫作</span></div><div class="timing-item"><span class="route-text">Grillmarkaðurinn 盛宴</span><span class="timing-badge">17:30</span><span class="timing-note">原表 Nicole 預定經典炭烤料理</span></div></div></div></div></div>
+
+<div class="day-grid">
+<div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
+<div class="time-row"><div class="time">08:00</div><div><b>飯店早餐 ＆ 辦理退房</b><p>退房後行李寄放於飯店櫃檯，開啟市區深度漫遊。</p></div></div>
+<div class="time-row"><div class="time">09:30</div><div><b>哈爾格林教堂（Hallgrimskirkja）</b><p>搭乘電梯直上塔頂，將雷克雅維克如童話般的彩色矮房與北大西洋全景盡收眼底。</p></div></div>
+<div class="time-row"><div class="time">10:45</div><div><b>Braud & Co. 現烤肉桂捲</b><p>教堂轉角處的繽紛彩繪小屋！剛出爐的肉桂捲香氣撲鼻、層次酥脆濃郁，趁熱品嚐最極致的幸福口感。</p></div></div>
+<div class="time-row"><div class="time">11:30</div><div><b>彩虹街（Skólavörðustígur）＆ MJÚK Iceland</b><p>沿著彩虹大道下行，探訪冰島指標性獨立設計品牌 <b>MJÚK Iceland</b>！告別大街上千篇一律的量產紀念品，親手觸摸細膩原創的冰島羊毛圍巾與帽子，質感絕佳。</p></div></div>
+<div class="time-row"><div class="time">12:45</div><div><b>Sandholt 百年烘焙名店 ＆ 主街 Laugavegur</b><p>在首都主街上的傳奇名店 Sandholt 品嚐外酥內軟、風味細緻的經典肉桂捲（與 Braud & Co. 進行肉桂控的終極盲測），順道逛街採買冰島伴手禮。</p></div></div>
+<div class="time-row"><div class="time">14:15</div><div><b>雷克雅維克藝術博物館（Kjarvalsstaðir）</b><p>坐落於 Klambratún 公園內的北歐現代主義建築，館內專注展示冰島靈魂畫家 Jóhannes S. Kjarval 描繪冰島火山與自然的經典名作，文藝氣息濃厚。</p></div></div>
+<div class="time-row"><div class="time">16:00</div><div><b>回飯店領取行李 ＆ 整理戰利品</b><p>將兩天買齊的毛衣、紀念品妥善裝箱，留出明早搭機保暖外套。</p></div></div>
+<div class="time-row"><div class="time">17:30</div><div><b>Grillmarkaðurinn 晚餐</b><p>在低調奢華的火山岩裝潢餐廳享受精緻炭烤晚宴，慶祝冰島環島圓滿成功！</p></div></div>
+<div class="time-row"><div class="time">19:30</div><div><b>專車接駁前往機場萬豪飯店</b><p>搭乘計程車直達 KEF 機場旁飯店，車程約 45 分鐘。</p></div></div>
+<div class="time-row"><div class="time">20:30</div><div><b>Courtyard by Marriott KEF 入住</b><p>辦理入住，設定好隔日 04:00 起床鬧鐘，無壓力好眠。</p></div></div>
+</div>
+<div class="side-stack">
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">文藝漫步＋高級餐廳裝束</div><div class="feel">體感規劃：約 2–7°C；市區多室內景點，洋蔥式穿法最便利。</div><ul class="wear-list"><li>保暖打底＋保暖毛衣／針織開襟衫</li><li>防風防水大衣＋俐落長褲</li><li>舒適好走的市區步行鞋</li><li>可戴今日在 MJÚK 採購的原創羊毛帽與圍巾</li></ul></div>
+<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐與特色點心</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">飯店早餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">🥐 雙名店評比</div><div class="daily-meal-value">Braud & Co. 濃郁酥脆 vs Sandholt 細膩層次肉桂捲</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Grillmarkaðurinn 17:30 (炭烤盛宴)</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Courtyard by Marriott Reykjavik Keflavik Airport ｜機場旁</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>Grillmarkaðurinn 17:30。Courtyard by Marriott KEF 住宿。</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- DAY 12 -->
+<section class="day" id="day-12">
+<div class="day-head">
+<div class="day-number">DAY 12</div>
+<div class="day-title-wrap">
+<div class="day-date">2026 / 10/13（二）</div>
+<h2>告別冰島 → London 4.5 小時快閃 → CI0082 回台</h2>
+<div class="meta-row"><span>📍 KEF ✈️ LHR → London</span><span>☀️ 冰島約 08:11 / 18:17</span><span>🚗 倫敦大眾運輸</span></div>
+</div>
+</div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">✈️ KEF ✈ LHR</span><span class="focus-chip">🇬🇧 London 快閃</span><span class="focus-chip">🛍️ 市區採買</span><span class="focus-chip">⏰ 18:30 LHR T3</span><span class="focus-chip">✈️ CI0082</span></div><p class="focus-note">倫敦只抓一條簡單動線；回到機場的時間比多看一個景點更重要。</p></div>
+
+<div class="card photo-gallery-card">
+<div class="photo-gallery-head"><div class="photo-gallery-title">📸 今日沿途景點</div><div class="photo-online-note">有網路時載入縮圖</div></div>
+<div class="photo-strip">
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🛍️ Old Bond Street</div><img alt="Old Bond Street" loading="lazy" src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🛍️</span>Old Bond Street</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Bond+Street+London">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🛍️ Regent Street</div><img alt="Regent Street" loading="lazy" src="https://images.unsplash.com/photo-1543731068-7e0f5beff43a?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🛍️</span>Regent Street</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Regent+Street+London">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🍵 Fortnum & Mason</div><img alt="Fortnum & Mason" loading="lazy" src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🍵</span>Fortnum & Mason</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Fortnum+%26+Mason">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🕰️ Big Ben / 大笨鐘</div><img alt="Big Ben" loading="lazy" src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🕰️</span>Big Ben / Elizabeth Tower</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Big+Ben+Westminster">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🎡 London Eye 倫敦眼機動</div><img alt="London Eye" loading="lazy" src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🎡</span>London Eye 倫敦眼機動</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=London+Eye">📍 Google Map</a></div></div></div>
+</div>
+</div>
+
+<div class="card route-card">
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Heathrow+Airport&amp;destination=Heathrow+Airport+Terminal+3&amp;travelmode=transit&amp;waypoints=Bond+Street+London%7CRegent+Street+London%7CFortnum+%26+Mason%7CBig+Ben+Westminster" rel="noopener noreferrer">📍 開啟 Google Maps 自駕／大眾運輸路線 ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>Heathrow Airport</b></span><span class="route-stop">2<b>Bond Street</b></span><span class="route-stop">3<b>Regent Street</b></span><span class="route-stop">4<b>Fortnum & Mason</b></span><span class="route-stop">5<b>Big Ben</b></span><span class="route-stop">6<b>LHR T3</b></span></div>
+</div>
+
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">以下時間直接依「冰島的主行程表」原訂內容整理，旅行現場可快速抓移動節奏。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">KEF → London Heathrow (LHR)</span><span class="timing-badge">3 小時 15 分</span><span class="timing-note">FI0450 07:40–11:55</span></div><div class="timing-item"><span class="route-text">London Heathrow ⇆ 倫敦市區</span><span class="timing-badge">進出市區</span><span class="timing-note">Heathrow Express 或 Elizabeth line</span></div><div class="timing-item"><span class="route-text">London Heathrow → 台北桃園 TPE</span><span class="timing-badge">12 小時 40 分</span><span class="timing-note">CI0082 21:10 起飛</span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">倫敦快閃</span><span class="timing-badge">約 4.5–6 小時</span><span class="timing-note">約 18:00–18:30 前回到機場</span></div></div></div></div></div>
+
+<div class="day-grid">
+<div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
+<div class="time-row"><div class="time">04:00</div><div><b>起床／退房</b><p>飯店到 KEF 很近，但國際線仍保留完整報到時間。</p></div></div>
+<div class="time-row"><div class="time">05:10–05:30</div><div><b>抵達 KEF</b><p>確認行李是否可直掛 TPE。</p></div></div>
+<div class="time-row"><div class="time">07:40</div><div><b>FI0450 起飛</b><p>KEF ✈ LHR，航程約 3 小時 15 分。</p></div></div>
+<div class="time-row"><div class="time">11:55</div><div><b>抵達 Heathrow</b><p>走 Arrivals 入境；實際通關時間依人流。</p></div></div>
+<div class="time-row"><div class="time">約 13:15</div><div><b>搭 Elizabeth Line 進市區</b><p>若 13:30 前仍未離開機場，直接縮短市區動線。</p></div></div>
+<div class="time-row"><div class="time">13:45–15:15</div><div><b>Bond Street / Regent Street</b><p>購物與午餐；不追太多點。</p></div></div>
+<div class="time-row"><div class="time">15:15–16:15</div><div><b>Piccadilly / Fortnum & Mason</b><p>伴手禮集中採買。</p></div></div>
+<div class="time-row"><div class="time">16:25–17:20</div><div><b>Westminster / Big Ben</b><p>天氣好才走戶外；下雨直接把時間留給室內購物。</p></div></div>
+<div class="time-row"><div class="time">17:35</div><div><b>開始返回 Heathrow</b><p>搭乘 Elizabeth Line；不要再加景點。</p></div></div>
+<div class="time-row"><div class="time">18:30</div><div><b>回到 LHR T3</b><p>安檢、出境、登機。</p></div></div>
+<div class="time-row"><div class="time">21:10</div><div><b>CI0082 起飛</b><p>LHR ✈ TPE，10/14 17:50 抵達。</p></div></div>
+</div>
+<div class="side-stack">
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">冰島冬裝拆成倫敦可穿的模組</div><div class="feel">體感規劃：倫敦十月較溫和；以可快速增減的分層穿法最實用。</div><ul class="wear-list"><li>薄長袖／T-shirt</li><li>輕中層＋防水外套</li><li>好走鞋</li><li>厚羽絨可收進行李，不必整天穿</li></ul></div>
+<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">飯店早餐盒／KEF 機場</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">London 市區</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">LHR 或機上餐</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>機上</p></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>FI0450 07:40–11:55；CI0082 21:10 起飛。</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- DAY 13 -->
+<section class="day" id="day-13">
+<div class="day-head">
+<div class="day-number">DAY 13</div>
+<div class="day-title-wrap">
+<div class="day-date">2026 / 10/14（三）</div>
+<h2>抵達台灣｜旅程收尾</h2>
+<div class="meta-row"><span>📍 LHR → TPE</span><span>☀️ 溫暖的家</span><span>🚗 機場接駁</span></div>
+</div>
+</div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">✈️ 長途飛行</span><span class="focus-chip">🛬 桃園入境領行李</span><span class="focus-chip">🏠 回家休息</span></div><p class="focus-note">旅程正式收尾。抵台後不再排集合活動，大家回家休息。</p></div>
+
+<div class="card route-card">
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Heathrow+Airport" rel="noopener noreferrer">📍 手機開啟 Heathrow Airport ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>Heathrow Airport</b></span><span class="route-stop">2<b>Taiwan Taoyuan International Airport</b></span></div>
+<div class="online-note">最後一天只留給飛行、入境與回家。</div>
+</div>
+
+<div class="day-grid">
+<div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
+<div class="time-row"><div class="time">飛行中</div><div><b>跨時區返台</b><p>補水、活動腿部、調整到台灣時間。</p></div></div>
+<div class="time-row"><div class="time">17:50</div><div><b>抵達桃園 TPE</b><p>入境、領行李。</p></div></div>
+<div class="time-row"><div class="time">晚間</div><div><b>甜蜜的家</b><p>把濕鞋、雨衣、冰川裝備先攤開乾燥；隔天再整理照片與帳務。</p></div></div>
+</div>
+<div class="side-stack">
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">機艙舒適即可</div><div class="feel">體感規劃：台灣體感比冰島溫暖，抵達前可把厚層收回手提行李。</div><ul class="wear-list"><li>舒適長褲＋薄長袖／T-shirt</li><li>保暖薄外套</li></ul></div>
+<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">機上餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">機上餐／依航班供應</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">抵台後自行安排</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>甜蜜的家</p></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>CI0082 預計 17:50 抵達桃園。</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- 出發前連線查詢 / 本頁研究來源 -->
+<section class="sources-card">
+  <h3>出發前連線查詢／本頁研究來源</h3>
+  <p class="sources-note">下列連結只有在有網路時才會開啟；HTML 本身的每日行程、穿搭與路線順序完全可離線使用。</p>
+  <div class="sources-grid">
+    <a class="source-box" href="https://spolur.is/en/" target="_blank" rel="noopener noreferrer">
+      <span>Spölur ｜ Hornafjörður 跨海大橋過路費繳款</span>
+      <small>https://spolur.is/en/</small>
+    </a>
+    <a class="source-box" href="https://safetravel.is/outdoors/clothing/" target="_blank" rel="noopener noreferrer">
+      <span>SafeTravel ｜ 穿搭分層與防水</span>
+      <small>https://safetravel.is/outdoors/clothing/</small>
+    </a>
+    <a class="source-box" href="https://safetravel.is/travel-conditions/blackbeach-safety/" target="_blank" rel="noopener noreferrer">
+      <span>SafeTravel ｜ Reynisfjara 黑沙灘安全</span>
+      <small>https://safetravel.is/travel-conditions/blackbeach-safety/</small>
+    </a>
+    <a class="source-box" href="https://umferdin.is/en" target="_blank" rel="noopener noreferrer">
+      <span>Umferðin ｜ 冰島即時道路狀況</span>
+      <small>https://umferdin.is/en</small>
+    </a>
+    <a class="source-box" href="https://en.vedur.is/" target="_blank" rel="noopener noreferrer">
+      <span>Icelandic Met Office ｜ 氣象</span>
+      <small>https://en.vedur.is/</small>
+    </a>
+    <a class="source-box" href="https://www.bluelagoon.com/opening-hours" target="_blank" rel="noopener noreferrer">
+      <span>Blue Lagoon ｜ Opening Hours</span>
+      <small>https://www.bluelagoon.com/opening-hours</small>
+    </a>
+    <a class="source-box" href="https://glacieradventure.is/tour/blue-ice-cave-adventure/" target="_blank" rel="noopener noreferrer">
+      <span>Glacier Adventure ｜ Blue Ice Cave Adventure</span>
+      <small>https://glacieradventure.is/tour/blue-ice-cave-adventure/</small>
+    </a>
+    <a class="source-box" href="https://icelagoon.is/tours/zodiac-boat-tour/" target="_blank" rel="noopener noreferrer">
+      <span>Jökulsárlón ｜ Zodiac Tour</span>
+      <small>https://icelagoon.is/tours/zodiac-boat-tour/</small>
+    </a>
+    <a class="source-box" href="https://www.gov.uk/eta" target="_blank" rel="noopener noreferrer">
+      <span>GOV.UK ｜ ETA</span>
+      <small>https://www.gov.uk/eta</small>
+    </a>
+    <a class="source-box" href="https://www.gov.uk/uk-border-control/at-border-control" target="_blank" rel="noopener noreferrer">
+      <span>GOV.UK ｜ UK border control</span>
+      <small>https://www.gov.uk/uk-border-control/at-border-control</small>
+    </a>
+  </div>
+</section>
+
+
+
+</main>
+
+<footer>
+<p>© 2026 KC & Cami's Travel. 冰島五人自由行旅行手冊</p>
+</footer>
+
+<a class="top-btn" href="#top" title="回到頁首">↑</a>
+
+</body></html>

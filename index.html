@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Our Travel</title>
+  <style>
+    :root {
+      --ink: #1f2d33;
+      --muted: #63737a;
+      --paper: #f7f6f2;
+      --card-bg: #ffffff;
+      --line: #e3e2dc;
+      --deep: #274b55;
+      --accent: #55746e;
+      --highlight: #d9c6a0;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.6;
+    }
+
+    /* 頂部品牌 Header */
+    .hero {
+      text-align: center;
+      padding: 70px 20px 40px;
+      background: radial-gradient(circle at 50% 20%, rgba(111,157,168,0.12), transparent 45%), var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: #eef4f2;
+      border: 1px solid #cfded9;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(34px, 5.5vw, 54px);
+      font-weight: 900;
+      letter-spacing: .03em;
+      color: var(--deep);
+    }
+    .subtitle {
+      margin: 0 auto;
+      max-width: 600px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* 內容容器 */
+    main {
+      max-width: 960px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 850;
+      color: var(--deep);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
+    /* 行程卡片清單 */
+    .trip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .trip-card {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 18px rgba(31,45,51,0.03);
+    }
+    .trip-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 32px rgba(39,75,85,0.1);
+      border-color: #bcd1d6;
+    }
+    
+    /* 卡片封面圖 */
+    .card-cover {
+      position: relative;
+      width: 100%;
+      height: 195px;
+      background: linear-gradient(135deg, #1b2830 0%, #111a1f 100%);
+      overflow: hidden;
+    }
+    .card-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.92;
+      transition: transform 0.4s ease;
+    }
+    .trip-card:hover .card-cover img {
+      transform: scale(1.05);
+    }
+    .card-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(4px);
+      padding: 4px 11px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--deep);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .card-tag.birthday {
+      background: rgba(255, 246, 249, 0.94);
+      color: #9c4167;
+      border: 1px solid #f2cfdb;
+    }
+    .card-tag.concert {
+      background: rgba(255, 249, 235, 0.95);
+      color: #b45309;
+      border: 1px solid #fde68a;
+    }
+
+    /* 卡片文字內容 */
+    .card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .trip-date {
+      font-size: 13px;
+      font-weight: 800;
+      color: #9a6a28;
+      letter-spacing: .04em;
+      margin-bottom: 6px;
+    }
+    .trip-title {
+      font-size: 21px;
+      font-weight: 900;
+      color: var(--ink);
+      margin: 0 0 10px;
+      line-height: 1.35;
+    }
+    .trip-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0 0 18px;
+      flex: 1;
+    }
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px dashed var(--line);
+      padding-top: 14px;
+      font-size: 13px;
+      font-weight: 850;
+      color: var(--accent);
+    }
+    .arrow-icon {
+      font-size: 16px;
+      transition: transform 0.2s ease;
+    }
+    .trip-card:hover .arrow-icon {
+      transform: translateX(4px);
+    }
+
+    /* 頁尾 */
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+      padding: 30px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 頂部品牌 Header -->
+  <header class="hero">
+    <span class="badge">Travel Journal</span>
+    <h1>K&C Travel</h1>
+    <p class="subtitle">記錄我們走過的世界風景、公路探險與每一段深刻旅程。</p>
+  </header>
+
+  <!-- 行程清單區塊 -->
+  <main>
+    <div class="section-title">旅程回顧</div>
+
+    <div class="trip-grid">
+      <!-- 2026/10 冰島之旅卡片 -->
+      <a class="trip-card" href="iceland-2026.html">
+        <div class="card-cover">
+          <span class="card-tag">🌌 13 天公路自駕</span>
+          <img src="https://images.unsplash.com/photo-1579033461380-adb47c3eb938?w=800&auto=format&fit=crop&q=80" alt="冰島極光與壯麗公路之旅">
+        </div>
+        <div class="card-body">
+          <div class="trip-date">2026</div>
+          <div class="trip-title">2026 秋・冰島 13 天公路探險</div>
+          <p class="trip-desc">藍冰洞健行、冰河湖快艇、南岸瀑布、東部峽灣。5人自駕環島與倫敦快閃行程。</p>
+          <div class="card-footer">
+            <span>查看行程摘要</span>
+            <span class="arrow-icon">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 2026/12 女王生日北海道盛宴之旅卡片 -->
+      <a class="trip-card" href="2026-Hokkaido.html">
+        <div class="card-cover">
+          <span class="card-tag birthday">🎂 聖誕周慶生</span>
+          <img src="https://images.unsplash.com/photo-1491557345352-5929e343eb89?w=800&auto=format&fit=crop&q=80" alt="北海道美瑛冬雪盛宴之旅">
+        </div>
+        <div class="card-body">
+          <div class="trip-date">2026</div>
+          <div class="trip-title">2026冬 北海道生日之旅</div>
+          <p class="trip-desc">札幌聖誕市集、小樽帝王蟹、洞爺湖頂級望樓慶生會席、美瑛包棟別墅自炊與星野聖誕夜。雪國 4WD 自駕旅遊規劃。</p>
+          <div class="card-footer">
+            <span>查看行程摘要</span>
+            <span class="arrow-icon">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 2027/05 Bruno Mars 高雄演唱會之旅卡片 -->
+      <a class="trip-card" href="2027-bruno-mars.html">
+        <div class="card-cover">
+          <span class="card-tag concert">🎵 2天1夜・現場狂熱</span>
+          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&auto=format&fit=crop&q=80" alt="Bruno Mars The Romantic Tour 演唱會">
+        </div>
+        <div class="card-body">
+          <div class="trip-date">2027.05</div>
+          <div class="trip-title">Bruno Mars 高雄演唱會</div>
+          <p class="trip-desc">The Romantic Tour 世運主場館！高鐵南下、港都午後茶點悠晃、沉浸火星人現場魅力，隔日慢活用餐愜意返程。</p>
+          <div class="card-footer">
+            <span>查看行程摘要</span>
+            <span class="arrow-icon">→</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    © 2026 K&C Travel. Powered by GitHub Pages.
+  </footer>
+
+</body>
+</html>

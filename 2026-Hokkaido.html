@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<title>北海道盛宴之旅｜2026.12.17–12.25</title>
+<style>
+/* 完全比照冰島範例的基底字體與色彩配置規範 */
+:root {
+  --ink: #1f2d33;
+  --muted: #63737a;
+  --paper: #f5f3ed;
+  --card: #fffdf8;
+  --line: #d9d8cf;
+  --ice: #dbecef;
+  --ocean: #447f9b;
+  --deep: #274b55;
+  --sand: #d9c6a0;
+  --lava: #8f6956;
+  --warn: #fff6e8;
+  --danger: #8b3d36;
+  --green: #4f806f;
+  --sky: #397e9a;
+  --berry: #9c5f72;
+  --soft-blue: #eef7fb;
+  --soft-yellow: #fff6df;
+  --soft-pink: #fff2f5;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  line-height: 1.68;
+  font-size: 15px;
+}
+a { color: inherit; }
+
+/* 頂部 Hero */
+.hero {
+  padding: 46px max(22px, calc((100vw - 1180px) / 2)) 32px;
+  background: radial-gradient(circle at 18% 14%, rgba(68,127,155,0.12), transparent 32%), radial-gradient(circle at 82% 8%, rgba(217,198,160,0.15), transparent 28%), #fbfaf6;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+.hero-brandline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--accent, #5b7773);
+  margin-bottom: 16px;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 5px 16px;
+  border: 1px solid #78958f;
+  border-radius: 999px;
+  background: #f3f7f4;
+  color: #55746e;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+.hero h1 {
+  margin: 0 auto 12px;
+  font-size: clamp(30px, 4.4vw, 52px);
+  font-weight: 900;
+  letter-spacing: .02em;
+  line-height: 1.2;
+  color: var(--deep);
+}
+.hero .subtitle {
+  margin: 0 auto;
+  max-width: 860px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+.hero .subtitle strong { color: #3e5f5b; }
+
+.hero-stats {
+  max-width: 960px;
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.hero-stat {
+  padding: 15px 12px;
+  border: 1px solid #dddcd4;
+  border-radius: 14px;
+  background: rgba(250, 249, 245, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(45, 54, 57, 0.03);
+}
+.hero-stat-value {
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 900;
+  color: #397e9a;
+  font-variant-numeric: tabular-nums;
+}
+.hero-stat-label {
+  margin-top: 5px;
+  color: #7b8589;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+/* 置頂快速跳轉列 */
+.quicknav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(245, 243, 237, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.quicknav {
+  max-width: 1180px;
+  margin: auto;
+  padding: 10px 16px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.date-chip {
+  min-width: 72px;
+  text-align: center;
+  text-decoration: none;
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+  line-height: 1.25;
+  transition: all .15s ease;
+}
+.date-chip b { display: block; font-size: 14px; color: var(--ink); }
+.date-chip span { font-size: 11px; color: var(--muted); }
+.date-chip.birthday-chip { border-color: #e5b6c7; background: #fff5f8; }
+.date-chip.birthday-chip b { color: #a43a65; }
+.date-chip.summary-chip { border-color: #cadde4; background: #f2f8fa; }
+.date-chip.summary-chip b { color: #28637b; }
+
+/* 內容主容器 */
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 18px 80px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 7px 22px rgba(31, 45, 51, 0.035);
+  margin-bottom: 18px;
+}
+.card h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 850;
+  letter-spacing: .02em;
+}
+
+/* 穿搭基準卡 */
+.wear-standard {
+  background: linear-gradient(135deg, #f7f6ef 0%, #eef5f2 100%);
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+.wear-icon-box {
+  width: 110px;
+  height: 110px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #dbeae2, #f7fbf8);
+  font-size: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d1ddd7;
+  margin: auto;
+}
+.wear-standard p { margin: 6px 0; font-size: 14.5px; color: #43545b; line-height: 1.65; }
+
+/* 微型扁平向量示意地圖 */
+.overview-map { padding: 18px 22px; }
+.overview-map h3 { color: var(--deep); }
+.map-container {
+  max-width: 720px;
+  margin: 10px auto 0;
+  background: #fdfdfb;
+  border: 1px solid #e2e5df;
+  border-radius: 14px;
+  padding: 10px 14px;
+}
+.map-container svg { width: 100%; height: 145px; display: block; }
+.map-caption {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #eef6fb, #f7f3ea);
+  border: 1px solid #d9e5ea;
+  line-height: 1.6;
+}
+.route-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.route-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #fff;
+}
+.route-pill.sapporo { background: #447f9b; }
+.route-pill.toya { background: #9c5f72; }
+.route-pill.biei { background: #4f806f; }
+.route-pill.tomamu { background: #6d668e; }
+
+/* 每日詳細行程 Day */
+.day {
+  padding: 40px 0 20px;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 80px;
+}
+.day:first-of-type { border-top: 0; }
+.day-head {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.day-number {
+  min-width: 95px;
+  background: var(--deep);
+  color: white;
+  border-radius: 16px;
+  padding: 14px 10px;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: .08em;
+  font-size: 15px;
+}
+.day-number.bday {
+  background: linear-gradient(135deg, #ab3a69 0%, #c95684 100%);
+  box-shadow: 0 4px 14px rgba(171, 58, 105, 0.3);
+}
+.day-title-wrap { flex: 1; }
+.day-date {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--lava);
+  letter-spacing: .05em;
+}
+.day-date.bday-text { color: #b33968; }
+h2 {
+  font-size: clamp(24px, 3.2vw, 36px);
+  line-height: 1.25;
+  margin: 5px 0 10px;
+  color: var(--ink);
+}
+.meta-row {
+  display: flex;
+  gap: 12px 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: var(--muted);
+}
+.meta-row span:nth-child(1) { color: #367691; font-weight: 800; }
+.meta-row span:nth-child(2) { color: #9a6a2d; font-weight: 800; }
+.meta-row span:nth-child(3) { color: #597a67; font-weight: 800; }
+
+.lead {
+  font-size: 15.5px;
+  margin: 16px 0 20px;
+  color: #3b464a;
+  line-height: 1.7;
+}
+
+/* 行程焦點卡 Focus Card */
+.focus-card {
+  background: linear-gradient(135deg, var(--soft-blue), #fffdf8 55%, var(--soft-yellow));
+  border-color: #cadde4;
+}
+.focus-card.bday-focus {
+  background: linear-gradient(135deg, #fff0f5, #fffdf8 55%, #fff5e6);
+  border-color: #ecc9d6;
+}
+.focus-card h3 { color: var(--sky); }
+.focus-card.bday-focus h3 { color: #ab3a69; }
+.focus-chips { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+.focus-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 850;
+  background: white;
+  border: 1px solid #cadde4;
+  color: #2f718e;
+}
+.focus-chip.bday-tag { border-color: #f1bfd0; color: #a83665; background: #fff8fa; }
+.focus-note { margin: 6px 0 0; color: #4b5f66; font-size: 14px; }
+
+/* 景點微型縮圖卡（Mini Thumbnail Chips） */
+.photo-gallery-card {
+  padding: 16px 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
+  border: 1px solid #dce6ef;
+}
+.photo-gallery-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.photo-gallery-title { font-weight: 850; color: #254b5f; font-size: 15px; }
+.photo-online-note { font-size: 12px; color: #7b8790; background: #eef4f7; border-radius: 999px; padding: 3px 9px; }
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+}
+.photo-item {
+  border: 1px solid #dad9cf;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(41, 63, 74, 0.04);
+}
+.photo-frame {
+  height: 68px;
+  background: #eef2f4;
+  position: relative;
+  overflow: hidden;
+}
+.photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo-caption { padding: 6px 8px; }
+.photo-caption-title {
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--ink);
+  padding-left: 5px;
+  border-left: 3px solid #7397a4;
+}
+.photo-map {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #edf5f6;
+  border: 1px solid #d2e2e5;
+  color: #356b79;
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* 路線卡 Route Card */
+.route-card { padding: 18px 22px; }
+.card-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.route-card h3 { margin: 0; color: #3f7287; }
+.map-btn {
+  font-size: 13px;
+  text-decoration: none;
+  background: #edf7fa;
+  color: #30687a;
+  border: 1px solid #c8d9dc;
+  padding: 7px 12px;
+  border-radius: 10px;
+  font-weight: 800;
+}
+.route-line {
+  display: flex;
+  overflow-x: auto;
+  padding: 14px 2px 8px;
+  align-items: center;
+}
+.route-stop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 140px;
+  max-width: 175px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f4f3ed;
+  border: 1px solid #dad9d2;
+  position: relative;
+  margin-right: 22px;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.route-stop b { font-size: 13.5px; color: #335b65; margin-top: 3px; line-height: 1.35; }
+.route-stop:not(:last-child):after {
+  content: '→';
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #77939a;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+/* 車程與停留時間卡 Timing Card */
+.timing-card {
+  background: linear-gradient(135deg, #f7fbfd 0%, #fffdf8 52%, #fff8e9 100%);
+  border-color: #cfdde1;
+}
+.timing-card h3 { color: #3f7287; margin-bottom: 5px; }
+.timing-sub { font-size: 13px; color: #748087; margin: 0 0 14px; }
+.timing-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.timing-group {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #dde2df;
+  border-radius: 14px;
+  padding: 14px;
+}
+.timing-group.move { border-top: 4px solid #6f9fb4; }
+.timing-group.stay { border-top: 4px solid #d0a35d; }
+.timing-group-title { font-size: 14.5px; font-weight: 900; margin-bottom: 10px; }
+.timing-group.move .timing-group-title { color: #3f7287; }
+.timing-group.stay .timing-group-title { color: #9a6a28; }
+.timing-list { display: grid; gap: 8px; }
+.timing-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #ebe9e2;
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+.timing-badge {
+  font-weight: 900;
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  font-size: 12.5px;
+}
+.move .timing-badge { background: #e7f3f8; color: #316b83; }
+.stay .timing-badge { background: #fff0cf; color: #8a5c1e; }
+.timing-note { grid-column: 1 / -1; color: #758086; font-size: 11.5px; margin-top: -2px; }
+
+/* 雙欄主架構 (時間軸 + 生活側欄) */
+.day-grid {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  gap: 18px;
+  align-items: start;
+}
+.side-stack { display: grid; gap: 16px; }
+
+/* 時間軸 Timeline Card */
+.timeline-card h3 { color: var(--sky); }
+.time-row {
+  display: grid;
+  grid-template-columns: 105px 1fr;
+  gap: 14px;
+  padding: 12px 0;
+  border-top: 1px dashed #d9d8cf;
+}
+.time-row:first-of-type { border-top: 0; }
+.time {
+  font-weight: 900;
+  color: #397e9a;
+  font-variant-numeric: tabular-nums;
+  font-size: 14.5px;
+}
+.time-row b { color: #283b42; font-size: 15px; }
+.time-row p { margin: 3px 0 0; color: #55666d; font-size: 14px; line-height: 1.6; }
+
+/* 穿搭與生活資訊卡 */
+.wear-card { background: #f2f6f4; border-color: #d1dfd8; }
+.wear-card h3 { color: var(--green); }
+.wear-title { font-weight: 900; margin-bottom: 6px; font-size: 14.5px; color: #375b4f; }
+.feel {
+  font-size: 13.5px;
+  color: #53666c;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin: 8px 0 12px;
+  line-height: 1.5;
+  border: 1px solid #dce8e3;
+}
+.wear-list, .alert-list { margin: 0; padding-left: 20px; font-size: 14px; }
+.wear-list li, .alert-list li { margin: 6px 0; color: #435359; }
+
+/* 今日生活資訊卡 Daily Info Card */
+.daily-info-card { padding: 0; overflow: hidden; background: #fffdfa; border-color: #dedbd1; }
+.daily-info-card > h3 {
+  margin: 0;
+  padding: 14px 18px;
+  background: linear-gradient(120deg, #fff3d8 0%, #eef6f5 48%, #f4eef9 100%);
+  color: #43545b;
+  border-bottom: 1px solid #dedbd1;
+  font-size: 16px;
+}
+.daily-info-section { padding: 14px 18px; border-top: 1px dashed #ddd8cd; }
+.daily-info-card > h3 + .daily-info-section { border-top: 0; }
+.daily-info-section h4 { margin: 0 0 9px; font-size: 14px; letter-spacing: .02em; }
+.meals-section h4 { color: #96642d; }
+.stay-section h4 { color: #8b5870; }
+.booking-section h4 { color: #66538d; }
+.daily-meal-list { display: grid; gap: 7px; }
+.daily-meal-row {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #fff8e9;
+  border: 1px solid #eee0c2;
+}
+.daily-meal-label { font-size: 12.5px; font-weight: 900; color: #8a5b2c; white-space: nowrap; }
+.daily-meal-value { font-size: 13.5px; color: #515b5e; line-height: 1.5; }
+.stay-section { background: #fff7f9; }
+.stay-section p, .booking-section p { margin: 0; color: #4f5d63; font-size: 13.5px; line-height: 1.6; }
+.stay-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 9px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #e6d1d9;
+  color: #87576a;
+  font-size: 12px;
+  font-weight: 900;
+}
+.booking-section { background: #f8f5fc; }
+.booking-section p { padding-left: 10px; border-left: 3px solid #c7b6dc; }
+
+/* 注意事項卡 Alert Card */
+.alert-card {
+  margin-top: 16px;
+  background: var(--warn);
+  border-color: #edd3aa;
+}
+.alert-card h3 { color: #9a562f; margin-bottom: 8px; font-size: 16.5px; }
+
+/* 底部「可收合」核定預算摘要表 (Collapsible Budget Overview) */
+.budget-details {
+  margin-top: 40px;
+  background: #ffffff;
+  border: 1px solid #d2dedf;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(39, 75, 85, 0.05);
+  overflow: hidden;
+  transition: all .2s ease;
+}
+.budget-summary-header {
+  list-style: none;
+  cursor: pointer;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #ffffff 0%, #f4f8f9 100%);
+  user-select: none;
+}
+.budget-summary-header::-webkit-details-marker { display: none; }
+.budget-summary-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.budget-summary-left h3 {
+  margin: 0;
+  font-size: 19px;
+  color: var(--deep);
+  font-weight: 850;
+}
+.budget-total-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #fff0f5;
+  border: 1px solid #f2cad9;
+  color: #ab3a69;
+  font-size: 13px;
+  font-weight: 900;
+}
+.budget-summary-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #607982;
+  font-size: 13px;
+  font-weight: 700;
+}
+.budget-chevron {
+  width: 18px;
+  height: 18px;
+  transition: transform .25s ease;
+}
+.budget-details[open] .budget-chevron {
+  transform: rotate(180deg);
+}
+.budget-content {
+  padding: 0 24px 24px;
+  border-top: 1px solid #eef2f3;
+}
+.budget-intro { font-size: 14px; color: var(--muted); margin: 16px 0 16px; }
+.budget-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.budget-table th, .budget-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #eae8e1;
+  text-align: left;
+}
+.budget-table th { background: #f6fafb; color: #35535e; font-weight: 850; }
+.budget-table tr:last-child td {
+  border-bottom: 0;
+  font-size: 16px;
+  font-weight: 900;
+  color: #a43a65;
+  background: #fff8fa;
+}
+.budget-num { text-align: right !important; font-variant-numeric: tabular-nums; font-weight: 800; }
+
+/* 外部連結卡 Sources Card */
+.sources-card {
+  margin-top: 24px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+}
+.sources-card h3 { margin: 0 0 6px; font-size: 17.5px; color: var(--deep); }
+.sources-note { font-size: 13px; color: var(--muted); margin: 0 0 16px; }
+.sources-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; }
+.source-box {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #e1ded5;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px 14px;
+  transition: all .2s ease;
+}
+.source-box:hover { border-color: #397e9a; box-shadow: 0 3px 12px rgba(40, 65, 80, 0.07); }
+.source-box span { font-weight: 850; font-size: 14px; color: #274b55; display: block; margin-bottom: 2px; }
+.source-box small { color: #76848a; font-size: 11.5px; word-break: break-all; }
+
+/* 回到頂端浮動鈕 */
+.top-btn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--deep);
+  color: white;
+  border: 2px solid white;
+  box-shadow: 0 8px 24px rgba(31, 45, 51, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 20px;
+  z-index: 30;
+}
+footer {
+  max-width: 1180px;
+  margin: 30px auto 50px;
+  padding: 0 18px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* 高亮文字 */
+.hl { background: linear-gradient(transparent 46%, #ffe8a8 46%, #ffe8a8 92%, transparent 92%); font-weight: 850; }
+.hl-pink { background: linear-gradient(transparent 46%, #fcd6e3 46%, #fcd6e3 92%, transparent 92%); font-weight: 850; color: #922b54; }
+.hl-blue { background: linear-gradient(transparent 46%, #cfeaf4 46%, #cfeaf4 92%, transparent 92%); font-weight: 850; }
+
+@media(max-width: 820px) {
+  .day-grid, .overview-grid, .timing-columns, .sources-grid, .wear-standard { grid-template-columns: 1fr; }
+  .wear-standard { text-align: center; }
+  .wear-icon-box { margin: 0 auto 10px; }
+  .day-head { gap: 12px; }
+  .day-number { min-width: 74px; padding: 12px 6px; font-size: 13px; }
+  .time-row { grid-template-columns: 86px 1fr; }
+  .quicknav-wrap { position: relative; }
+  .day { scroll-margin-top: 10px; }
+  .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .budget-summary-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+
+@media print {
+  body { background: white; font-size: 12pt; line-height: 1.45; }
+  .quicknav-wrap, .top-btn, .map-btn, .photo-map { display: none !important; }
+  .card, .day, .budget-details { page-break-inside: avoid; border: 1px solid #ccc; box-shadow: none; margin-bottom: 12pt; }
+  .budget-details { display: block !important; }
+  .budget-content { display: block !important; }
+  .hero { padding: 16pt; background: none; border-bottom: 2px solid #333; }
+  .day-grid { display: block; }
+  .side-stack { margin-top: 10pt; }
+}
+</style>
+</head>
+<body id="top">
+
+<!-- 頂部 Hero -->
+<header class="hero">
+  <div class="hero-brandline">
+    <span class="hero-badge">Hokkaido Winter Journey 2026</span>
+    <span>❄️</span>
+  </div>
+  <h1>2026 生日北海道盛宴之旅</h1>
+  <p class="subtitle">K&C 雙人行｜<strong>新千歲一幻拉麵・小樽海雪鐵道・若鶏時代炸雞・洞爺湖頂級望樓慶生・美瑛包棟別墅・星野聖誕夜</strong><br>從札幌到美瑛丘陵雪景，完整收錄 9 天雪國 4WD 自駕路線、每日時間軸與生活預算。</p>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-value">9 天 8 夜</div>
+      <div class="hero-stat-label">12/17 – 12/25</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value">2 位同行</div>
+      <div class="hero-stat-label">K&C 慶生</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value">4WD 雪地自駕</div>
+      <div class="hero-stat-label">12/19 – 12/24 札幌起訖</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value">雪國夢幻名宿</div>
+      <div class="hero-stat-label">望樓洞爺 × 美瑛別墅</div>
+    </div>
+  </div>
+</header>
+
+<!-- 置頂快速導航 -->
+<nav class="quicknav-wrap" aria-label="日期快速跳轉">
+  <div class="quicknav">
+    <a class="date-chip" href="#day-1"><b>12/17</b><span>Day 1</span></a>
+    <a class="date-chip" href="#day-2"><b>12/18</b><span>Day 2</span></a>
+    <a class="date-chip" href="#day-3"><b>12/19</b><span>Day 3</span></a>
+    <a class="date-chip birthday-chip" href="#day-4"><b>12/20</b><span>🎂 Day 4</span></a>
+    <a class="date-chip" href="#day-5"><b>12/21</b><span>Day 5</span></a>
+    <a class="date-chip" href="#day-6"><b>12/22</b><span>Day 6</span></a>
+    <a class="date-chip" href="#day-7"><b>12/23</b><span>Day 7</span></a>
+    <a class="date-chip" href="#day-8"><b>12/24</b><span>Day 8</span></a>
+    <a class="date-chip" href="#day-9"><b>12/25</b><span>Day 9</span></a>
+    <a class="date-chip summary-chip" href="#budget-summary" onclick="document.getElementById('budget-summary').open = true;"><b>預算</b><span>Summary</span></a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- 12 月北海道穿搭基準 -->
+  <section class="card wear-standard">
+    <div class="wear-icon-box">🧥</div>
+    <div>
+      <h3>12 月北海道雪國穿搭基準</h3>
+      <p>12 月中下旬北海道氣溫常態約在 <strong>-4°C 至 -9°C</strong>，入夜或空曠雪原體感可低於 -12°C。室內與電車暖氣極強（約 20–22°C），室內外溫差高達 30°C！</p>
+      <p>戶外標準公式：<strong>「發熱排汗底層 ＋ 羊毛/抓絨中層 ＋ 防風防水長版厚羽絨外套」</strong>。室內一脫即下，切忌穿過於厚重無法穿脫的單件毛衣。鞋子務必選擇<strong>防水防滑雪靴（刻紋深或附冰爪）</strong>，並搭配羊毛厚襪，隨身備妥毛帽、保暖耳罩、防風手套與圍巾。</p>
+    </div>
+  </section>
+
+  <!-- 微型扁平向量示意地圖 -->
+  <section class="card overview-map">
+    <h3>全程自駕與移動路線示意</h3>
+    <div class="map-container">
+      <svg viewBox="0 0 700 145" role="img" aria-label="北海道行程路線圖">
+        <path d="M 60,85 C 90,65 140,55 190,52 C 240,40 310,25 390,28 C 470,30 540,50 630,70 C 600,100 520,115 450,110 C 370,105 300,125 220,122 C 150,120 90,115 60,85 Z" fill="#edf2ee" stroke="#c2ccc5" stroke-width="2.2" />
+        <polyline points="155,75 190,70 170,105 285,55 310,65 330,90 190,70 185,92" fill="none" stroke="#397e9a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 6" />
+        <g fill="#274b55">
+          <circle cx="155" cy="75" r="5" fill="#447f9b" stroke="#fff" stroke-width="1.8" />
+          <text x="145" y="65" font-size="11.5" font-weight="900" text-anchor="end">小樽</text>
+          <circle cx="190" cy="70" r="6" fill="#274b55" stroke="#fff" stroke-width="2" />
+          <text x="190" y="58" font-size="12" font-weight="900" text-anchor="middle">札幌 (起訖/還車)</text>
+          <circle cx="185" cy="92" r="5" fill="#447f9b" stroke="#fff" stroke-width="1.8" />
+          <text x="195" y="96" font-size="11.5" font-weight="800">新千歲 CTS</text>
+          <circle cx="170" cy="105" r="5.5" fill="#9c5f72" stroke="#fff" stroke-width="2" />
+          <text x="158" y="118" font-size="11.5" font-weight="900" text-anchor="end">洞爺湖 (望樓)</text>
+          <circle cx="285" cy="55" r="5.5" fill="#4f806f" stroke="#fff" stroke-width="2" />
+          <text x="285" y="44" font-size="12" font-weight="900" text-anchor="middle">美瑛 (別墅3晚)</text>
+          <circle cx="310" cy="65" r="5" fill="#4f806f" stroke="#fff" stroke-width="1.8" />
+          <text x="322" y="66" font-size="11.5" font-weight="800">富良野</text>
+          <circle cx="330" cy="90" r="5.5" fill="#6d668e" stroke="#fff" stroke-width="2" />
+          <text x="342" y="94" font-size="11.5" font-weight="900">Tomamu 星野</text>
+        </g>
+      </svg>
+    </div>
+    <div class="map-caption">
+      <strong>自駕與鐵道節奏</strong>：CTS ➔ 札幌 ➔ 小樽鐵道遊 ➔ 札幌租 4WD ➔ 洞爺湖 ➔ 美瑛丘陵（連住3晚） ➔ Tomamu 星野 ➔ 札幌還車 ➔ CTS 機場大採買。
+      <div class="route-legend">
+        <span class="route-pill sapporo">札幌・小樽 (JR/市區)</span>
+        <span class="route-pill toya">洞爺湖 (溫泉慶生)</span>
+        <span class="route-pill biei">美瑛・富良野 (包棟自炊)</span>
+        <span class="route-pill tomamu">星野度假村 (聖誕夜)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 1 -->
+  <section class="day" id="day-1">
+    <div class="day-head">
+      <div class="day-number">DAY 01</div>
+      <div class="day-title-wrap">
+        <div class="day-date">2026 / 12 / 17（四）</div>
+        <h2>啟程飛往雪國 → 新千歲機場首站品嚐一幻拉麵 → 札幌大通公園聖誕市集</h2>
+        <div class="meta-row">
+          <span>📍 TPE → CTS → 札幌</span>
+          <span>☀️ 氣溫 -4° / -9°C（日落約 16:03）</span>
+          <span>🚆 JR 快速 Airport 線</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card focus-card">
+      <h3>✨ 行程焦點</h3>
+      <div class="focus-chips">
+        <span class="focus-chip">✈️ 雙人班機抵達（Cami 13:15 / KC 14:05）</span>
+        <span class="focus-chip">🧰 每人享 2 件托運行李額度</span>
+        <span class="focus-chip">🍜 新千歲機場直奔：一幻拉麵 (Ichigen) 極濃鮮蝦味噌</span>
+        <span class="focus-chip">🚆 JR 快速 Airport 號直奔札幌</span>
+        <span class="focus-chip">🎄 札幌慕尼黑聖誕市集 ＆ 薄野 すみれ (Sumire) 拉麵</span>
+      </div>
+      <p class="focus-note">落地出境會合後，第一件事直奔新千歲機場國內線 3F 拉麵道場大啖一幻拉麵！暖身後搭乘 JR 直達札幌市中心，飯店下樓即是大通公園白色燈樹節。</p>
+    </div>
+
+    <div class="card photo-gallery-card">
+      <div class="photo-gallery-head">
+        <div class="photo-gallery-title">📸 今日沿途景點與美食</div>
+        <div class="photo-online-note">連線時載入縮圖</div>
+      </div>
+      <div class="photo-strip">
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=350" alt="一幻拉麵" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">一幻拉麵 (國內線3F)</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Ebisoba+Ichigen+New+Chitose+Airport" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=350" alt="札幌電視塔夜景" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">大通公園白色燈樹節</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Odori+Park+Sapporo" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?w=350" alt="すみれ拉麵" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">すみれ 味噌拉麵</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Sumire+Sapporo+Susukino" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card route-card">
+      <div class="card-title-row">
+        <h3>🗺️ 路線與地圖</h3>
+        <a class="map-btn" href="https://www.google.com/maps/dir/?api=1&origin=New+Chitose+Airport&destination=The+Royal+Park+Canvas+Sapporo+Odori+Park&travelmode=transit" target="_blank" rel="noopener">📍 開啟 JR 移動路線 ↗</a>
+      </div>
+      <div class="route-line">
+        <span class="route-stop">1<b>桃園機場 TPE</b></span>
+        <span class="route-stop">2<b>新千歲 CTS（一幻拉麵）</b></span>
+        <span class="route-stop">3<b>JR 快速 Airport 號</b></span>
+        <span class="route-stop">4<b>大通公園飯店</b></span>
+        <span class="route-stop">5<b>大通聖誕市集 / すみれ</b></span>
+      </div>
+    </div>
+
+    <div class="card timing-card">
+      <h3>🚗 車程＆⏱️ 景點停留</h3>
+      <div class="timing-columns">
+        <div class="timing-group move">
+          <div class="timing-group-title">🚗 從哪裡到哪裡</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">台灣出發前往桃園機場接送</span><span class="timing-badge">05:20 發車</span></div>
+            <div class="timing-item"><span class="route-text">新千歲國際線 ➔ 國內線 3F 拉麵道場</span><span class="timing-badge">🚶 步行約 8 分</span><span class="timing-note">航廈聯絡通道順暢好走</span></div>
+            <div class="timing-item"><span class="route-text">新千歲機場 CTS → JR 札幌站</span><span class="timing-badge">🚆 約 37 分鐘</span><span class="timing-note">JR 快速 Airport 號（每 12 分一班）</span></div>
+            <div class="timing-item"><span class="route-text">札幌站 → The Royal Park Canvas</span><span class="timing-badge">約 8 分鐘</span><span class="timing-note">地下街直通或計程車 1 跳表</span></div>
+          </div>
+        </div>
+        <div class="timing-group stay">
+          <div class="timing-group-title">⏱️ 這一站待多久</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">一幻拉麵（新千歲國內線 3F）</span><span class="timing-badge">約 50 分鐘</span><span class="timing-note">品嚐香氣撲鼻的甜蝦頭熬煮味噌湯頭</span></div>
+            <div class="timing-item"><span class="route-text">大通公園慕尼黑聖誕市集</span><span class="timing-badge">約 1.5 小時</span><span class="timing-note">熱紅酒、德式小點、光雕秀</span></div>
+            <div class="timing-item"><span class="route-text">薄野 すみれ (Sumire) 味噌拉麵</span><span class="timing-badge">約 1 小時</span><span class="timing-note">經典重油厚味極熱湯底夜宵</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="lead">第一天以順利抵達與暖胃美食為核心！出境會合後，不用餓著肚子趕路，先到新千歲機場國內線 3F 的北海道拉麵道場品嚐大名鼎鼎的「一幻拉麵（えびそば 一幻）」，熱騰騰濃醇蝦湯下肚，整個人瞬間暖和起來。接著搭乘舒適的 JR 快速 Airport 號前往札幌市區。入住公園景高級雙床房，窗外就是大通公園與電視塔雪景！</p>
+
+    <div class="day-grid">
+      <div class="card timeline-card">
+        <h3>⏱️ 當日時間軸</h3>
+        <div class="time-row"><div class="time">05:20</div><div><b>專車接送前往桃園機場</b><p>護照、日幣與雙人電子憑證集中隨身包。</p></div></div>
+        <div class="time-row"><div class="time">08:35</div><div><b>Cami 航班起飛（華航 CI0130）</b><p>TPE 第二航廈 08:35 起飛 ➔ 預計 13:15 抵達新千歲 CTS。</p></div></div>
+        <div class="time-row"><div class="time">09:20</div><div><b>KC 航班起飛（星宇航空 JX）</b><p>TPE 第一航廈 09:20 起飛 ➔ 預計 14:05 抵達新千歲 CTS。</p></div></div>
+        <div class="time-row"><div class="time">14:30–14:50</div><div><b>新千歲機場入境會合與領行李</b><p>兩人各享有兩件大行李托運額度，順利在國際線入境大廳會合。</p></div></div>
+        <div class="time-row"><div class="time">15:00</div><div><b>第一站美食：新千歲機場「一幻拉麵 (Ichigen)」</b><p>推著行李前往國內線 3F 北海道拉麵道場，大啖蝦味濃郁、炸生薑麵酥點綴的原汁蝦湯味噌拉麵！</p></div></div>
+        <div class="time-row"><div class="time">16:15</div><div><b>前往 B1 搭乘 JR 快速 Airport 號</b><p>暖氣列車行駛約 37 分鐘直抵札幌站。</p></div></div>
+        <div class="time-row"><div class="time">17:15</div><div><b>抵達札幌市區飯店辦理 Check-in</b><p>入住 The Royal Park Canvas，窗外即是白色積雪與大通公園景緻。</p></div></div>
+        <div class="time-row"><div class="time">18:00</div><div><b>大通公園慕尼黑聖誕市集 ＆ 白色燈樹節</b><p>漫步於浪漫雪花與白色燈樹節中，品嚐香料熱紅酒與烤杏仁。</p></div></div>
+        <div class="time-row"><div class="time">20:00</div><div><b>晚餐 / 夜宵：薄野 すみれ (Sumire) 味噌拉麵</b><p>品嚐傳奇重油厚封的正宗札幌味噌拉麵，極致熱燙過癮！</p></div></div>
+      </div>
+
+      <div class="side-stack">
+        <div class="card wear-card">
+          <h3>🧥 當天建議穿搭</h3>
+          <div class="wear-title">機艙分層＋踏入北國雪地立即保暖</div>
+          <div class="feel">體感規劃：台灣 18°C ➔ 札幌 -5°C！出機場瞬間步入冰天雪地，厚外套隨身攜帶。</div>
+          <ul class="wear-list">
+            <li>透氣長袖打底＋舒適長褲（機上保暖放鬆）</li>
+            <li>厚保暖長版防風羽絨外套（隨身帶上機，下機立即穿）</li>
+            <li>抓地防滑雪靴（機場至飯店路上有積雪結冰）</li>
+            <li>毛帽、圍巾、保暖手套放入手提包備用</li>
+          </ul>
+        </div>
+
+        <div class="card daily-info-card">
+          <h3>🧾 今日生活資訊</h3>
+          <div class="daily-info-section meals-section">
+            <h4>🍽️ 三餐安排</h4>
+            <div class="daily-meal-list">
+              <div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">自理 / 機場貴賓室輕食</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">新千歲機場：一幻極濃蝦湯味噌拉麵</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">大通市集小食 ＋ すみれ拉麵</div></div>
+            </div>
+          </div>
+          <div class="daily-info-section stay-section">
+            <h4>🏡 今晚住宿</h4>
+            <p><strong>The Royal Park Canvas - Sapporo Odori Park</strong><br>公園景高級雙床房－藝廊樓層（已確認訂房，NT$ 5,408.5）</p>
+            <span class="stay-badge">👥 雙人已訂妥</span>
+          </div>
+          <div class="daily-info-section booking-section">
+            <h4>🎟️ 預訂資訊</h4>
+            <p>✈️ Cami CI0130 (08:35-13:15)；KC JX (09:20-14:05)。每人享 2 件行李額度。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card alert-card">
+      <h3>⚠️ 今天特別注意</h3>
+      <ul class="alert-list">
+        <li>冬季新千歲機場提領行李與通關人潮較多，Cami 先行抵達後可在國內線商店街逛逛稍候 KC。</li>
+        <li>新千歲一幻拉麵用餐時間可能需排隊約 15–20 分鐘，拉麵道場內有專用行李放置處。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DAY 2 -->
+  <section class="day" id="day-2">
+    <div class="day-head">
+      <div class="day-number">DAY 02</div>
+      <div class="day-title-wrap">
+        <div class="day-date">2026 / 12 / 18（五）</div>
+        <h2>小樽雪國鐵道海雪行 → 三角市場帝王蟹 → 若鶏時代炸雞 → 運河煤氣燈雪景夜色</h2>
+        <div class="meta-row">
+          <span>📍 札幌 ⇆ 小樽（JR 鐵道海景路線）</span>
+          <span>☀️ 氣溫 -3° / -8°C（日落 16:03）</span>
+          <span>🚆 JR 函館本線（右側靠窗海景）</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card focus-card">
+      <h3>✨ 行程焦點</h3>
+      <div class="focus-chips">
+        <span class="focus-chip">🚆 JR 函館本線：靠右窗欣賞石狩灣「海與雪的交界」絕景</span>
+        <span class="focus-chip">🦀 三角市場現剖烤帝王蟹 ＆ 爆汁海膽海鮮丼</span>
+        <span class="focus-chip">🍗 小樽靈魂名物：若鶏時代 なると 本店（香脆若鶏半身炸雞）</span>
+        <span class="focus-chip">🍰 LeTAO 雙層乳酪雙重下午茶 ＆ 八音盒堂</span>
+        <span class="focus-chip">🕯️ 小樽運河聖誕點燈夜景</span>
+      </div>
+      <p class="focus-note">搭乘 JR 鐵路往返，去程特意靠右側座位，飽覽列車緊貼日本海海岸、浪花與積雪交融的夢幻景象！除了三角市場帝王蟹，午後更安排走訪傳奇的「若鶏時代 なると 本店」品嚐名物炸雞。</p>
+    </div>
+
+    <div class="card photo-gallery-card">
+      <div class="photo-gallery-head">
+        <div class="photo-gallery-title">📸 今日沿途景點與必吃美食</div>
+        <div class="photo-online-note">連線時載入縮圖</div>
+      </div>
+      <div class="photo-strip">
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=350" alt="小樽鐵道海景" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">JR 鐵道海與雪絕景</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Asari+Station+Hokkaido" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=350" alt="海鮮丼" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">三角市場帝王蟹海鮮丼</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Otaru+Sankaku+Market" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=350" alt="炸雞" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">若鶏時代 なると 本店</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Naruto+Main+Shop+Otaru" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=350" alt="LeTAO" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">LeTAO 總店雙層乳酪</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=LeTAO+Main+Store+Otaru" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card timing-card">
+      <h3>🚗 車程＆⏱️ 景點停留</h3>
+      <div class="timing-columns">
+        <div class="timing-group move">
+          <div class="timing-group-title">🚗 從哪裡到哪裡</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">JR 札幌站 → JR 小樽站</span><span class="timing-badge">🚆 約 32–35 分</span><span class="timing-note">JR 快速 Airport 線（錢函至朝里間緊貼海邊雪景）</span></div>
+            <div class="timing-item"><span class="route-text">堺町通 ➔ 若鶏時代 なると 本店</span><span class="timing-badge">🚶 步行約 12 分</span><span class="timing-note">位於小樽市稻穗巷弄內</span></div>
+            <div class="timing-item"><span class="route-text">JR 小樽站 → JR 札幌站</span><span class="timing-badge">🚆 約 35 分</span><span class="timing-note">欣賞完運河夜景後搭車返回</span></div>
+          </div>
+        </div>
+        <div class="timing-group stay">
+          <div class="timing-group-title">⏱️ 這一站待多久</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">三角市場帝王蟹海鮮盛宴</span><span class="timing-badge">約 1.5 小時</span><span class="timing-note">現選現烤活帝王蟹、特級海膽丼</span></div>
+            <div class="timing-item"><span class="route-text">堺町通、八音盒堂、LeTAO</span><span class="timing-badge">約 2 小時</span><span class="timing-note">悠閒甜點時光與硝子工藝</span></div>
+            <div class="timing-item"><span class="route-text">若鶏時代 なると 本店</span><span class="timing-badge">約 1 小時</span><span class="timing-note">現炸半隻雞香脆多汁必吃名物</span></div>
+            <div class="timing-item"><span class="route-text">小樽運河聖誕點燈夜景</span><span class="timing-badge">約 50 分鐘</span><span class="timing-note">傍晚煤氣燈與運河白雪交織</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="lead"><span class="hl">搭乘鐵道看海賞雪，解鎖小樽雙重美食</span>。搭上往小樽的 JR 列車，記得坐在右側座位，當列車駛過錢函、朝里車站時，鐵軌右方就是無垠的日本海，白雪覆蓋的防波堤與深藍海面形成強烈對比。抵達後先在三角市場大啖活帝王蟹與海膽丼；午後漫步八音盒堂品嚐 LeTAO 甜點，傍晚接著前往「若鶏時代 なると 本店」品嚐皮脆肉嫩的招牌半隻炸雞，最後在小樽運河的藍色瓦斯燈倒影中畫下完美句點。</p>
+
+    <div class="day-grid">
+      <div class="card timeline-card">
+        <h3>⏱️ 當日時間軸</h3>
+        <div class="time-row"><div class="time">08:00</div><div><b>飯店悠閒早餐</b><p>在大通公園前品嚐熱咖啡與精緻和洋朝食。</p></div></div>
+        <div class="time-row"><div class="time">09:15</div><div><b>搭乘 JR 快速 Airport 號（靠右側車窗選位）</b><p>列車駛近石狩灣，窗外「海與雪」的夢幻交界美景令人屏息。</p></div></div>
+        <div class="time-row"><div class="time">10:00</div><div><b>小樽三角市場：帝王蟹與海鮮丼盛宴</b><p>挑選現撈帝王蟹清蒸炭烤兩吃，搭配金黃海膽與鮭魚卵蓋飯！</p></div></div>
+        <div class="time-row"><div class="time">12:30</div><div><b>堺町通商店街、小樽音樂盒堂 ＆ LeTAO 甜點</b><p>聆聽百年蒸汽鐘樂音，在 LeTAO 享用現烤雙層乳酪蛋糕與咖啡。</p></div></div>
+        <div class="time-row"><div class="time">15:00</div><div><b>朝聖名店：若鶏時代 なると 本店（必吃香脆炸雞）</b><p>品嚐小樽昭和傳奇美味！招牌「若鶏半身揚げ」高溫炸至外皮金黃鹹香、內部肉汁四溢，絕對不能錯過！</p></div></div>
+        <div class="time-row"><div class="time">16:30</div><div><b>小樽運河日落藍調夜景與聖誕點燈</b><p>16:00 點燈後，石造倉庫倒映在幽藍水面，煤氣燈與覆雪街道極度浪漫。</p></div></div>
+        <div class="time-row"><div class="time">18:30</div><div><b>搭乘 JR 返回札幌市區</b><p>回到大通公園，晚上散步看燈樹節，自由品嚐宵夜甜點。</p></div></div>
+      </div>
+
+      <div class="side-stack">
+        <div class="card wear-card">
+          <h3>🧥 當天建議穿搭</h3>
+          <div class="wear-title">海風保暖＋防滑鞋底</div>
+          <div class="feel">小樽臨海海風強勁，運河畔地面與積雪結冰滑溜，保暖防風與防滑雪靴至關重要。</div>
+          <ul class="wear-list">
+            <li>中層刷毛衣＋長版厚連帽防風羽絨外套</li>
+            <li>防風保暖長褲（內搭發熱褲）</li>
+            <li>高抓地力雪靴（結冰路面走小碎步）</li>
+            <li>羊毛帽、耳罩、厚防風手套（拍照必備）</li>
+          </ul>
+        </div>
+
+        <div class="card daily-info-card">
+          <h3>🧾 今日生活資訊</h3>
+          <div class="daily-info-section meals-section">
+            <h4>🍽️ 三餐安排</h4>
+            <div class="daily-meal-list">
+              <div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">飯店精緻早餐</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">三角市場：現剖帝王蟹 ＋ 豪華海鮮丼</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">🍗 必嚐名物</div><div class="daily-meal-value">若鶏時代 なると 本店：招牌炸半雞</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">札幌市區特色湯咖哩 / 居酒屋小酌</div></div>
+            </div>
+          </div>
+          <div class="daily-info-section stay-section">
+            <h4>🏡 今晚住宿</h4>
+            <p><strong>The Royal Park Canvas - Sapporo Odori Park</strong>（連住第 2 晚，NT$ 5,408.5）</p>
+            <span class="stay-badge">👥 雙人已訂妥</span>
+          </div>
+          <div class="daily-info-section booking-section">
+            <h4>🎟️ 預訂資訊</h4>
+            <p>全日搭乘 JR 鐵路，刷 IC 卡即可搭乘自由座。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 3 -->
+  <section class="day" id="day-3">
+    <div class="day-head">
+      <div class="day-number">DAY 03</div>
+      <div class="day-title-wrap">
+        <div class="day-date">2026 / 12 / 19（六）</div>
+        <h2>4WD 取車自駕啟程 → 翻越中山峠雪嶺 → 入住望樓 NOGUCHI 洞爺奢華會席</h2>
+        <div class="meta-row">
+          <span>📍 札幌 → 中山峠 → 洞爺湖</span>
+          <span>☀️ 氣溫 -4° / -9°C（日落 16:03）</span>
+          <span>🚗 4WD 自駕約 2 小時（約 80–100 km）</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card focus-card">
+      <h3>✨ 行程焦點</h3>
+      <div class="focus-chips">
+        <span class="focus-chip">🚙 札幌租車 11:00 前完成取車（4WD 雪地胎）</span>
+        <span class="focus-chip">🥔 中山峠休息站必吃招牌炸炸馬鈴薯 (あげいも)</span>
+        <span class="focus-chip">♨️ 奢華名宿：望樓 NOGUCHI 洞爺湖</span>
+        <span class="focus-chip">🍱 房內私人展望溫泉 ＋ 頂級客房懷石會席</span>
+        <span class="focus-chip">🎂 生日前夜盛大暖身</span>
+      </div>
+      <p class="focus-note">11:00 順利取車出發，翻越中山峠欣賞羊蹄山冬雪，午後提早入住一泊二食頂級名宿，完全放鬆沉浸。</p>
+    </div>
+
+    <div class="card photo-gallery-card">
+      <div class="photo-gallery-head">
+        <div class="photo-gallery-title">📸 今日沿途景點</div>
+        <div class="photo-online-note">連線時載入縮圖</div>
+      </div>
+      <div class="photo-strip">
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=350" alt="溫泉飯店" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">望樓 NOGUCHI 洞爺</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Boro+Noguchi+Toya" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=350" alt="洞爺湖雪景" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">洞爺湖雪景湖畔</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Lake+Toya+Hokkaido" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card route-card">
+      <div class="card-title-row">
+        <h3>🗺️ 路線與地圖</h3>
+        <a class="map-btn" href="https://www.google.com/maps/dir/?api=1&origin=The+Royal+Park+Canvas+Sapporo&destination=Boro+Noguchi+Toya&travelmode=driving&waypoints=Nakajima+Pass" target="_blank" rel="noopener">📍 開啟 Google Maps 自駕導航 ↗</a>
+      </div>
+      <div class="route-line">
+        <span class="route-stop">1<b>札幌飯店退房</b></span>
+        <span class="route-stop">2<b>租車店 4WD 取車</b></span>
+        <span class="route-stop">3<b>國道230號 中山峠</b></span>
+        <span class="route-stop">4<b>喜茂別・壯瞥雪景</b></span>
+        <span class="route-stop">5<b>望樓 NOGUCHI 洞爺</b></span>
+      </div>
+    </div>
+
+    <div class="card timing-card">
+      <h3>🚗 車程＆⏱️ 景點停留</h3>
+      <div class="timing-columns">
+        <div class="timing-group move">
+          <div class="timing-group-title">🚗 從哪裡到哪裡</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">札幌租車點 → 中山峠休息站</span><span class="timing-badge">約 55 分鐘</span><span class="timing-note">國道 230 號（注意積雪與除雪車）</span></div>
+            <div class="timing-item"><span class="route-text">中山峠 → 洞爺湖 望樓 NOGUCHI</span><span class="timing-badge">約 1 小時 10 分</span><span class="timing-note">緩坡下山，途經留壽都、壯瞥町</span></div>
+          </div>
+        </div>
+        <div class="timing-group stay">
+          <div class="timing-group-title">⏱️ 這一站待多久</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">札幌租車櫃台取車辦理</span><span class="timing-badge">09:30–10:45</span><span class="timing-note">確認 4WD、雪胎、ETC卡與刮痕檢查</span></div>
+            <div class="timing-item"><span class="route-text">中山峠休息站小憩</span><span class="timing-badge">約 30 分鐘</span><span class="timing-note">購買炸馬鈴薯、遠眺蝦夷富士羊蹄山</span></div>
+            <div class="timing-item"><span class="route-text">望樓 NOGUCHI 洞爺</span><span class="timing-badge">14:30 起至隔日</span><span class="timing-note">提早入住享受奢華露天風呂與會席晚餐</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="lead"><span class="hl">冬雪自駕啟程，入住北海道頂級名宿</span>。早上完成租車手續，駕駛 4WD 雪地休旅車沿著國道 230 號出發，於中山峠稍作停留。午後 14:30 抵達此行最具代表性的奢華溫泉飯店「望樓 NOGUCHI 洞爺」。客房內附設全景展望溫泉，一邊浸泡在滑順泉水中，一邊俯瞰被白雪覆蓋的洞爺湖，晚間享用主廚特製會席盛宴。</p>
+
+    <div class="day-grid">
+      <div class="card timeline-card">
+        <h3>⏱️ 當日時間軸</h3>
+        <div class="time-row"><div class="time">08:00</div><div><b>飯店悠閒早餐與整理行李退房</b><p>把保暖用品與車上隨身保溫瓶準備齊全。</p></div></div>
+        <div class="time-row"><div class="time">09:30</div><div><b>前往札幌市區租車門市</b><p>核對台灣駕照正本、日文譯本與信用卡。檢查 4WD 車況與雪胎胎紋深度。</p></div></div>
+        <div class="time-row"><div class="time">10:45</div><div><b>正式啟程出發前往洞爺湖</b><p>出發離開市區，習慣雪地行車剎車距離與視線。</p></div></div>
+        <div class="time-row"><div class="time">11:50</div><div><b>中山峠休息站觀景</b><p>品嚐熱氣騰騰的酥炸馬鈴薯球（あげいも），欣賞白雪皚皚的羊蹄山全景。</p></div></div>
+        <div class="time-row"><div class="time">14:30</div><div><b>抵達 望樓 NOGUCHI 洞爺 辦理入住</b><p>迎賓茶點招待，入住寬敞的頂級客房，在私人物件中放鬆。</p></div></div>
+        <div class="time-row"><div class="time">15:30</div><div><b>享受私人展望溫泉風呂與館內 Lounge</b><p>遠眺白雪紛飛的湖面，品味飯店特調軟飲與香醇咖啡。</p></div></div>
+        <div class="time-row"><div class="time">18:30</div><div><b>望樓頂級和洋創作會席晚宴</b><p>以北海道在地頂級和牛、當季時令海鮮入饌，為明天的生日提前隆重慶生！</p></div></div>
+      </div>
+
+      <div class="side-stack">
+        <div class="card wear-card">
+          <h3>🧥 當天建議穿搭</h3>
+          <div class="wear-title">車內舒適＋高山風口防寒</div>
+          <div class="feel">車內暖氣舒適，但中山峠山口風強雪大；抵達溫泉飯店後即可換上輕便日式浴衣。</div>
+          <ul class="wear-list">
+            <li>舒適長褲與輕便衛衣（自駕開車好伸展）</li>
+            <li>厚保暖羽絨隨手放於後座（上下休息站時套上）</li>
+            <li>保暖毛帽與太陽眼鏡（雪地反光強烈必備）</li>
+          </ul>
+        </div>
+
+        <div class="card daily-info-card">
+          <h3>🧾 今日生活資訊</h3>
+          <div class="daily-info-section meals-section">
+            <h4>🍽️ 三餐安排</h4>
+            <div class="daily-meal-list">
+              <div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">飯店早餐</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">中山峠炸馬鈴薯 / 車上自備輕食小點</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">☕ 下午茶</div><div class="daily-meal-value">望樓 Lounge 頂級迎賓茶點與咖啡</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">望樓 NOGUCHI 和洋懷石創作料理盛宴</div></div>
+            </div>
+          </div>
+          <div class="daily-info-section stay-section">
+            <h4>🏡 今晚住宿</h4>
+            <p><strong>望樓 NOGUCHI 洞爺 (Boro Noguchi Toya)</strong><br>私人展望溫泉客房・一泊二食（已確認訂房，NT$ 35,084）</p>
+            <span class="stay-badge">👥 雙人已訂妥・頂級慶生</span>
+          </div>
+          <div class="daily-info-section booking-section">
+            <h4>🎟️ 預訂資訊</h4>
+            <p>🚙 4WD 雪地自駕車已取車；望樓一泊二食晚宴預約已確認。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 4 (生日) -->
+  <section class="day" id="day-4">
+    <div class="day-head">
+      <div class="day-number bday">🎂 DAY 04</div>
+      <div class="day-title-wrap">
+        <div class="day-date bday-text">2026 / 12 / 20（日）★ 生日當日 ★</div>
+        <h2>望樓豐盛和朝食 → 穿越道央雪原 → 超市採購三大天食材與美酒 → 美瑛包棟別墅開箱自煮</h2>
+        <div class="meta-row">
+          <span>📍 洞爺湖 → 美瑛町</span>
+          <span>☀️ 氣溫 -5° / -11°C（日落 16:03）</span>
+          <span>🚗 4WD 自駕約 3.5–4 小時（約 210 km）</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card focus-card bday-focus">
+      <h3>👑 ✨ 生日盛宴焦點</h3>
+      <div class="focus-chips">
+        <span class="focus-chip bday-tag">🎉 生日快樂！</span>
+        <span class="focus-chip bday-tag">🍳 望樓精緻湖景和風朝食</span>
+        <span class="focus-chip bday-tag">🛒 超市大採買：三天份十勝黑毛和牛、生干貝、美瑛生乳與美酒</span>
+        <span class="focus-chip bday-tag">🏡 入住美瑛獨棟包棟別墅：ウバク荘 (ubakusou)</span>
+        <span class="focus-chip bday-tag">🍲 暖烘烘別墅生日火鍋與紅酒之夜</span>
+      </div>
+      <p class="focus-note">最重要的一天！享受完望樓晨湯後出發，傍晚採購北海道最新鮮的牛排海鮮與美酒，入住獨棟別墅浪漫慶生自煮。</p>
+    </div>
+
+    <div class="card photo-gallery-card">
+      <div class="photo-gallery-head">
+        <div class="photo-gallery-title">📸 今日沿途景點</div>
+        <div class="photo-online-note">連線時載入縮圖</div>
+      </div>
+      <div class="photo-strip">
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=350" alt="美瑛白雪" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">美瑛純白雪原景色</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Biei+Hokkaido" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=350" alt="超市牛排生鮮" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">道產和牛與海鮮</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Supermarket+Biei+Hokkaido" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card route-card">
+      <div class="card-title-row">
+        <h3>🗺️ 路線與地圖</h3>
+        <a class="map-btn" href="https://www.google.com/maps/dir/?api=1&origin=Boro+Noguchi+Toya&destination=Ubakusou+Biei&travelmode=driving" target="_blank" rel="noopener">📍 開啟 洞爺湖-美瑛 自駕路線 ↗</a>
+      </div>
+      <div class="route-line">
+        <span class="route-stop">1<b>望樓 NOGUCHI 洞爺</b></span>
+        <span class="route-stop">2<b>道央高速自動車道</b></span>
+        <span class="route-stop">3<b>砂川 / 瀧川高速休息站</b></span>
+        <span class="route-stop">4<b>美瑛 / 富良野生鮮超市</b></span>
+        <span class="route-stop">5<b>ウバク荘 (ubakusou)</b></span>
+      </div>
+    </div>
+
+    <div class="card timing-card">
+      <h3>🚗 車程＆⏱️ 景點停留</h3>
+      <div class="timing-columns">
+        <div class="timing-group move">
+          <div class="timing-group-title">🚗 從哪裡到哪裡</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">望樓洞爺 → 道央高速道（虻田洞爺湖IC）</span><span class="timing-badge">約 15 分鐘</span></div>
+            <div class="timing-item"><span class="route-text">道央道高速行駛至旭川/深川系統</span><span class="timing-badge">約 2 小時 40 分</span><span class="timing-note">途經砂川 SA 用餐休息</span></div>
+            <div class="timing-item"><span class="route-text">一般道路 → 美瑛當地超市與別墅</span><span class="timing-badge">約 40 分鐘</span><span class="timing-note">下午 15:00 前後抵達美瑛</span></div>
+          </div>
+        </div>
+        <div class="timing-group stay">
+          <div class="timing-group-title">⏱️ 這一站待多久</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">望樓朝食與晨湯漫活</span><span class="timing-badge">至 11:00 退房</span><span class="timing-note">奢華享受溫泉最後時光</span></div>
+            <div class="timing-item"><span class="route-text">美瑛超市採買食材與美酒</span><span class="timing-badge">約 1 小時</span><span class="timing-note">採買三天份壽喜燒/火鍋、頂級牛排與紅白酒</span></div>
+            <div class="timing-item"><span class="route-text">美瑛ウバク荘別墅開箱自煮</span><span class="timing-badge">16:00 起</span><span class="timing-note">廚房設備齊全，生日燭光晚宴</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="lead"><span class="hl-pink">生日快樂！</span>在望樓晨光雪景中醒來，享用道產白米飯、炭烤鮭魚與溫泉蛋的精緻早餐。11:00 從容退房出發，沿著道央自動車道一路向北穿梭於壯麗雪嶺之間。抵達美瑛後，前往大型生鮮超市大採買：十勝黑毛和牛、生干貝、富良野起司與美酒！入住日式現代包棟別墅「ウバク荘」，在暖氣融融的木質空間裡，兩人一起開箱煮火鍋、煎牛排、品嚐美酒，歡度溫馨無比的生日盛宴！</p>
+
+    <div class="day-grid">
+      <div class="card timeline-card">
+        <h3>⏱️ 當日時間軸</h3>
+        <div class="time-row"><div class="time">08:00</div><div><b>望樓私人晨湯 ＆ 精緻湖景早餐</b><p>早晨再次浸泡暖湯，享用溫熱豐盛的和風料理。</p></div></div>
+        <div class="time-row"><div class="time">11:00</div><div><b>辦理退房，出發前往美瑛</b><p>揮別洞爺湖，駛上高速公路展開道央雪國長途行駛。</p></div></div>
+        <div class="time-row"><div class="time">13:00</div><div><b>砂川 SA 高速公路服務區小憩</b><p>購買熱飲與特色點心，伸展筋骨更換駕駛。</p></div></div>
+        <div class="time-row"><div class="time">15:00</div><div><b>抵達美瑛町大型超市（Supermarket）大採買</b><p>精選 3 天份頂級火鍋/自炊食材：頂級和牛肉片、北海道產大生干貝、新鮮蔬菜、美瑛牛奶與精選生日香檳紅酒。</p></div></div>
+        <div class="time-row"><div class="time">16:15</div><div><b>抵達美瑛獨棟別墅：ウバク荘 (ubakusou) 入住</b><p>包棟空間寬敞溫馨，設備齊全的現代廚房與地暖設備。</p></div></div>
+        <div class="time-row"><div class="time">18:00</div><div><b>生日大餐自煮料理：和牛壽喜燒盛宴</b><p>香氣四溢的和牛鍋物、乾杯美酒，沉浸在屬於兩人的浪漫雪國夜晚！</p></div></div>
+      </div>
+
+      <div class="side-stack">
+        <div class="card wear-card">
+          <h3>🧥 當天建議穿搭</h3>
+          <div class="wear-title">長途車程舒適＋美瑛雪地保暖</div>
+          <div class="feel">長途自駕以舒適透氣為佳，但美瑛為內陸盆地，入夜氣溫急速降至 -10°C 以下！</div>
+          <ul class="wear-list">
+            <li>舒適彈性褲裝＋刷毛上衣（便於車內活動）</li>
+            <li>羽絨外套隨手放置，上下超市採購時迅速保暖</li>
+            <li>進入別墅內暖氣充裕，可換穿舒適居家服</li>
+          </ul>
+        </div>
+
+        <div class="card daily-info-card">
+          <h3>🧾 今日生活資訊</h3>
+          <div class="daily-info-section meals-section">
+            <h4>🍽️ 三餐安排</h4>
+            <div class="daily-meal-list">
+              <div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">望樓頂級和風朝食</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">高速公路 SA 輕食 / 道產便當</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">🎂 晚餐</div><div class="daily-meal-value">別墅燭光自煮：十勝和牛鍋物、海鮮與美酒</div></div>
+            </div>
+          </div>
+          <div class="daily-info-section stay-section">
+            <h4>🏡 今晚住宿</h4>
+            <p><strong>ウバク荘 (ubakusou)</strong><br>美瑛包棟別墅・獨立完整廚房（已確認訂房，NT$ 3,901）</p>
+            <span class="stay-badge">👥 美瑛包棟連住第 1 晚</span>
+          </div>
+          <div class="daily-info-section booking-section">
+            <h4>🎟️ 預訂資訊</h4>
+            <p>ウバク荘 密碼自助入住手續；超市採購預算約 ¥15,000–20,000。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 5 -->
+  <section class="day" id="day-5">
+    <div class="day-head">
+      <div class="day-number">DAY 05</div>
+      <div class="day-title-wrap">
+        <div class="day-date">2026 / 12 / 21（一）</div>
+        <h2>美瑛夢幻名木巡禮 → 白金青池點燈 → 白鬚瀑布藍河冰柱</h2>
+        <div class="meta-row">
+          <span>📍 美瑛丘陵 ⇆ 白金溫泉區</span>
+          <span>☀️ 氣溫 -5° / -11°C（日落 16:03）</span>
+          <span>🚗 4WD 景點短程穿梭</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card focus-card">
+      <h3>✨ 行程焦點</h3>
+      <div class="focus-chips">
+        <span class="focus-chip">🌲 孤獨而美麗：美瑛聖誕樹 (Christmas Tree)</span>
+        <span class="focus-chip">❄️ Ken & Mary 之樹 ＆ 七星之樹 (Seven Stars Tree)</span>
+        <span class="focus-chip">🌌 白金青池冬季夜間積雪點燈</span>
+        <span class="focus-chip">💧 白鬚瀑布藍色美瑛川霧氣</span>
+        <span class="focus-chip">🏡 別墅溫馨自煮暖胃晚餐</span>
+      </div>
+      <p class="focus-note">全日專注於美瑛最經典的冬雪意境，白天追尋雪原名木，傍晚前進白金青池欣賞奇幻的光雕投射。</p>
+    </div>
+
+    <div class="card photo-gallery-card">
+      <div class="photo-gallery-head">
+        <div class="photo-gallery-title">📸 今日沿途景點</div>
+        <div class="photo-online-note">連線時載入縮圖</div>
+      </div>
+      <div class="photo-strip">
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=350" alt="聖誕樹" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">美瑛聖誕樹雪景</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Christmas+Tree+Biei" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1508873696983-2df5293cb32f?w=350" alt="青池" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">白金青池冬季點燈</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Shirogane+Blue+Pond" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=350" alt="白鬚瀑布" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">白鬚瀑布鈷藍溪谷</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Shirahige+Waterfall" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card timing-card">
+      <h3>🚗 車程＆⏱️ 景點停留</h3>
+      <div class="timing-columns">
+        <div class="timing-group move">
+          <div class="timing-group-title">🚗 從哪裡到哪裡</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">別墅 → 拼布之路（七星之樹、Ken & Mary）</span><span class="timing-badge">約 15 分鐘</span></div>
+            <div class="timing-item"><span class="route-text">拼布之路 → 聖誕樹之木</span><span class="timing-badge">約 20 分鐘</span></div>
+            <div class="timing-item"><span class="route-text">聖誕樹 → 白金青池 / 白鬚瀑布</span><span class="timing-badge">約 25 分鐘</span></div>
+            <div class="timing-item"><span class="route-text">白金溫泉區 → 返回別墅</span><span class="timing-badge">約 30 分鐘</span></div>
+          </div>
+        </div>
+        <div class="timing-group stay">
+          <div class="timing-group-title">⏱️ 這一站待多久</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">七星之樹、Ken & Mary 攝影</span><span class="timing-badge">各約 30 分鐘</span><span class="timing-note">欣賞純白丘陵與地平線</span></div>
+            <div class="timing-item"><span class="route-text">美瑛聖誕樹 (Christmas Tree)</span><span class="timing-badge">約 40 分鐘</span><span class="timing-note">日落前金黃斜射光最佳</span></div>
+            <div class="timing-item"><span class="route-text">白金青池點燈 ＆ 白鬚瀑布</span><span class="timing-badge">約 1.5 小時</span><span class="timing-note">16:30 點燈後藍調奇景</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="lead"><span class="hl">美瑛明信片級雪景攝影日</span>。今天完全不需匆忙趕路，睡到自然醒後悠閒自煮早餐。帶上相機探訪雪原中矗立的聖誕樹與七星之樹。日落時分前往白金青池，欣賞積雪覆蓋的枯木在多層次燈光投影下的魔幻色彩，隨後至白鬚瀑布俯瞰 Cobalt Blue 的不凍溪谷。</p>
+
+    <div class="day-grid">
+      <div class="card timeline-card">
+        <h3>⏱️ 當日時間軸</h3>
+        <div class="time-row"><div class="time">08:30</div><div><b>別墅悠閒早午餐</b><p>美瑛小麥吐司、煎培根蛋、濃郁道產鮮乳與手沖熱咖啡。</p></div></div>
+        <div class="time-row"><div class="time">10:00</div><div><b>探訪「拼布之路」：Ken & Mary 之樹、七星之樹</b><p>欣賞純白無瑕的起伏雪丘與孤挺樹木，拍下極致純淨的留白美學。</p></div></div>
+        <div class="time-row"><div class="time">12:30</div><div><b>美瑛市區午餐或回別墅熱食</b><p>可品嚐美瑛知名的炸豬排咖哩烏龍麵，或回溫暖別墅自理輕食。</p></div></div>
+        <div class="time-row"><div class="time">14:45</div><div><b>美瑛聖誕樹 (Christmas Tree) 捕捉日落金光</b><p>冬日午後斜陽為純白大地抹上溫柔金黃，孤獨矗立的聖誕樹最是動人。</p></div></div>
+        <div class="time-row"><div class="time">16:30</div><div><b>白金青池（冬季夜間點燈）</b><p>結冰積雪的池面上，幻彩燈光每十分鐘輪轉變幻，如夢似幻。</p></div></div>
+        <div class="time-row"><div class="time">17:45</div><div><b>白鬚瀑布夜間觀賞</b><p>溫泉水從石縫中湧出注入美瑛川，鈷藍色溪流冒著裊裊白煙。</p></div></div>
+        <div class="time-row"><div class="time">19:00</div><div><b>返回別墅享受溫馨自炊晚餐</b><p>煎烤干貝牛排、熱湯佐美酒，享受寧靜無擾的雪夜時光。</p></div></div>
+      </div>
+
+      <div class="side-stack">
+        <div class="card wear-card">
+          <h3>🧥 當天建議穿搭</h3>
+          <div class="wear-title">戶外雪地長時間停留保暖</div>
+          <div class="feel">美瑛戶外空曠風大，青池入夜體感低於 -10°C，需具備最高等級防寒配備。</div>
+          <ul class="wear-list">
+            <li>超保暖羊毛發熱衣 ＋ 厚抓絨中層</li>
+            <li>長版抗暴風雪連帽羽絨外套</li>
+            <li>防風防水雪褲（拍照常需蹲跪於雪地中）</li>
+            <li>毛帽、包耳罩、保暖防風手套（內附暖暖包）</li>
+          </ul>
+        </div>
+
+        <div class="card daily-info-card">
+          <h3>🧾 今日生活資訊</h3>
+          <div class="daily-info-section meals-section">
+            <h4>🍽️ 三餐安排</h4>
+            <div class="daily-meal-list">
+              <div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">別墅悠閒自煮晨食</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">美瑛在地簡餐 / 別墅自理</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">別墅自炊：奶油嫩煎大干貝、牛排熱饌</div></div>
+            </div>
+          </div>
+          <div class="daily-info-section stay-section">
+            <h4>🏡 今晚住宿</h4>
+            <p><strong>ウバク荘 (ubakusou)</strong>（連住第 2 晚，NT$ 3,901）</p>
+            <span class="stay-badge">👥 美瑛包棟連住第 2 晚</span>
+          </div>
+          <div class="daily-info-section booking-section">
+            <h4>🎟️ 預訂資訊</h4>
+            <p>白金青池與白鬚瀑布點燈免門票；青池冬季停車場收取整理費 ¥500。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 6 -->
+  <section class="day" id="day-6">
+    <div class="day-head">
+      <div class="day-number">DAY 06</div>
+      <div class="day-title-wrap">
+        <div class="day-date">2026 / 12 / 22（二）</div>
+        <h2>富良野浪漫巡遊 → 精靈露台森林木屋 → 起司工坊手作體驗</h2>
+        <div class="meta-row">
+          <span>📍 美瑛 ⇆ 富良野</span>
+          <span>☀️ 氣溫 -5° / -11°C（日落 16:03）</span>
+          <span>🚗 4WD 自駕約 35 分鐘（單程約 35 km）</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card focus-card">
+      <h3>✨ 行程焦點</h3>
+      <div class="focus-chips">
+        <span class="focus-chip">🧚 新富良野王子大飯店：森林精靈露台 (Ningle Terrace)</span>
+        <span class="focus-chip">🧀 富良野起司工坊品嚐新鮮乳酪與窯烤披薩</span>
+        <span class="focus-chip">☕ 森之時計咖啡館：親手手磨咖啡豆</span>
+        <span class="focus-chip">❄️ 美瑛別墅第三夜溫馨小酌</span>
+      </div>
+      <p class="focus-note">前往充滿童話氣息的富良野，造訪森林深處的木屋聚落，夜幕降臨宛如冰雪奇緣世界。</p>
+    </div>
+
+    <div class="card photo-gallery-card">
+      <div class="photo-gallery-head">
+        <div class="photo-gallery-title">📸 今日沿途景點</div>
+        <div class="photo-online-note">連線時載入縮圖</div>
+      </div>
+      <div class="photo-strip">
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=350" alt="精靈露台木屋" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">森林精靈露台木屋</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Ningle+Terrace+Furano" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=350" alt="起司披薩" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">富良野起司工坊</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Furano+Cheese+Factory" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card timing-card">
+      <h3>🚗 車程＆⏱️ 景點停留</h3>
+      <div class="timing-columns">
+        <div class="timing-group move">
+          <div class="timing-group-title">🚗 從哪裡到哪裡</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">美瑛別墅 → 富良野起司工坊</span><span class="timing-badge">約 35 分鐘</span><span class="timing-note">國道 237 號花人街道（冬雪版）</span></div>
+            <div class="timing-item"><span class="route-text">起司工坊 → 森林精靈露台</span><span class="timing-badge">約 10 分鐘</span></div>
+            <div class="timing-item"><span class="route-text">精靈露台 → 返回美瑛別墅</span><span class="timing-badge">約 40 分鐘</span></div>
+          </div>
+        </div>
+        <div class="timing-group stay">
+          <div class="timing-group-title">⏱️ 這一站待多久</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">富良野起司工坊 ＆ 披薩午餐</span><span class="timing-badge">約 1.5 小時</span><span class="timing-note">乳酪試吃、現烤拿坡里披薩</span></div>
+            <div class="timing-item"><span class="route-text">森林精靈露台 ＆ 森之時計</span><span class="timing-badge">約 2.5 小時</span><span class="timing-note">16:00 點燈後黃金拍攝時段</span></div>
+            <div class="timing-item"><span class="route-text">美瑛別墅悠閒時光</span><span class="timing-badge">整晚</span><span class="timing-note">收拾整理、享受第三晚清靜</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="lead"><span class="hl">漫遊雪國童話世界</span>。今天往南探訪富良野，午後抵達坐落於森林深處的「森林精靈露台（Ningle Terrace）」。15 棟覆蓋厚重白雪的原木工藝小屋串聯在步道兩側，在暖黃燈光映照下格外夢幻。隨後走入著名日劇取景地「森之時計」咖啡館，坐在吧檯親手旋轉磨豆機，品味一杯現磨黑咖啡。</p>
+
+    <div class="day-grid">
+      <div class="card timeline-card">
+        <h3>⏱️ 當日時間軸</h3>
+        <div class="time-row"><div class="time">09:00</div><div><b>別墅悠閒早餐與熱飲</b><p>放慢節奏，享受包棟別墅的寧靜晨間時光。</p></div></div>
+        <div class="time-row"><div class="time">10:45</div><div><b>自駕前往富良野起司工坊 (Cheese Factory)</b><p>參觀起司製作過程，品嚐特色墨魚黑起司，午餐享用石窯烤牽絲起司披薩。</p></div></div>
+        <div class="time-row"><div class="time">13:30</div><div><b>前往新富良野王子大飯店園區</b><p>漫步於森林木棧道，感受針葉林間清脆的踏雪聲。</p></div></div>
+        <div class="time-row"><div class="time">14:30</div><div><b>森之時計 (Soh's BAR) 親手磨豆咖啡</b><p>在暖爐旁的吧檯慢慢研磨咖啡豆，感受時光靜止的愜意氛圍。</p></div></div>
+        <div class="time-row"><div class="time">16:00</div><div><b>森林精靈露台點燈夢幻夜景</b><p>夕陽西下，木屋群與森林步道點亮金黃燈泡，宛如童話小精靈的家。</p></div></div>
+        <div class="time-row"><div class="time">18:00</div><div><b>自駕返回美瑛別墅</b><p>沿著國道 237 號平穩駕駛返回美瑛。</p></div></div>
+        <div class="time-row"><div class="time">19:00</div><div><b>別墅最後一晚自煮佳餚小酌</b><p>享用熱騰騰的道產拉麵與煎餃，清點行李準備明日前往星野。</p></div></div>
+      </div>
+
+      <div class="side-stack">
+        <div class="card wear-card">
+          <h3>🧥 當天建議穿搭</h3>
+          <div class="wear-title">森林漫步＋咖啡館溫暖層次</div>
+          <div class="feel">精靈露台在森林內，積雪厚且多階梯，建議穿著防水雪靴與方便行走的保暖衣物。</div>
+          <ul class="wear-list">
+            <li>中層開襟羊毛衫（進入室內方便穿脫）</li>
+            <li>長版保暖防風羽絨外套</li>
+            <li>抓地力強之雪靴（木棧道易滑）</li>
+            <li>毛帽、圍巾、保暖手套</li>
+          </ul>
+        </div>
+
+        <div class="card daily-info-card">
+          <h3>🧾 今日生活資訊</h3>
+          <div class="daily-info-section meals-section">
+            <h4>🍽️ 三餐安排</h4>
+            <div class="daily-meal-list">
+              <div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">別墅溫暖自煮</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">富良野起司工坊現烤披薩</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">☕ 咖啡</div><div class="daily-meal-value">森之時計手磨研豆黑咖啡</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">別墅美饌自理</div></div>
+            </div>
+          </div>
+          <div class="daily-info-section stay-section">
+            <h4>🏡 今晚住宿</h4>
+            <p><strong>ウバク荘 (ubakusou)</strong>（連住第 3 晚，NT$ 3,901）</p>
+            <span class="stay-badge">👥 美瑛包棟連住第 3 晚</span>
+          </div>
+          <div class="daily-info-section booking-section">
+            <h4>🎟️ 預訂資訊</h4>
+            <p>森林精靈露台免門票參觀；附設免費戶外停車場。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 7 (星野全都要版) -->
+  <section class="day" id="day-7">
+    <div class="day-head">
+      <div class="day-number">DAY 07</div>
+      <div class="day-title-wrap">
+        <div class="day-date">2026 / 12 / 23（三）</div>
+        <h2>星野 Tomamu 全明星聖誕巡禮：霧冰平台 ➔ 螢火蟲街聖誕市集 ➔ 愛絲冰城 ➔ 森林餐廳好友晚宴 ➔ 夜間水之教堂 ➔ 木林之湯</h2>
+        <div class="meta-row">
+          <span>📍 美瑛 → Tomamu 星野度假村</span>
+          <span>☀️ 氣溫 -6° / -13°C（日落 16:03）</span>
+          <span>🚗 4WD 自駕約 1.8 小時（約 95 km）</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card focus-card">
+      <h3>✨ 行程焦點（全亮點完整收錄）</h3>
+      <div class="focus-chips">
+        <span class="focus-chip">🏔️ 雲海纜車登頂：霧冰平台 (Frost Tree Terrace) ＆ Cloud Walk 漫步</span>
+        <span class="focus-chip">🎅 螢火蟲之街 (Hotalu Street) 聖誕市集 ＆ 尋找滑雪聖誕老人</span>
+        <span class="focus-chip">🧊 愛絲冰城 (Ice Village) 冰之教堂、冰酒吧、溜冰場</span>
+        <span class="focus-chip">🎄 森林餐廳 Nininupuri 4 人聖誕盛宴（與好友會合）</span>
+        <span class="focus-chip">⛪ 安藤忠雄大師名作：雪與冰之「水之教堂」（夜間開放 20:30–21:30）</span>
+        <span class="focus-chip">♨️ 木林之湯 (Kirin-no-Yu) 森林雪景露天風呂</span>
+      </div>
+      <p class="focus-note">美瑛早出發，中午抵達星野即展開全天無冷場的聖誕奢華巡禮！登高賞霧冰、逛雪地市集、探訪零下真冰城堡，晚間在森林餐廳大啖海鮮牛排，最後在水之教堂與露天雪湯中完美沉醉。</p>
+    </div>
+
+    <div class="card photo-gallery-card">
+      <div class="photo-gallery-head">
+        <div class="photo-gallery-title">📸 今日沿途景點與星野聖誕亮點</div>
+        <div class="photo-online-note">連線時載入縮圖</div>
+      </div>
+      <div class="photo-strip">
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1548777123-e216912df7d8?w=350" alt="霧冰平台" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">霧冰平台 ＆ 雲端步道</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Terrace+of+Frost+Tree+Tomamu" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=350" alt="愛絲冰城" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">愛絲冰城 Ice Village</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Ice+Village+Tomamu" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=350" alt="水之教堂" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">冬季 水之教堂 (夜間)</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Church+on+the+Water+Tomamu" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=350" alt="森林餐廳" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">森林餐廳 Nininupuri</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Forest+Restaurant+Nininupuri" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card route-card">
+      <div class="card-title-row">
+        <h3>🗺️ 路線與地圖</h3>
+        <a class="map-btn" href="https://www.google.com/maps/dir/?api=1&origin=Ubakusou+Biei&destination=Hoshino+Resorts+Tomamu&travelmode=driving" target="_blank" rel="noopener">📍 開啟 美瑛-星野 自駕路線 ↗</a>
+      </div>
+      <div class="route-line">
+        <span class="route-stop">1<b>美瑛別墅退房</b></span>
+        <span class="route-stop">2<b>南富良野雪嶺公路</b></span>
+        <span class="route-stop">3<b>星野纜車站 (霧冰平台)</b></span>
+        <span class="route-stop">4<b>螢火蟲街 / 愛絲冰城</b></span>
+        <span class="route-stop">5<b>森林餐廳 / 水之教堂</b></span>
+      </div>
+    </div>
+
+    <div class="card timing-card">
+      <h3>🚗 車程＆⏱️ 景點停留</h3>
+      <div class="timing-columns">
+        <div class="timing-group move">
+          <div class="timing-group-title">🚗 從哪裡到哪裡</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">美瑛別墅 → 星野度假村 Tomamu</span><span class="timing-badge">約 1 小時 50 分</span><span class="timing-note">經國道 38 號與南富良野，路況平整</span></div>
+            <div class="timing-item"><span class="route-text">度假村內各點移動（纜車/木林之湯）</span><span class="timing-badge">🚌 免費巴士 5–8 分</span><span class="timing-note">穿梭巴士循環行駛於各館之間</span></div>
+          </div>
+        </div>
+        <div class="timing-group stay">
+          <div class="timing-group-title">⏱️ 這一站待多久</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">霧冰平台 ＆ 雲端步道纜車</span><span class="timing-badge">約 1.5 小時</span><span class="timing-note">13:15–14:45（纜車單程約 13 分）</span></div>
+            <div class="timing-item"><span class="route-text">螢火蟲街聖誕市集 ＆ 農場聖誕樹</span><span class="timing-badge">約 45 分鐘</span><span class="timing-note">品嚐香料熱紅酒與尋找聖誕老人</span></div>
+            <div class="timing-item"><span class="route-text">愛絲冰城 (Ice Village) 點燈</span><span class="timing-badge">約 1.2 小時</span><span class="timing-note">16:45–18:00（冰教堂與冰酒吧）</span></div>
+            <div class="timing-item"><span class="route-text">森林餐廳好友聖誕大餐</span><span class="timing-badge">約 2 小時</span><span class="timing-note">18:15–20:15（4 人歡聚乾杯）</span></div>
+            <div class="timing-item"><span class="route-text">安藤忠雄「水之教堂」夜間朝聖</span><span class="timing-badge">約 45 分鐘</span><span class="timing-note">20:30–21:15（冬季夜間限定開放）</span></div>
+            <div class="timing-item"><span class="route-text">木林之湯雪見露天溫泉風呂</span><span class="timing-badge">約 1 小時</span><span class="timing-note">21:30–22:30（看著落雪泡湯）</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="lead"><span class="hl">全都要！星野 Tomamu 最極致奢華的聖誕夢想日</span>。上午退房後出發，約 13:00 抵達星野度假村！寄放行李後立即搭乘雲海纜車登上 1,088 公尺的山頂「霧冰平台」，在 Cloud Walk 雲端步道俯瞰覆蓋晶瑩樹冰的連綿雪山。下山後漫步全日本唯一的滑雪購物街「螢火蟲之街」，與雪道上的滑雪聖誕老人合影。15:30 辦理入住稍作休息，16:45 踏入零下嚴寒打造的奇幻「愛絲冰城」。晚間在挑高玻璃景觀「森林餐廳」與度假中的好友共享豐盛聖誕晚宴。餐後 20:30 親臨安藤忠雄的大師名作「水之教堂」，凝視白雪與巨大十字架的極致純粹。最後在「木林之湯」無邊際露天溫泉池中，看著片片落雪洗去身心疲憊！</p>
+
+    <div class="day-grid">
+      <div class="card timeline-card">
+        <h3>⏱️ 當日時間軸（全亮點完美連貫）</h3>
+        <div class="time-row"><div class="time">09:00</div><div><b>別墅悠閒早餐與打包退房</b><p>確認行李完備，將暖氣歸位復原。</p></div></div>
+        <div class="time-row"><div class="time">10:30</div><div><b>出發前往星野度假村 Tomamu</b><p>車程約 1.8 小時，穿越南富良野壯麗雪原與針葉林道。</p></div></div>
+        <div class="time-row"><div class="time">12:30–13:00</div><div><b>抵達星野度假村主接待區</b><p>寄放大件行李、換上最高防寒外裝、領取園區地圖。</p></div></div>
+        <div class="time-row"><div class="time">13:15–14:45</div><div><b>雲海纜車站 ➔ 登上「霧冰平台 (Frost Tree Terrace)」</b><p>搭乘纜車登頂！漫步在突出於雪山懸崖的 Cloud Walk 網狀展望台，欣賞樹枝上結滿晶瑩剔透霧冰的絕景，在山頂景觀咖啡館享用熱可可。</p></div></div>
+        <div class="time-row"><div class="time">14:50–15:30</div><div><b>漫步「螢火蟲之街 (Hotalu Street)」聖誕市集</b><p>全木造露天雪街掛滿暖黃燈飾，欣賞農場巨大乾草聖誕樹，巧遇穿梭雪道發糖果的滑雪聖誕老人！</p></div></div>
+        <div class="time-row"><div class="time">15:30</div><div><b>辦理 Check-in 入住 White House</b><p>回到房間整理裝備、加貼暖暖包、喝杯熱茶準備迎接夜間重頭戲。</p></div></div>
+        <div class="time-row"><div class="time">16:45–18:00</div><div><b>探訪零下魔幻世界「愛絲冰城 (Ice Village)」</b><p>17:00 準時點燈！參觀整座用冰塊砌成的冰之教堂、坐在冰椅上於冰之酒吧品嚐冰杯雞尾酒、暢玩冰之滑梯。</p></div></div>
+        <div class="time-row"><div class="time">18:15–20:15</div><div><b>森林餐廳 Nininupuri：4 人好友聖誕歡聚大餐</b><p>與在此度假的友人於挑高 15 米的巨木玻璃森林餐廳會合！舉杯同慶聖誕，大啖現煎牛排、極品海鮮與聖誕甜點盛宴。</p></div></div>
+        <div class="time-row"><div class="time">20:30–21:15</div><div><b>朝聖安藤忠雄大師名作：夜間「水之教堂 (Church on the Water)」</b><p>（冬季夜間免費開放時段 20:30–21:30）走進靜謐的清水模建築，滑門完全敞開，眼前是白雪冰封的水池與純白十字架，氣氛神聖震撼心靈！</p></div></div>
+        <div class="time-row"><div class="time">21:30–22:30</div><div><b>木林之湯 (Kirin-no-Yu) 露天雪見溫泉風呂</b><p>在夜間打光的落葉松針葉林包圍下泡入滾燙露天溫泉，頭頂雪花飄落，為這場全明星聖誕盛宴畫下最極致句點！</p></div></div>
+      </div>
+
+      <div class="side-stack">
+        <div class="card wear-card">
+          <h3>🧥 當天建議穿搭</h3>
+          <div class="wear-title">零下極度抗寒（全日戶外）</div>
+          <div class="feel">山頂霧冰平台與夜間愛絲冰城氣溫可低至 -12°C 至 -15°C，防風保暖務必做到頂級！</div>
+          <ul class="wear-list">
+            <li>極暖羊毛發熱衣 ＋ 抓絨或厚羽絨背心中層</li>
+            <li>長版抗暴風雪厚羽絨大衣（附防風連帽）</li>
+            <li>雙層保暖褲 ＋ 外搭防風防水雪褲</li>
+            <li>高筒止滑雪靴 ＋ 厚羊毛襪 ＋ 防風手套</li>
+            <li>毛帽、包耳罩、圍巾與隨身暖暖包（手機也貼一個防凍關機）</li>
+          </ul>
+        </div>
+
+        <div class="card daily-info-card">
+          <h3>🧾 今日生活資訊</h3>
+          <div class="daily-info-section meals-section">
+            <h4>🍽️ 三餐安排</h4>
+            <div class="daily-meal-list">
+              <div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">美瑛別墅悠閒自炊早餐</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">星野螢火蟲街 / 霧冰平台景觀咖啡輕食</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">🎄 晚餐</div><div class="daily-meal-value">森林餐廳 Nininupuri：4 人好友聖誕盛宴</div></div>
+            </div>
+          </div>
+          <div class="daily-info-section stay-section">
+            <h4>🏡 今晚住宿</h4>
+            <p><strong>星野 Risonare Tomamu 的 White House</strong>（已確認訂房，NT$ 2,700）</p>
+            <span class="stay-badge">👥 星野度假村特選住宿</span>
+          </div>
+          <div class="daily-info-section booking-section">
+            <h4>🎟️ 預訂資訊</h4>
+            <p>霧冰纜車往返約 ¥2,200；水之教堂夜間 20:30–21:30 免費開放；森林餐廳憑房客資格現場候位。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card alert-card">
+      <h3>⚠️ 今天特別注意</h3>
+      <ul class="alert-list">
+        <li><strong>水之教堂夜間開放為 20:30 至 21:30（最後入場 21:20）</strong>，白天為婚禮包場不開放，務必在森林餐廳用餐後準時前往。</li>
+        <li>園區各點之間有免費接駁巴士（綠線/藍線），約 15 分鐘一班，移動前可先向櫃台或站牌確認動線。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DAY 8 (平安夜) -->
+  <section class="day" id="day-8">
+    <div class="day-head">
+      <div class="day-number">DAY 08</div>
+      <div class="day-title-wrap">
+        <div class="day-date">2026 / 12 / 24（四）★ 平安夜 ★</div>
+        <h2>Tomamu 晨光 → 4WD 開返札幌還車 → 入住三井花園 → 札幌平安夜浪漫盛宴</h2>
+        <div class="meta-row">
+          <span>📍 Tomamu → 札幌市區</span>
+          <span>☀️ 氣溫 -4° / -9°C（日落 16:03）</span>
+          <span>🚗 4WD 自駕約 2 小時 40 分（約 145 km）➔ 市區還車</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card focus-card">
+      <h3>✨ 行程焦點</h3>
+      <div class="focus-chips">
+        <span class="focus-chip">🚙 4WD 順利開回札幌租車門市（預計 14:00 前滿油還車）</span>
+        <span class="focus-chip">🏨 入住札幌核心名宿：Mitsui Garden Hotel Sapporo West</span>
+        <span class="focus-chip">🛍️ 狸小路、大丸百貨聖誕最後伴手禮採買</span>
+        <span class="focus-chip">🎄 札幌白色燈樹節平安夜點燈</span>
+        <span class="focus-chip">🍽️ 札幌知名餐廳平安夜大餐</span>
+      </div>
+      <p class="focus-note">中午前出發經道東高速平穩返回札幌，下午兩點前完成還車手續，放下開車壓力，入住三井花園漫步平安夜！</p>
+    </div>
+
+    <div class="card photo-gallery-card">
+      <div class="photo-gallery-head">
+        <div class="photo-gallery-title">📸 今日沿途景點</div>
+        <div class="photo-online-note">連線時載入縮圖</div>
+      </div>
+      <div class="photo-strip">
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=350" alt="札幌街景" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">札幌平安夜燈火</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Sapporo+Station" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-frame"><img src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=350" alt="三井花園" loading="lazy"></div>
+          <div class="photo-caption">
+            <div class="photo-caption-title">三井花園札幌西</div>
+            <a class="photo-map" href="https://www.google.com/maps/search/?api=1&query=Mitsui+Garden+Hotel+Sapporo+West" target="_blank" rel="noopener">📍 地圖</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card route-card">
+      <div class="card-title-row">
+        <h3>🗺️ 路線與地圖</h3>
+        <a class="map-btn" href="https://www.google.com/maps/dir/?api=1&origin=Hoshino+Resorts+Tomamu&destination=Mitsui+Garden+Hotel+Sapporo+West&travelmode=driving" target="_blank" rel="noopener">📍 開啟 星野-札幌 自駕路線 ↗</a>
+      </div>
+      <div class="route-line">
+        <span class="route-stop">1<b>星野退房啟程</b></span>
+        <span class="route-stop">2<b>道東自動車道</b></span>
+        <span class="route-stop">3<b>札幌市區加油站（加滿油）</b></span>
+        <span class="route-stop">4<b>租車門市 14:00 還車</b></span>
+        <span class="route-stop">5<b>三井花園飯店 ＆ 平安夜</b></span>
+      </div>
+    </div>
+
+    <div class="card timing-card">
+      <h3>🚗 車程＆⏱️ 景點停留</h3>
+      <div class="timing-columns">
+        <div class="timing-group move">
+          <div class="timing-group-title">🚗 從哪裡到哪裡</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">Tomamu IC → 道東高速自動車道</span><span class="timing-badge">約 10 分鐘</span></div>
+            <div class="timing-item"><span class="route-text">道東道 ➔ 道央道直達札幌市區</span><span class="timing-badge">約 2 小時 30 分</span><span class="timing-note">全程高速公路，定期除雪路況良好</span></div>
+            <div class="timing-item"><span class="route-text">租車門市 → 三井花園飯店</span><span class="timing-badge">步行約 6 分</span></div>
+          </div>
+        </div>
+        <div class="timing-group stay">
+          <div class="timing-group-title">⏱️ 這一站待多久</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">還車前加滿油與還車驗收</span><span class="timing-badge">13:30–14:00</span><span class="timing-note">核對里程、ETC結算與外觀</span></div>
+            <div class="timing-item"><span class="route-text">三井花園 Check-in 入住</span><span class="timing-badge">15:00 起</span><span class="timing-note">放下行李、享受大浴場</span></div>
+            <div class="timing-item"><span class="route-text">札幌市區平安夜漫步採買</span><span class="timing-badge">整個午後至晚間</span><span class="timing-note">大丸百貨、狸小路、平安夜盛宴</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="lead"><span class="hl">平安夜重返繁華札幌</span>。早晨告別星野，沿著平整的道東自動車道一路平穩開回札幌市區。下午兩點前在門市旁加滿油、順利完成 6 天無事故的自駕還車！入住位置絕佳的「Mitsui Garden Hotel Sapporo West」，午後牽手漫步於狸小路商店街與大丸百貨，採購精緻伴手禮。晚間在聖誕鐘聲中享用盛大平安夜晚餐，度過難忘雪國平安夜。</p>
+
+    <div class="day-grid">
+      <div class="card timeline-card">
+        <h3>⏱️ 當日時間軸</h3>
+        <div class="time-row"><div class="time">09:00</div><div><b>星野早餐與悠閒退房</b><p>享受晨間清新的針葉林芬多精與白雪景致。</p></div></div>
+        <div class="time-row"><div class="time">10:30</div><div><b>啟程自駕返回札幌</b><p>由 Tomamu IC 駛上高速公路，保持均速 80km/h 安全巡航。</p></div></div>
+        <div class="time-row"><div class="time">13:30</div><div><b>抵達札幌市區指定加油站加滿油 (Regular 油)</b><p>保留加油發票，供還車櫃檯查驗。</p></div></div>
+        <div class="time-row"><div class="time">14:00前</div><div><b>租車公司門市順利完成還車</b><p>結清高速公路 ETC 過路費，取下所有行李，自駕任務圓滿達成！</p></div></div>
+        <div class="time-row"><div class="time">14:30</div><div><b>入住 Mitsui Garden Hotel Sapporo West</b><p>辦理入住手續，房間設計新穎雅緻，館內附設舒適的景觀大浴場。</p></div></div>
+        <div class="time-row"><div class="time">15:30</div><div><b>大丸百貨地下街 ＆ 狸小路採購</b><p>採買北菓樓開拓米果、六花亭葡萄奶油夾心餅與聖誕限定甜品禮盒。</p></div></div>
+        <div class="time-row"><div class="time">18:30</div><div><b>札幌知名餐廳：浪漫平安夜盛宴</b><p>精選成吉思汗烤肉 (達摩) 或海鮮會席，在歡笑與白雪中乾杯慶祝平安夜！</p></div></div>
+      </div>
+
+      <div class="side-stack">
+        <div class="card wear-card">
+          <h3>🧥 當天建議穿搭</h3>
+          <div class="wear-title">市區逛街好走＋晚餐體面保暖</div>
+          <div class="feel">札幌市區室內地下街暖氣充足，採易穿脫的分層搭配最為輕鬆。</div>
+          <ul class="wear-list">
+            <li>修身保暖毛衣 ＋ 俐落長褲</li>
+            <li>時尚保暖羊毛大衣或羽絨外套</li>
+            <li>好走耐磨止滑短靴</li>
+          </ul>
+        </div>
+
+        <div class="card daily-info-card">
+          <h3>🧾 今日生活資訊</h3>
+          <div class="daily-info-section meals-section">
+            <h4>🍽️ 三餐安排</h4>
+            <div class="daily-meal-list">
+              <div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">星野度假村早餐</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">高速公路休息站 / 札幌拉麵</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">🎄 晚餐</div><div class="daily-meal-value">札幌市區精緻平安夜大餐（預約餐廳）</div></div>
+            </div>
+          </div>
+          <div class="daily-info-section stay-section">
+            <h4>🏡 今晚住宿</h4>
+            <p><strong>Mitsui Garden Hotel Sapporo West</strong><br>近札幌站西口・附頂級大浴場（已確認訂房，NT$ 9,207）</p>
+            <span class="stay-badge">👥 雙人已訂妥・平安夜市區</span>
+          </div>
+          <div class="daily-info-section booking-section">
+            <h4>🎟️ 預訂資訊</h4>
+            <p>🚙 14:00 前完成還車；Mitsui Garden 已確認訂房。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 9 (聖誕節返台) -->
+  <section class="day" id="day-9">
+    <div class="day-head">
+      <div class="day-number">DAY 09</div>
+      <div class="day-title-wrap">
+        <div class="day-date">2026 / 12 / 25（五）★ 聖誕節 ★</div>
+        <h2>新千歲機場大採買 → 雙人班機返台 → 回到溫暖的家享用聖誕晚餐</h2>
+        <div class="meta-row">
+          <span>📍 札幌 → 新千歲 CTS → 桃園 TPE</span>
+          <span>☀️ 溫暖甜蜜的家</span>
+          <span>✈️ 華航 CI0131 / 星宇 JX</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card focus-card">
+      <h3>✨ 行程焦點</h3>
+      <div class="focus-chips">
+        <span class="focus-chip">🚆 早晨搭乘 JR 直達新千歲機場</span>
+        <span class="focus-chip">🛍️ 新千歲免稅店最後衝刺採買（Royce'生巧、白色戀人、薯條三兄弟）</span>
+        <span class="focus-chip">✈️ 雙人班機起飛（Cami 14:40 / KC 15:20）</span>
+        <span class="focus-chip">🏠 抵達台灣桃園，返家歡度聖誕夜</span>
+      </div>
+      <p class="focus-note">旅程正式圓滿收尾！將新千歲機場打造成最後的購物樂園，滿載回憶與伴手禮平安返台。</p>
+    </div>
+
+    <div class="card route-card">
+      <div class="card-title-row">
+        <h3>🗺️ 路線與地圖</h3>
+        <a class="map-btn" href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Garden+Hotel+Sapporo+West&destination=New+Chitose+Airport&travelmode=transit" target="_blank" rel="noopener">📍 開啟 JR 前往機場路線 ↗</a>
+      </div>
+      <div class="route-line">
+        <span class="route-stop">1<b>三井花園退房</b></span>
+        <span class="route-stop">2<b>JR 札幌站</b></span>
+        <span class="route-stop">3<b>新千歲機場 CTS</b></span>
+        <span class="route-stop">4<b>國際線起飛返台</b></span>
+        <span class="route-stop">5<b>台灣桃園機場 TPE</b></span>
+      </div>
+    </div>
+
+    <div class="card timing-card">
+      <h3>🚗 車程＆⏱️ 景點停留</h3>
+      <div class="timing-columns">
+        <div class="timing-group move">
+          <div class="timing-group-title">🚗 從哪裡到哪裡</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">札幌站 → 新千歲機場 CTS</span><span class="timing-badge">🚆 約 37 分鐘</span><span class="timing-note">JR 快速 Airport 號每 12 分鐘一班</span></div>
+            <div class="timing-item"><span class="route-text">CTS → TPE（Cami CI0131）</span><span class="timing-badge">✈️ 4 小時 35 分</span><span class="timing-note">14:40 起飛 ➔ 18:15 抵達 T2</span></div>
+            <div class="timing-item"><span class="route-text">CTS → TPE（KC 星宇）</span><span class="timing-badge">✈️ 4 小時 45 分</span><span class="timing-note">15:20 起飛 ➔ 19:05 抵達 T1</span></div>
+          </div>
+        </div>
+        <div class="timing-group stay">
+          <div class="timing-group-title">⏱️ 這一站待多久</div>
+          <div class="timing-list">
+            <div class="timing-item"><span class="route-text">新千歲國內外線伴手禮大街</span><span class="timing-badge">約 2 小時</span><span class="timing-note">採買 Royce'、六花亭、北菓樓與甜點</span></div>
+            <div class="timing-item"><span class="route-text">國際線通關與免稅購物</span><span class="timing-badge">起飛前 2 小時</span><span class="timing-note">入關後提領免稅伴手禮</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="lead">今天是聖誕節，也是完美旅程的豐收日。早晨辦理退房，搭乘 JR 前往新千歲機場。新千歲機場是全日本最好逛好買的機場，在國內線商店街將 Royce'、LeTAO、六花亭等招牌伴手禮一網打盡！雙人依各自航班登機，傍晚平安抵達台灣，回到溫暖的家共度溫馨聖誕夜晚。</p>
+
+    <div class="day-grid">
+      <div class="card timeline-card">
+        <h3>⏱️ 當日時間軸</h3>
+        <div class="time-row"><div class="time">09:00</div><div><b>飯店悠閒退房與出發</b><p>步行 5 分鐘抵達札幌站，搭乘舒適的 JR 快速 Airport 號直奔機場。</p></div></div>
+        <div class="time-row"><div class="time">10:00</div><div><b>抵達新千歲機場，直奔國內線伴手禮大街</b><p>血拼北海道各地知名點心、起司塔、現烤餅乾與真空包裝海鮮。</p></div></div>
+        <div class="time-row"><div class="time">12:00</div><div><b>機場特色輕食或甜點補充</b><p>品嚐北菓樓霜淇淋或現烤起司塔。</p></div></div>
+        <div class="time-row"><div class="time">12:30</div><div><b>前往國際線櫃台辦理行李托運與出境</b><p>兩人各有兩大箱行李額度，從容完成託運與安檢。</p></div></div>
+        <div class="time-row"><div class="time">14:40</div><div><b>Cami 班機起飛（華航 CI0131）</b><p>CTS 14:40 起飛 ➔ 預計 18:15 抵達桃園 T2。</p></div></div>
+        <div class="time-row"><div class="time">15:20</div><div><b>KC 班機起飛（星宇航空 JX）</b><p>CTS 15:20 起飛 ➔ 預計 19:05 抵達桃園 T1。</p></div></div>
+        <div class="time-row"><div class="time">19:30後</div><div><b>桃園機場會合，專車返抵溫暖甜蜜的家</b><p>開箱滿滿的北海道戰利品，享用聖誕晚餐，回味 9 天盛宴之旅的點點滴滴！</p></div></div>
+      </div>
+
+      <div class="side-stack">
+        <div class="card wear-card">
+          <h3>🧥 當天建議穿搭</h3>
+          <div class="wear-title">機艙舒適穿著即可</div>
+          <div class="feel">台灣氣溫約 18–20°C，登機前可將厚羽絨大衣與保暖毛帽收納至隨身手提袋。</div>
+          <ul class="wear-list">
+            <li>長袖休閒 T-shirt ＋ 舒適長褲</li>
+            <li>薄長袖或輕便開襟外套</li>
+            <li>厚雪靴或換穿輕便運動鞋</li>
+          </ul>
+        </div>
+
+        <div class="card daily-info-card">
+          <h3>🧾 今日生活資訊</h3>
+          <div class="daily-info-section meals-section">
+            <h4>🍽️ 三餐安排</h4>
+            <div class="daily-meal-list">
+              <div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">飯店周邊咖啡 / 機場輕食</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">新千歲機場精緻特色美食</div></div>
+              <div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">飛機精緻晚餐 ＋ 返台聖誕溫馨晚餐</div></div>
+            </div>
+          </div>
+          <div class="daily-info-section stay-section">
+            <h4>🏡 今晚住宿</h4>
+            <p><strong>溫暖甜蜜的家</strong></p>
+            <span class="stay-badge">❤️ 平安返家・旅程圓滿</span>
+          </div>
+          <div class="daily-info-section booking-section">
+            <h4>🎟️ 預訂資訊</h4>
+            <p>✈️ Cami CI0131 (14:40-18:15)；KC 星宇 (15:20-19:05)。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- 出發前連線查詢 / 研究來源 -->
+  <section class="sources-card">
+    <h3>出發前連線查詢／官方即時路況來源</h3>
+    <p class="sources-note">下列連結於聯網時可即時查看官方冬季路況與即時影像，HTML 本身所有行程規劃完全支援離線使用。</p>
+    <div class="sources-grid">
+      <a class="source-box" href="https://northern-road.jp/navi/touge/" target="_blank" rel="noopener">
+        <span>北の道ナビ ｜ 北海道峠即時路況與即時相機</span>
+        <small>https://northern-road.jp/navi/touge/</small>
+      </a>
+      <a class="source-box" href="https://www.jartic.or.jp/" target="_blank" rel="noopener">
+        <span>JARTIC ｜ 日本道路交通情報中心即時路況</span>
+        <small>https://www.jartic.or.jp/</small>
+      </a>
+      <a class="source-box" href="https://www.jma.go.jp/bosai/forecast/" target="_blank" rel="noopener">
+        <span>日本氣象廳 ｜ 北海道最新天氣與暴雪警報</span>
+        <small>https://www.jma.go.jp/bosai/forecast/</small>
+      </a>
+      <a class="source-box" href="https://www.snowtomamu.jp/" target="_blank" rel="noopener">
+        <span>星野 Tomamu ｜ 愛絲冰城、水之教堂與霧冰平台狀態</span>
+        <small>https://www.snowtomamu.jp/</small>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 K & C's Travel. 2026 生日北海道盛宴之旅旅行手冊</p>
+</footer>
+
+<a class="top-btn" href="#top" title="回到頁首">↑</a>
+
+</body>
+</html>
