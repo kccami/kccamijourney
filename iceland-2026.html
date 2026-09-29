@@ -15,6 +15,7 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 .overview-map{min-height:0;padding-top:14px}.map-caption{font-size:12px;color:var(--muted);margin-top:4px}.overview-map svg{width:100%;height:auto;display:block}.island{fill:#eef0e9;stroke:#b9c0b7;stroke-width:3}.journey{fill:none;stroke:#527a85;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:6 7}.map-pin circle{fill:#274b55;stroke:white;stroke-width:2}.map-pin text{font-size:13px;font-weight:800;fill:#243a40;paint-order:stroke;stroke:#fffdf8;stroke-width:4;stroke-linejoin:round}.map-pin .map-date{font-size:10px;font-weight:700;fill:#677a7f}
 .day{padding:38px 0 18px;border-top:1px solid var(--line);scroll-margin-top:82px}.day:first-of-type{border-top:0}.day-head{display:flex;gap:20px;align-items:flex-start}.day-number{min-width:92px;background:var(--deep);color:white;border-radius:16px;padding:15px 10px;text-align:center;font-weight:900;letter-spacing:.08em}.day-title-wrap{flex:1}.day-date{font-size:14px;font-weight:800;color:var(--lava);letter-spacing:.06em}h2{font-size:clamp(25px,3.4vw,38px);line-height:1.2;margin:4px 0 10px}.meta-row{display:flex;gap:8px 16px;flex-wrap:wrap;color:var(--muted);font-size:14px}.lead{font-size:16px;margin:18px 0 18px;max-width:1000px}
 .day-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:16px;align-items:start}.side-stack{display:grid;gap:16px}.time-row{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:12px 0;border-top:1px dashed #d9d8cf}.time-row:first-of-type{border-top:0}.time{font-weight:900;color:var(--deep);font-variant-numeric:tabular-nums}.time-row p{margin:2px 0 0;color:var(--muted);font-size:14px}.wear-card{background:#f2f6f4}.wear-title{font-weight:900;margin-bottom:5px}.feel{font-size:13px;color:#53666c;background:#fff;padding:8px 10px;border-radius:10px;margin:8px 0 12px}.wear-list,.alert-list{margin:0;padding-left:20px}.wear-list li,.alert-list li{margin:5px 0}.info-card p{margin:9px 0;color:#4f5f64}.info-card b{color:var(--ink)}
+.wear-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;background:#ffffff;border:1px solid #d4e0db;border-radius:12px;padding:10px 12px;margin:10px 0 12px;font-size:12px;line-height:1.5}.wear-metric-item{color:#3c535a}.wear-metric-item b{color:#274b55;font-weight:800}
 .route-card{margin-top:16px;overflow:hidden}.card-title-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.map-btn{font-size:13px;text-decoration:none;background:#e7f0f1;color:var(--deep);border:1px solid #c8d9dc;padding:8px 11px;border-radius:10px;font-weight:800}.route-line{display:flex;gap:0;overflow-x:auto;padding:12px 2px 6px;align-items:center}.route-stop{display:flex;flex-direction:column;justify-content:center;min-width:145px;max-width:180px;padding:11px;border-radius:13px;background:#f4f3ed;border:1px solid #dad9d2;position:relative;margin-right:24px;font-size:11px;color:var(--muted)}.route-stop b{font-size:13px;color:var(--ink);margin-top:2px}.route-stop:not(:last-child):after{content:'→';position:absolute;right:-21px;top:50%;transform:translateY(-50%);color:#77939a;font-size:18px;font-weight:900}.online-note{font-size:12px;color:var(--muted);margin-top:8px}.mini-link{display:inline-block;margin:3px 4px 0 0;color:#436d77;text-decoration:underline;text-underline-offset:2px}.alert-card{margin-top:16px;background:var(--warn);border-color:#e5ca96}.alert-card h3{color:#79552c}
 .top-btn{position:fixed;right:18px;bottom:18px;width:50px;height:50px;border-radius:50%;background:var(--deep);color:white;border:2px solid white;box-shadow:0 8px 24px rgba(31,45,51,.25);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:20px;z-index:30}
 .print-note{font-size:13px;color:var(--muted);margin-top:8px}footer{max-width:1180px;margin:0 auto 50px;padding:0 18px;color:var(--muted);font-size:12px}
@@ -204,7 +205,7 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 <div class="map-caption"><strong>旅程主線</strong>：KEF → Blue Lagoon → Snæfellsnes → Golden Circle → South Coast → Jökulsárlón → Höfn → Eastfjords → EGS ✈ RKV → KEF。<div class="route-legend"><span class="route-pill kev">KEF／藍湖</span><span class="route-pill west">西部半島</span><span class="route-pill gold">黃金圈</span><span class="route-pill south">南岸冰河湖</span><span class="route-pill east">東部峽灣</span><span class="route-pill city">Reykjavík</span><span class="route-pill uk">London</span></div></div>
 </section>
 
-<!-- DAY 1 -->
+<!-- DAY 1 (更新：加入免稅店買酒20分鐘、更新停留與時間軸) -->
 <section class="day" id="day-1">
 <div class="day-head">
 <div class="day-number">DAY 01</div>
@@ -214,14 +215,14 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 <div class="meta-row"><span>📍 TPE → LHR → KEF</span><span>☀️ 冰島約 07:38 / 18:56</span><span>🚗 無自駕</span></div>
 </div>
 </div>
-<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">✈️ TPE → LHR → KEF</span><span class="focus-chip">🔁 Heathrow 換航廈</span><span class="focus-chip">🏨 深夜住機場旁</span></div><p class="focus-note">今天只處理長途移動與轉機，把體力留給正式環島第一天。</p></div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">✈️ TPE → LHR → KEF</span><span class="focus-chip">🔁 Heathrow 換航廈</span><span class="focus-chip">🍷 KEF 免稅店買酒</span><span class="focus-chip">🏨 深夜住機場旁</span></div><p class="focus-note">今天只處理長途移動與轉機；抵達 KEF 後先至機場免稅店採買酒水，隨後步行至機場旁飯店入住休息，把體力留給正式環島第一天。</p></div>
 <div class="card route-card">
 <div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Heathrow+Airport+Terminal+3" rel="noopener noreferrer">📍 手機開啟 Heathrow T3 地圖 ↗</a></div>
 <div class="route-line"><span class="route-stop">1<b>Taiwan Taoyuan International Airport</b></span><span class="route-stop">2<b>Heathrow Airport Terminal 3</b></span><span class="route-stop">3<b>Heathrow Airport Terminal 2</b></span><span class="route-stop">4<b>Keflavík International Airport</b></span></div>
 <div class="online-note">✈️ 飛行日不使用開車導航；有網路時可直接開啟各機場位置。</div>
 </div>
-<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">以下時間直接依「冰島的主行程表」原訂內容整理，旅行現場可快速抓移動節奏。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">台北桃園 TPE → 倫敦希斯洛 LHR T3</span><span class="timing-badge">✈️ 14 小時 10 分</span><span class="timing-note">CI0081 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Taiwan+Taoyuan+International+Airport&amp;destination=Heathrow+Airport+Terminal+3" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">LHR T3 → LHR T2 航廈接駁／轉機預留</span><span class="timing-badge">🚶 4.5 小時</span><span class="timing-note">含採買、安檢與候機緩衝 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Heathrow+Airport+Terminal+3&amp;destination=Heathrow+Airport+Terminal+2" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">倫敦希斯洛 LHR T2 → 冰島 KEF</span><span class="timing-badge">✈️ 3 小時 10 分</span><span class="timing-note">FI0455 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Heathrow+Airport+Terminal+2&amp;destination=Keflav%C3%ADk+International+Airport" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">今日以航班移動為主，沒有另外安排景點停留。</span></div></div></div></div></div>
-<p class="lead">第一天的重點是把轉機做得從容。去程只有約 4 小時 55 分的 LHR 轉機，不安排入境倫敦。抵達 KEF 已接近午夜，住宿直接選機場旁是正確安排。</p>
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">以下時間直接依「冰島的主行程表」最新調整內容整理，旅行現場可快速抓移動節奏。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">台北桃園 TPE → 倫敦希斯洛 LHR T3</span><span class="timing-badge">✈️ 14 小時 10 分</span><span class="timing-note">CI0081 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Taiwan+Taoyuan+International+Airport&amp;destination=Heathrow+Airport+Terminal+3" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">LHR T3 → LHR T2 航廈接駁／轉機預留</span><span class="timing-badge">🚶 4.5 小時</span><span class="timing-note">含採買、安檢與候機緩衝 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Heathrow+Airport+Terminal+3&amp;destination=Heathrow+Airport+Terminal+2" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">倫敦希斯洛 LHR T2 → 冰島 KEF</span><span class="timing-badge">✈️ 3 小時 10 分</span><span class="timing-note">FI0455 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Heathrow+Airport+Terminal+2&amp;destination=Keflav%C3%ADk+International+Airport" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">KEF 機場 Duty Free 免稅店</span><span class="timing-badge">約 20 分鐘</span><span class="timing-note">入境後採買啤酒與紅白酒</span></div><div class="timing-item"><span class="route-text">其餘時間以航班移動與轉機為主，無戶外景點停留。</span></div></div></div></div></div>
+<p class="lead">第一天的重點是把轉機做得從容。去程只有約 4 小時 55 分的 LHR 轉機，不安排入境倫敦。抵達 KEF 入境後先在免稅店採買酒類，隨後步行入住機場旁飯店是最佳安排。</p>
 <div class="day-grid">
 <div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
 <div class="time-row"><div class="time">05:20</div><div><b>桃園機場集合</b><p>建議國際線起飛前約 3 小時抵達。護照、ETA 狀態、冰島航班訂位資料放在隨身包。</p></div></div>
@@ -229,23 +230,32 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 <div class="time-row"><div class="time">16:30</div><div><b>抵達 London Heathrow T3</b><p>不要入境市區；依機場指標轉往 T2，預留航廈移動、安檢、採買與晚餐時間。</p></div></div>
 <div class="time-row"><div class="time">19:30</div><div><b>回到登機節奏</b><p>確認 FI0455 登機門、補水、換上抵達冰島後可直接禦寒的衣物。</p></div></div>
 <div class="time-row"><div class="time">21:25</div><div><b>FI0455 起飛</b><p>LHR T2 → KEF，飛行約 3 小時 10 分。</p></div></div>
-<div class="time-row"><div class="time">23:35</div><div><b>抵達 KEF</b><p>入境後步行前往 Aurora Hotel；今晚不再安排其他活動。</p></div></div>
+<div class="time-row"><div class="time">23:35</div><div><b>抵達 KEF</b><p>入境後 先去免稅店 買酒 約停留20分鐘</p></div></div>
+<div class="time-row"><div class="time">23:55</div><div><b>步行前往 Aurora Hotel</b><p>步行前往 Aurora Hotel；今晚不再安排其他活動。</p></div></div>
 </div>
 <div class="side-stack">
-<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">機艙舒適＋落地立即禦寒</div><div class="feel">體感規劃：落地後以 2–7°C、風大與可能下雨來準備；機上則可逐層脫掉。</div><ul class="wear-list"><li>排汗或薄長袖打底</li><li>針織／刷毛中層</li><li>輕羽絨或保暖外套放隨身行李</li><li>長褲＋好走鞋</li><li>毛帽／薄手套放手提包</li></ul></div>
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">機艙舒適＋落地立即禦寒</div>
+<div class="wear-metrics">
+<div class="wear-metric-item">預估天氣：<b>多雲陰天</b></div>
+<div class="wear-metric-item">預估風速：<b>沿海陣風 13 mph</b></div>
+<div class="wear-metric-item">預估降雨：<b>30%</b></div>
+<div class="wear-metric-item">預估溫度：<b>約 2°C ~ 6°C</b></div>
+<div class="wear-metric-item" style="grid-column:1/-1">預估體感溫度：<b>約 0°C ~ 3°C</b></div>
+</div>
+<div class="feel">體感規劃：落地後體感接近 0°C ~ 3°C，海邊陣風偏大且有小雨機率；出機艙領完行李後立即穿上防風防潑水保暖外套。</div><ul class="wear-list"><li>排汗或薄長袖打底</li><li>針織／刷毛中層</li><li>輕羽絨或保暖外套放隨身行李</li><li>長褲＋好走鞋</li><li>毛帽／薄手套放手提包</li></ul></div>
 <div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">機上餐／出發前自行補充</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">LHR 轉機期間用餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">機上餐；抵達 KEF 後以休息為主</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Aurora Hotel at Reykjavik-Keflavik Airport Terminal KEF｜機場旁</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>✈️ CI0081 08:20 → 16:30；FI0455 21:25 → 23:35。住宿依各自已完成訂單。</p></div></div>
 </div>
 </div>
-<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li>去程不建議嘗試倫敦入境快閃。</li><li>保暖外套不要托運，KEF 深夜下機即可穿。</li></ul></div>
+<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li>去程不建議嘗試倫敦入境快閃。</li><li>保暖外套不要托運，KEF 深夜下機即可穿。</li><li><b>KEF 機場入境免稅店買酒最划算</b>：冰島酒稅高昂，入境提領行李處旁的 Duty Free 是採買啤酒與紅白酒最省錢的時機。</li></ul></div>
 </section>
 
-<!-- DAY 2 -->
+<!-- DAY 2 (更新：標題加入 LAVA Restaurant，午餐改為 13:00~14:00，後續時間軸順暢推移) -->
 <section class="day" id="day-2">
 <div class="day-head">
 <div class="day-number">DAY 02</div>
 <div class="day-title-wrap">
 <div class="day-date">2026 / 10/03（六）</div>
-<h2>租車公司取車 → 藍湖 → Brauð & Co → Icewear Outlet → Bónus 超市 → Vínbúðin 買酒 → Villa</h2>
+<h2>租車公司取車 → 藍湖 → LAVA Restaurant → Brauð & Co → Icewear Outlet → Bónus 超市 → Vínbúðin 買酒 → Villa</h2>
 <div class="meta-row"><span>📍 Reykjanes → Reykjavík (Skeifan) → Mosfellsbær</span><span>☀️ 約 07:41 / 18:52</span><span>🚗 約 2 小時 10 分＋停留</span></div>
 </div>
 </div>
@@ -255,13 +265,13 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 <div class="focus-chips">
 <span class="focus-chip">🚙 兩台 租車公司取車</span>
 <span class="focus-chip">♨️ Blue Lagoon 11:00</span>
-<span class="focus-chip">🍽️ LAVA 13:30 (待1小時)</span>
+<span class="focus-chip">🍽️ LAVA 13:00–14:00</span>
 <span class="focus-chip">🥐 Brauð & Co 肉桂捲</span>
 <span class="focus-chip">🛍️ Icewear Outlet 30分</span>
 <span class="focus-chip">🛒 Bónus (Skeifan) 30分</span>
 <span class="focus-chip">🍷 Vínbúðin 買酒 10分</span>
 </div>
-<p class="focus-note">藍湖與午餐是固定時間點；13:30 在 LAVA 餐廳午餐（停留 1 小時）並領取行李上車後，開車前往 Skeifan 商圈：先買熱騰騰的 Brauð & Co 肉桂捲，接著在 Icewear Outlet 添購保暖配件，隨後至鄰近的 Bónus 超市採買食材，最後在附近的 Vínbúðin 挑選美酒，傍晚抵達 Villa 悠閒自炊。</p>
+<p class="focus-note">藍湖泡湯後於 13:00 準時在 LAVA 餐廳午餐（停留 1 小時），14:10 領取行李上車出發前往 Skeifan 商圈：先買熱騰騰的 Brauð & Co 肉桂捲，接著在 Icewear Outlet 添購保暖配件，隨後至鄰近的 Bónus 超市採買食材，最後在附近的 Vínbúðin 挑選美酒，約 16:40 輕鬆入住 Villa 悠閒自炊。</p>
 </div>
 
 <div class="card photo-gallery-card">
@@ -346,7 +356,7 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 
 <div class="card timing-card">
 <h3>🚗 車程＆⏱️ 景點停留</h3>
-<p class="timing-sub">以下時間依「藍湖 ➔ Skeifan 商圈集中採買（肉桂捲、保暖配件、生鮮食材、公賣局買酒）➔ Villa」最新調整內容整理，現場快速掌握行車移動。</p>
+<p class="timing-sub">以下時間依「藍湖 ➔ 13:00 LAVA 午餐 ➔ Skeifan 商圈集中採買 ➔ Villa」最新調整內容整理，現場快速掌握行車移動。</p>
 <div class="timing-columns">
   <div class="timing-group move">
     <div class="timing-group-title">🚗 從哪裡到哪裡</div>
@@ -362,8 +372,8 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
   <div class="timing-group stay">
     <div class="timing-group-title">⏱️ 這一站待多久</div>
     <div class="timing-list">
-      <div class="timing-item"><span class="route-text">Blue Lagoon 藍湖溫泉</span><span class="timing-badge">11:00–13:00</span><span class="timing-note">泡湯放鬆、敷矽泥面膜</span></div>
-      <div class="timing-item"><span class="route-text">LAVA Restaurant 午餐</span><span class="timing-badge">13:30–14:30 (待1小時)</span><span class="timing-note">精緻 2 courses 午餐饗宴；餐後取行李上車</span></div>
+      <div class="timing-item"><span class="route-text">Blue Lagoon 藍湖溫泉</span><span class="timing-badge">11:00–12:45</span><span class="timing-note">泡湯放鬆、敷矽泥面膜、洗漱換裝</span></div>
+      <div class="timing-item"><span class="route-text">LAVA Restaurant 午餐</span><span class="timing-badge">13:00–14:00 (待1小時)</span><span class="timing-note">精緻 2 courses 午餐饗宴；餐後取行李上車</span></div>
       <div class="timing-item"><span class="route-text">Brauð & Co (Fákafen 11)</span><span class="timing-badge">約 7 分鐘</span><span class="timing-note">購買香濃可口的剛出爐肉桂捲</span></div>
       <div class="timing-item"><span class="route-text">Icewear Outlet & Store</span><span class="timing-badge">約 30 分鐘</span><span class="timing-note">添購高品質羊毛毛帽、防風外套、羊毛毯、披風等禦寒保暖層配件</span></div>
       <div class="timing-item"><span class="route-text">Bónus 小豬超市 (Skeifan 11a)</span><span class="timing-badge">約 30 分鐘</span><span class="timing-note">採買晚餐自炊食材、Day 3 早餐、飲用水與車上乾糧零食</span></div>
@@ -373,7 +383,7 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 </div>
 </div>
 
-<p class="lead"><span class="hl">11:00 藍湖</span>與 <span class="hl">13:30 LAVA 午餐</span>為固定時間點。餐後約 14:40 出發前往雷克雅維克 <span class="hl-blue">Skeifan 商業區</span>：依序完成「買肉桂捲 ➔ 挑保暖配件 ➔ 超市採買食材 ➔ 公賣局買酒」一站式搞定，全部點位集中相鄰，預計 17:15 前後天黑前輕鬆入住 Villa，節奏充裕從容。</p>
+<p class="lead"><span class="hl">11:00 藍湖</span>與 <span class="hl">13:00 LAVA 午餐</span>為固定時間點。餐後約 14:10 出發前往雷克雅維克 <span class="hl-blue">Skeifan 商業區</span>：依序完成「買肉桂捲 ➔ 挑保暖配件 ➔ 超市採買食材 ➔ 公賣局買酒」一站式搞定，全部點位集中相鄰，預計 16:40 前後天黑前輕鬆入住 Villa，節奏充裕從容。</p>
 
 <div class="day-grid">
 <div class="card timeline-card">
@@ -382,47 +392,55 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 <div class="time-row"><div class="time">09:00</div><div><b>前往 租車公司 櫃檯</b><p>兩台車一起確認車況、輪胎、刮痕、油量、道路救援與駕駛資料。09:30 統一取車。</p></div></div>
 <div class="time-row"><div class="time">09:30</div><div><b>兩台 租車公司 取車</b><p>KEF → Blue Lagoon 車程約 20 分鐘。</p></div></div>
 <div class="time-row"><div class="time">10:15</div><div><b>藍湖報到／寄放行李</b><p>11:00 入場，先沖洗淋浴；長髮建議先抹大量潤髮乳並綁起保護髮質。</p></div></div>
-<div class="time-row"><div class="time">11:00–13:00</div><div><b>Blue Lagoon 藍湖溫泉</b><p>享受火山地熱溫泉、矽泥面膜敷臉；出水後沖洗抹乳液，換穿乾爽保暖衣物。</p></div></div>
-<div class="time-row"><div class="time">13:30–14:30</div><div><b>LAVA Restaurant 午餐（預計停留 1 小時）</b><p>享用 2 courses 精緻午餐饗宴（已由 Ni 預訂完成）。</p></div></div>
-<div class="time-row"><div class="time">14:30–14:40</div><div><b>領取行李、整裝上車</b><p>至寄放處領回大件行李，全體上車啟程前往雷克雅維克 Skeifan 購物商圈（車程約 40 分鐘）。</p></div></div>
-<div class="time-row"><div class="time">15:20–15:27</div><div><b>Brauð & Co 買好吃可口的肉桂捲（停留約 7 分鐘）</b><p>抵達 Fákafen 11 門市，快速購買熱騰騰、香氣濃郁的經典肉桂捲作為下午茶點心。</p></div></div>
-<div class="time-row"><div class="time">15:30–16:00</div><div><b>Icewear Outlet & Store（停留約 30 分鐘）</b><p>開車 2 分鐘即達！添購高品質羊毛毛帽、防風外套、羊毛毯、披風等禦寒保暖層配件。</p></div></div>
-<div class="time-row"><div class="time">16:02–16:32</div><div><b>Bónus 小豬超市採買食材（停留約 30 分鐘）</b><p>前往距離極近的 Bónus (Skeifan 11a)，採買晚餐自炊食材、Day 3 早餐、飲用水與車上乾糧零食。</p></div></div>
-<div class="time-row"><div class="time">16:35–16:45</div><div><b>Vínbúðin 買酒（停留約 10 分鐘）</b><p>前往隔壁的 Vínbúðin (Skeifan 5) 採買冰島特色酒精飲料、啤酒或佐餐紅白酒。</p></div></div>
-<div class="time-row"><div class="time">16:45</div><div><b>啟程前往 Black Diamond Villa</b><p>裝載所有採買戰利品與食材，自駕前往 Mosfellsbær，車程約 20 分鐘。</p></div></div>
-<div class="time-row"><div class="time">17:10 前後</div><div><b>入住 Black Diamond Villa</b><p>辦理入住手續，放鬆煮晚餐、享用熱騰騰火鍋與美酒，享受私人別墅空間。</p></div></div>
+<div class="time-row"><div class="time">11:00–12:45</div><div><b>Blue Lagoon 藍湖溫泉</b><p>享受火山地熱溫泉、矽泥面膜敷臉；出水後沖洗抹乳液，換穿乾爽保暖衣物。</p></div></div>
+<div class="time-row"><div class="time">13:00–14:00</div><div><b>LAVA Restaurant 午餐（預計停留 1 小時）</b><p>享用 2 courses 精緻午餐饗宴（已由 Ni 預訂完成）。</p></div></div>
+<div class="time-row"><div class="time">14:00–14:10</div><div><b>領取行李、整裝上車</b><p>至寄放處領回大件行李，全體上車啟程前往雷克雅維克 Skeifan 購物商圈（車程約 40 分鐘）。</p></div></div>
+<div class="time-row"><div class="time">14:50–14:57</div><div><b>Brauð & Co 買好吃可口的肉桂捲（停留約 7 分鐘）</b><p>抵達 Fákafen 11 門市，快速購買熱騰騰、香氣濃郁的經典肉桂捲作為下午茶點心。</p></div></div>
+<div class="time-row"><div class="time">15:00–15:30</div><div><b>Icewear Outlet & Store（停留約 30 分鐘）</b><p>開車 2 分鐘即達！添購高品質羊毛毛帽、防風外套、羊毛毯、披風等禦寒保暖層配件。</p></div></div>
+<div class="time-row"><div class="time">15:32–16:02</div><div><b>Bónus 小豬超市採買食材（停留約 30 分鐘）</b><p>前往距離極近的 Bónus (Skeifan 11a)，採買晚餐自炊食材、Day 3 早餐、飲用水與車上乾糧零食。</p></div></div>
+<div class="time-row"><div class="time">16:05–16:15</div><div><b>Vínbúðin 買酒（停留約 10 分鐘）</b><p>前往隔壁的 Vínbúðin (Skeifan 5) 採買冰島特色酒精飲料、啤酒或佐餐紅白酒。</p></div></div>
+<div class="time-row"><div class="time">16:15</div><div><b>啟程前往 Black Diamond Villa</b><p>裝載所有採買戰利品與食材，自駕前往 Mosfellsbær，車程約 20 分鐘。</p></div></div>
+<div class="time-row"><div class="time">16:40 前後</div><div><b>入住 Black Diamond Villa</b><p>辦理入住手續，放鬆煮晚餐、享用熱騰騰火鍋與美酒，享受私人別墅空間。</p></div></div>
 </div>
 
 <div class="side-stack">
-<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">溫泉日＋市區購物，重點防著涼</div><div class="feel">體感規劃：戶外約 2–7°C；出溫泉水後遇風體感偏低，泡完立即戴毛帽與厚外套。</div><ul class="wear-list"><li>泳衣、防霧眼鏡直接放隨身包</li><li>薄羊毛／機能發熱打底衣</li><li>刷毛保暖中層或輕羽絨</li><li>防風防水外層衝鋒衣</li><li>防水健行鞋＋保暖羊毛襪</li></ul></div>
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">溫泉日＋市區購物，重點防著涼</div>
+<div class="wear-metrics">
+<div class="wear-metric-item">預估天氣：<b>晴時多雲</b></div>
+<div class="wear-metric-item">預估風速：<b>微風約 7 mph</b></div>
+<div class="wear-metric-item">預估降雨：<b>15%</b></div>
+<div class="wear-metric-item">預估溫度：<b>約 3°C ~ 7°C</b></div>
+<div class="wear-metric-item" style="grid-column:1/-1">預估體感溫度：<b>約 2°C ~ 5°C</b></div>
+</div>
+<div class="feel">體感規劃：戶外體感約 2°C ~ 5°C，降雨機率低；出藍湖溫泉水後遇微風容易著涼，泡完需立即戴毛帽與厚外套，市區採買則採洋蔥式穿脫。</div><ul class="wear-list"><li>泳衣、防霧眼鏡直接放隨身包</li><li>薄羊毛／機能發熱打底衣</li><li>刷毛保暖中層或輕羽絨</li><li>防風防水外層衝鋒衣</li><li>防水健行鞋＋保暖羊毛襪</li></ul></div>
 <div class="card daily-info-card"><h3>🧾 今日生活資訊</h3>
 <div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4>
 <div class="daily-meal-list">
 <div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Aurora Hotel 早餐</div></div>
-<div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">LAVA Restaurant 13:30 (待1小時)</div></div>
+<div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">LAVA Restaurant 13:00–14:00 (待1小時)</div></div>
 <div class="daily-meal-row"><div class="daily-meal-label">🥐 點心</div><div class="daily-meal-value">Brauð & Co 現烤肉桂捲</div></div>
 <div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Black Diamond Villa 廚房自炊火鍋料理</div></div>
 </div>
 </div>
 <div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Black Diamond Villa｜整棟獨棟別墅、含齊全廚房設備</p><span class="confirmed-five">👥 5 人住宿已安排</span></div>
-<div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>🚙 租車公司：5 人共 2 台車，confirm完畢；10/3 09:30 於 KEF 同步取車。♨️ Blue Lagoon 11:00；🍽️ LAVA 13:30；🏡 Villa 17:10 入住。</p></div>
+<div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>🚙 租車公司：5 人共 2 台車，confirm完畢；10/3 09:30 於 KEF 同步取車。♨️ Blue Lagoon 11:00；🍽️ LAVA 13:00；🏡 Villa 16:40 入住。</p></div>
 </div>
 </div>
 </div>
-<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li>藍湖泡湯長髮請塗滿潤髮乳保護，避免礦物質結晶讓頭髮乾澀打結。</li><li>5 人共租 2 台車，取車時雙方駕駛共同核對全車防刮損與保險條款，沿途全程保持前後跟車同步移動。</li><li><b>Skeifan 採買聚落極為集中</b>：Brauð & Co (Fákafen 11)、Icewear、Bónus (Skeifan 11a) 與 Vínbúðin (Skeifan 5) 皆在數百公尺範圍內，點對點車程僅需 1–2 分鐘，效率極高。</li><li>冰島一般超市僅販售低酒精飲料，購買紅白酒、精釀啤酒烈酒須至國營 <b>Vínbúðin</b>，營業時間多於 18:00 關門，今日於 16:30 前後抵達時間非常充裕！</li></ul></div>
+<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li>藍湖泡湯長髮請塗滿潤髮乳保護，避免礦物質結晶讓頭髮乾澀打結。</li><li>5 人共租 2 台車，取車時雙方駕駛共同核對全車防刮損與保險條款，沿途全程保持前後跟車同步移動。</li><li><b>Skeifan 採買聚落極為集中</b>：Brauð & Co (Fákafen 11)、Icewear、Bónus (Skeifan 11a) 與 Vínbúðin (Skeifan 5) 皆在數百公尺範圍內，點對點車程僅需 1–2 分鐘，效率極高。</li><li>冰島一般超市僅販售低酒精飲料，購買紅白酒、精釀啤酒烈酒須至國營 <b>Vínbúðin</b>，營業時間多於 18:00 關門，今日於 16:05 前後抵達時間非常充裕！</li></ul></div>
 </section>
 
-<!-- DAY 3 (更新：10:00 離開 Villa，精簡沿途各站停留為 10–20 分鐘快拍，約 15:20 準時抵達 Berg 2 Grundarfjörður 入住) -->
+<!-- DAY 3 (更新：正名為 Berg Horse Farm，並補充完整地址與房東開車路線指引) -->
 <section class="day" id="day-3">
 <div class="day-head">
 <div class="day-number">DAY 03</div>
 <div class="day-title-wrap">
 <div class="day-date">2026 / 10/04（日）</div>
-<h2>10:00 悠閒出發斯奈山 → 海豹沙灘 → 黑教堂 → 海崖 → 教堂山 → 15:20 抵達 Berg 2</h2>
+<h2>10:00 悠閒出發斯奈山 → 海豹沙灘 → 黑教堂 → 海崖 → 教堂山 → 15:20 抵達 Berg Horse Farm</h2>
 <div class="meta-row"><span>📍 Snæfellsnes</span><span>☀️ 約 07:44 / 18:49</span><span>🚗 約 4 小時 10 分</span></div>
 </div>
 </div>
-<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🏡 10:00 離開 Villa</span><span class="focus-chip">🦭 Ytri Tunga 快拍</span><span class="focus-chip">⛪ Búðakirkja 黑教堂</span><span class="focus-chip">🌊 Arnarstapi 海崖</span><span class="focus-chip">🏔️ Kirkjufell 教堂山</span><span class="focus-chip">🏡 15:20 入住 Berg 2</span></div><p class="focus-note">早晨在 Villa 睡飽悠閒早餐，10:00 準時整裝出發！全日沿途 5 大經典景點全數保留，透過每站約 10–20 分鐘的高效快拍節奏，順利於 15:20 前後抵達 Berg 2 Grundarfjörður 辦理入住、悠閒自炊等極光。</p></div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🏡 10:00 離開 Villa</span><span class="focus-chip">🦭 Ytri Tunga 快拍</span><span class="focus-chip">⛪ Búðakirkja 黑教堂</span><span class="focus-chip">🌊 Arnarstapi 海崖</span><span class="focus-chip">🏔️ Kirkjufell 教堂山</span><span class="focus-chip">🐴 15:20 入住 Berg Horse Farm</span></div><p class="focus-note">早晨在 Villa 睡飽悠閒早餐，10:00 準時整裝出發！全日沿途 5 大經典景點全數保留，透過每站約 10–20 分鐘的高效快拍節奏，順利於 15:20 前後抵達 Berg Horse Farm 辦理入住、悠閒自炊等極光。</p></div>
 
 <div class="card photo-gallery-card">
 <div class="photo-gallery-head"><div class="photo-gallery-title">📸 今日沿途景點</div><div class="photo-online-note">有網路時載入縮圖</div></div>
@@ -436,11 +454,11 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 </div>
 
 <div class="card route-card">
-<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Black+Diamond+Villa+Mosfellsb%C3%A6r&amp;destination=Berg+2+Grundarfj%C3%B6r%C3%B0ur&amp;travelmode=driving&amp;waypoints=Ytri+Tunga+Beach+Iceland%7CBudakirkja+Iceland%7CArnarstapi+Cliff+Iceland%7CIngjaldsholl+church%7CKirkjufell+Iceland" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a></div>
-<div class="route-line"><span class="route-stop">1<b>Black Diamond Villa</b></span><span class="route-stop">2<b>Ytri Tunga Beach</b></span><span class="route-stop">3<b>Búðakirkja</b></span><span class="route-stop">4<b>Arnarstapi</b></span><span class="route-stop">5<b>Ingjaldshóll Church</b></span><span class="route-stop">6<b>Kirkjufell</b></span><span class="route-stop">7<b>Berg 2 Grundarfjörður</b></span></div>
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Black+Diamond+Villa+Mosfellsb%C3%A6r&amp;destination=Berg+Horse+Farm+XM57%2B8H7+351+%C3%89n%C3%A9s%C3%A6%C3%BE+Iceland&amp;travelmode=driving&amp;waypoints=Ytri+Tunga+Beach+Iceland%7CBudakirkja+Iceland%7CArnarstapi+Cliff+Iceland%7CIngjaldsholl+church%7CKirkjufell+Iceland" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>Black Diamond Villa</b></span><span class="route-stop">2<b>Ytri Tunga Beach</b></span><span class="route-stop">3<b>Búðakirkja</b></span><span class="route-stop">4<b>Arnarstapi</b></span><span class="route-stop">5<b>Ingjaldshóll Church</b></span><span class="route-stop">6<b>Kirkjufell</b></span><span class="route-stop">7<b>Berg Horse Farm</b></span></div>
 </div>
 
-<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">依「10:00 離開 Villa、各站精準快拍 10–20 分鐘、15:20 抵達民宿」快速掌握動線節奏。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Black Diamond Villa → Ytri Tunga 海豹沙灘</span><span class="timing-badge">約 2 小時 15 分</span><span class="timing-note">175 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Black+Diamond+Villa+Mosfellsb%C3%A6r&amp;destination=Ytri+Tunga+Beach+Iceland" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Ytri Tunga → Búðakirkja 黑教堂</span><span class="timing-badge">約 20 分鐘</span><span class="timing-note">20 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Ytri+Tunga+Beach+Iceland&amp;destination=Budakirkja+Iceland" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Búðakirkja → Arnarstapi Cliff</span><span class="timing-badge">約 15 分鐘</span><span class="timing-note">15 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Budakirkja+Iceland&amp;destination=Arnarstapi+Cliff+Iceland" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Arnarstapi → Ingjaldshóll Church</span><span class="timing-badge">約 35 分鐘</span><span class="timing-note">35 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Arnarstapi+Cliff+Iceland&amp;destination=Ingjaldsholl+church+Iceland" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Ingjaldshóll → Kirkjufell 教堂山</span><span class="timing-badge">約 35 分鐘</span><span class="timing-note">38 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Ingjaldsholl+church+Iceland&amp;destination=Kirkjufell+Iceland" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Kirkjufell → Berg 2 Grundarfjörður</span><span class="timing-badge">約 12 分鐘</span><span class="timing-note">12 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Kirkjufell+Iceland&amp;destination=Berg+2+Grundarfj%C3%B6r%C3%B0ur" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">Ytri Tunga 海豹沙灘</span><span class="timing-badge">精簡約 15 分鐘</span><span class="timing-note">海邊快拍野生海豹，吹風賞景</span></div><div class="timing-item"><span class="route-text">Búðakirkja 黑教堂</span><span class="timing-badge">精簡約 15 分鐘</span><span class="timing-note">拍照欣賞孤絕黑教堂外觀</span></div><div class="timing-item"><span class="route-text">Arnarstapi 海崖</span><span class="timing-badge">精簡約 20 分鐘</span><span class="timing-note">石拱門與壯麗玄武岩海蝕柱快拍</span></div><div class="timing-item"><span class="route-text">Ingjaldshóll Church</span><span class="timing-badge">精簡約 10 分鐘</span><span class="timing-note">紅頂白牆小教堂與延伸公路快拍</span></div><div class="timing-item"><span class="route-text">Kirkjufell 教堂山</span><span class="timing-badge">精簡約 20 分鐘</span><span class="timing-note">拍攝經典錐形山與瀑布流水</span></div></div></div></div></div>
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">依「10:00 離開 Villa、各站精準快拍 10–20 分鐘、15:20 抵達農場」快速掌握動線節奏。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Black Diamond Villa → Ytri Tunga 海豹沙灘</span><span class="timing-badge">約 2 小時 15 分</span><span class="timing-note">175 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Black+Diamond+Villa+Mosfellsb%C3%A6r&amp;destination=Ytri+Tunga+Beach+Iceland" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Ytri Tunga → Búðakirkja 黑教堂</span><span class="timing-badge">約 20 分鐘</span><span class="timing-note">20 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Ytri+Tunga+Beach+Iceland&amp;destination=Budakirkja+Iceland" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Búðakirkja → Arnarstapi Cliff</span><span class="timing-badge">約 15 分鐘</span><span class="timing-note">15 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Budakirkja+Iceland&amp;destination=Arnarstapi+Cliff+Iceland" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Arnarstapi → Ingjaldshóll Church</span><span class="timing-badge">約 35 分鐘</span><span class="timing-note">35 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Arnarstapi+Cliff+Iceland&amp;destination=Ingjaldsholl+church+Iceland" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Ingjaldshóll → Kirkjufell 教堂山</span><span class="timing-badge">約 35 分鐘</span><span class="timing-note">38 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Ingjaldsholl+church+Iceland&amp;destination=Kirkjufell+Iceland" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Kirkjufell → Berg Horse Farm</span><span class="timing-badge">約 12 分鐘</span><span class="timing-note">12 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Kirkjufell+Iceland&amp;destination=Berg+Horse+Farm+XM57%2B8H7+351+%C3%89n%C3%A9s%C3%A6%C3%BE+Iceland" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">Ytri Tunga 海豹沙灘</span><span class="timing-badge">精簡約 15 分鐘</span><span class="timing-note">海邊快拍野生海豹，吹風賞景</span></div><div class="timing-item"><span class="route-text">Búðakirkja 黑教堂</span><span class="timing-badge">精簡約 15 分鐘</span><span class="timing-note">拍照欣賞孤絕黑教堂外觀</span></div><div class="timing-item"><span class="route-text">Arnarstapi 海崖</span><span class="timing-badge">精簡約 20 分鐘</span><span class="timing-note">石拱門與壯麗玄武岩海蝕柱快拍</span></div><div class="timing-item"><span class="route-text">Ingjaldshóll Church</span><span class="timing-badge">精簡約 10 分鐘</span><span class="timing-note">紅頂白牆小教堂與延伸公路快拍</span></div><div class="timing-item"><span class="route-text">Kirkjufell 教堂山</span><span class="timing-badge">精簡約 20 分鐘</span><span class="timing-note">拍攝經典錐形山與瀑布流水</span></div></div></div></div></div>
 
 <div class="day-grid">
 <div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
@@ -451,31 +469,40 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 <div class="time-row"><div class="time">13:20–13:40</div><div><b>Arnarstapi 海崖（停留 20 分鐘）</b><p>車程約 15 分鐘。沿步道快拍壯麗玄武岩海蝕景觀與 Gatklettur 石拱門，並於車上享用簡餐輕食。</p></div></div>
 <div class="time-row"><div class="time">14:15–14:25</div><div><b>Ingjaldshóll Church（停留 10 分鐘）</b><p>車程約 35 分鐘。紅頂白牆的靜謐教堂打卡快拍。</p></div></div>
 <div class="time-row"><div class="time">15:00–15:20</div><div><b>Kirkjufell 教堂山（停留 20 分鐘）</b><p>車程約 35 分鐘。拍攝冰島最具指標性的教堂山與瀑布全景。</p></div></div>
-<div class="time-row"><div class="time">15:32 前後</div><div><b>抵達 Berg 2 Grundarfjörður 辦理入住</b><p>約 15:20–15:30 順利入住溫馨農場民宿！卸下大件行李、悠閒準備晚餐，夜晚守候極光。</p></div></div>
+<div class="time-row"><div class="time">15:32 前後</div><div><b>抵達 Berg Horse Farm 辦理入住</b><p>約 15:20–15:30 順利入住溫馨農場民宿！卸下大件行李、悠閒準備晚餐，夜晚守候極光。</p></div></div>
 </div>
 <div class="side-stack">
-<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">海岸強風日，防風比厚度更重要</div><div class="feel">體感規劃：約 1–7°C；海邊陣風會明顯拉低體感。</div><ul class="wear-list"><li>羊毛／機能發熱打底</li><li>抓絨或薄羽絨中層</li><li>有帽防風防水外套</li><li>防水長褲或快乾長褲</li><li>防水登山鞋、毛帽、手套、脖圍</li></ul></div>
-<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Villa 悠閒自炊</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">車上輕食／Arnarstapi 簡餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Berg 2 自炊</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Berg 2 Grundarfjörður ｜含廚房設備</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>10/4 住宿確認為 Berg 2 Grundarfjörður。5 人住宿皆已安排，預計 15:20–15:30 入住。</p></div></div>
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">海岸強風日，防風比厚度更重要</div>
+<div class="wear-metrics">
+<div class="wear-metric-item">預估天氣：<b>陰天短暫陣雨</b></div>
+<div class="wear-metric-item">預估風速：<b>沿岸強風 16 mph</b></div>
+<div class="wear-metric-item">預估降雨：<b>40%</b></div>
+<div class="wear-metric-item">預估溫度：<b>約 1°C ~ 5°C</b></div>
+<div class="wear-metric-item" style="grid-column:1/-1">預估體感溫度：<b>約 -2°C ~ 2°C</b></div>
+</div>
+<div class="feel">體感規劃：約 1°C ~ 5°C 但在 16 mph 強烈陣風與 40% 短暫陣雨下，體感會跌至 -2°C ~ 2°C；防風防潑水衝鋒衣帽與防滑鞋為標配。</div><ul class="wear-list"><li>羊毛／機能發熱打底</li><li>抓絨或薄羽絨中層</li><li>有帽防風防水外套</li><li>防水長褲或快乾長褲</li><li>防水登山鞋、毛帽、手套、脖圍</li></ul></div>
+<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Villa 悠閒自炊</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">車上輕食／Arnarstapi 簡餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Berg Horse Farm 自炊</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p><b>Berg Horse Farm</b>｜含齊全廚房設備</p><p style="margin-top:6px;font-size:12px;color:#475b63;"><b>📍 地址</b>：Grundarfjörður, West, Berg Horse Farm XM57+8H7, 351 Énésæþ, 冰島</p><p style="margin-top:6px;font-size:11.5px;color:#6b7c82;background:#fff;padding:8px;border-radius:8px;border:1px solid #e2dbcd;"><b>🚗 房東路線指引</b>：<br>"Berg Horse Farm is located just west of Kirkjufell. Driving on Highway 54 westwards from Grundarfjörður, you make a right turn after passing Kirkjufell at the sign for Kvíabryggja and Berg. Afterwards, make a left at the fork and you will arrive at Berg Horse Farm."</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>10/4 住宿確認為 Berg Horse Farm。5 人住宿皆已安排，預計 15:20–15:30 入住。</p></div></div>
 </div>
 </div>
-<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li><b>10:00 準時離開 Villa</b>：各景點控制在 10–20 分鐘快速取景，方可確保在 15:20 前後順利抵達 Berg 2 Grundarfjörður。</li><li>海岸線風大，下車拍照切記戴妥毛帽並抓好車門。</li></ul></div>
+<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li><b>10:00 準時離開 Villa</b>：各景點控制在 10–20 分鐘快速取景，方可確保在 15:20 前後順利抵達 Berg Horse Farm。</li><li><b>尋找農場指引</b>：自 54 號公路向西行駛，過教堂山後依路標「Kvíabryggja and Berg」右轉，叉路處靠左即可抵達 Berg Horse Farm。</li><li>海岸線風大，下車拍照切記戴妥毛帽並抓好車門。</li></ul></div>
 </section>
 
-<!-- DAY 4 -->
+<!-- DAY 4 (更新：出發點正名為 Berg Horse Farm) -->
 <section class="day" id="day-4">
 <div class="day-head">
 <div class="day-number">DAY 04</div>
 <div class="day-title-wrap">
 <div class="day-date">2026 / 10/05（一）</div>
-<h2>Berg 2 → 秘境藍瀑布(Brúarfoss) → 間歇泉(Geysir) → 黃金瀑布(Gullfoss) → 15:00 入住 ION</h2>
-<div class="meta-row"><span>📍 Golden Circle</span><span>☀️ 約 07:47 / 18:45</span><span>🚗 約 4 小時 50 分</span></div>
+<h2>Berg Horse Farm → N1 Borgarnes(加油) → 秘境藍瀑布(Brúarfoss) → 間歇泉 → 黃金瀑布 → 15:00 入住 ION</h2>
+<div class="meta-row"><span>📍 Snæfellsnes → Borgarnes → Golden Circle</span><span>☀️ 約 07:47 / 18:45</span><span>🚗 約 4 小時 55 分</span></div>
 </div>
 </div>
-<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🏡 Berg 2 出發</span><span class="focus-chip">🌊 Brúarfoss 秘境瀑布</span><span class="focus-chip">💥 Strokkur 間歇泉</span><span class="focus-chip">💦 Gullfoss 壯觀大瀑布</span><span class="focus-chip">🏨 15:00 入住 ION Adventure</span></div><p class="focus-note">全景點保留、精算長途車程與停留時間：晨間 07:35 準時出發，依序走訪秘境藍瀑布與間歇泉，最後在黃金瀑布穿著雨衣感受震撼水氣，濕透後於 15:00 準時抵達 ION 入住、沖澡泡湯放鬆！</p></div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🏡 07:15 早出發</span><span class="focus-chip">⛽ N1 Borgarnes 加油</span><span class="focus-chip">🌊 Brúarfoss 秘境瀑布</span><span class="focus-chip">💥 Strokkur 間歇泉</span><span class="focus-chip">💦 Gullfoss 壯觀大瀑布</span><span class="focus-chip">🏨 15:00 入住 ION Adventure</span></div><p class="focus-note">早晨 07:15 自 Berg Horse Farm 出發南下，途中先停靠樞紐大站 N1 Borgarnes 為兩台車加滿油，接著前往秘境藍瀑布與間歇泉，下午在黃金瀑布感受磅礴水霧後，於 15:00 準時抵達 ION Adventure Hotel 入住泡湯！</p></div>
 
 <div class="card photo-gallery-card">
 <div class="photo-gallery-head"><div class="photo-gallery-title">📸 今日沿途景點</div><div class="photo-online-note">有網路時載入縮圖</div></div>
 <div class="photo-strip">
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">⛽ N1 Borgarnes</div><img alt="⛽ N1 Borgarnes" loading="lazy" src="https://images.unsplash.com/photo-1545459720-aac8509eb02c?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">⛽</span>N1 Borgarnes 加油站</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=N1+Bruartorg+1+310+Borgarnes">📍 Google Map</a></div></div></div>
 <div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🌊 Brúarfoss</div><img alt="🌊 Brúarfoss" loading="lazy" src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🌊</span>Brúarfoss 藍色秘境</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Bruarfoss">📍 Google Map</a></div></div></div>
 <div class="photo-item"><div class="photo-frame"><div class="photo-fallback">💥 Strokkur / Geysir</div><img alt="💥 Strokkur / Geysir" loading="lazy" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">💥</span>Strokkur / Geysir</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Strokkur+Geysir+Iceland">📍 Google Map</a></div></div></div>
 <div class="photo-item"><div class="photo-frame"><div class="photo-fallback">💦 Gullfoss 黃金瀑布</div><img alt="💦 Gullfoss 黃金瀑布" loading="lazy" src="https://images.unsplash.com/photo-1508873696983-2df5293cb32f?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">💦</span>Gullfoss 黃金瀑布</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Gullfoss+Waterfall">📍 Google Map</a></div></div></div>
@@ -483,29 +510,38 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 </div>
 
 <div class="card route-card">
-<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Berg+2+Grundarfj%C3%B6r%C3%B0ur&amp;destination=ION+Adventure+Hotel+Nesjavellir&amp;travelmode=driving&amp;waypoints=Bruarfoss%7CStrokkur+Geysir+Iceland%7CGullfoss+Waterfall" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a></div>
-<div class="route-line"><span class="route-stop">1<b>Berg 2 Grundarfjörður</b></span><span class="route-stop">2<b>Brúarfoss</b></span><span class="route-stop">3<b>Strokkur Geysir</b></span><span class="route-stop">4<b>Gullfoss</b></span><span class="route-stop">5<b>ION Adventure Hotel</b></span></div>
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Berg+Horse+Farm+XM57%2B8H7+351+%C3%89n%C3%A9s%C3%A6%C3%BE+Iceland&amp;destination=ION+Adventure+Hotel+Nesjavellir&amp;travelmode=driving&amp;waypoints=N1+Bruartorg+1+310+Borgarnes%7CBruarfoss%7CStrokkur+Geysir+Iceland%7CGullfoss+Waterfall" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>Berg Horse Farm</b></span><span class="route-stop">2<b>N1 Borgarnes (加油)</b></span><span class="route-stop">3<b>Brúarfoss</b></span><span class="route-stop">4<b>Strokkur Geysir</b></span><span class="route-stop">5<b>Gullfoss</b></span><span class="route-stop">6<b>ION Adventure Hotel</b></span></div>
 </div>
 
-<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">依「235 km 實際路況、07:35 出發、精簡停留時間、確保 15:00 準時進飯店」的節奏精準配置。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Berg 2 Grundarfjörður → Brúarfoss 秘境瀑布</span><span class="timing-badge">約 3 小時 15 分</span><span class="timing-note">235 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Berg+2+Grundarfj%C3%B6r%C3%B0ur&amp;destination=Bruarfoss" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Brúarfoss → Strokkur / Geysir 間歇泉</span><span class="timing-badge">約 15 分鐘</span><span class="timing-note">15 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Bruarfoss&amp;destination=Strokkur+Geysir+Iceland" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Strokkur → Gullfoss 黃金瀑布</span><span class="timing-badge">約 10 分鐘</span><span class="timing-note">10 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Strokkur+Geysir+Iceland&amp;destination=Gullfoss+Waterfall" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Gullfoss → ION Adventure Hotel</span><span class="timing-badge">約 1 小時 15 分</span><span class="timing-note">75 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Gullfoss+Waterfall&amp;destination=ION+Adventure+Hotel+Nesjavellir" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">Brúarfoss 藍色秘境瀑布</span><span class="timing-badge">精簡約 30 分鐘</span><span class="timing-note">停車後步道健行，快拍純淨冰川Tiffany藍</span></div><div class="timing-item"><span class="route-text">Strokkur 間歇泉＋快速午餐</span><span class="timing-badge">精簡約 45 分鐘</span><span class="timing-note">看 2–3 次地熱噴發，遊客中心吃熱湯暖身</span></div><div class="timing-item"><span class="route-text">Gullfoss 黃金瀑布＋紀念品店</span><span class="timing-badge">精簡約 50 分鐘</span><span class="timing-note">穿雨衣近距離看水霧噴濺，快速逛紀念品店</span></div></div></div></div></div>
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">依「07:15 出發、先至 N1 Borgarnes 加油、精準停留、確保 15:00 準時進飯店」的節奏精準配置。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Berg Horse Farm → N1 Borgarnes</span><span class="timing-badge">約 1 小時 25 分</span><span class="timing-note">105 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Berg+Horse+Farm+XM57%2B8H7+351+%C3%89n%C3%A9s%C3%A6%C3%BE+Iceland&amp;destination=N1+Bruartorg+1+310+Borgarnes" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">N1 Borgarnes → Brúarfoss 秘境瀑布</span><span class="timing-badge">約 1 小時 50 分</span><span class="timing-note">130 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=N1+Bruartorg+1+310+Borgarnes&amp;destination=Bruarfoss" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Brúarfoss → Strokkur / Geysir 間歇泉</span><span class="timing-badge">約 15 分鐘</span><span class="timing-note">15 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Bruarfoss&amp;destination=Strokkur+Geysir+Iceland" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Strokkur → Gullfoss 黃金瀑布</span><span class="timing-badge">約 10 分鐘</span><span class="timing-note">10 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Strokkur+Geysir+Iceland&amp;destination=Gullfoss+Waterfall" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Gullfoss → ION Adventure Hotel</span><span class="timing-badge">約 1 小時 15 分</span><span class="timing-note">75 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Gullfoss+Waterfall&amp;destination=ION+Adventure+Hotel+Nesjavellir" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">N1 Borgarnes (加油休整)</span><span class="timing-badge">約 15 分鐘</span><span class="timing-note">兩台車加滿油、上洗手間、外帶熱咖啡</span></div><div class="timing-item"><span class="route-text">Brúarfoss 藍色秘境瀑布</span><span class="timing-badge">精簡約 30 分鐘</span><span class="timing-note">停車後步道健行，快拍純淨冰川Tiffany藍</span></div><div class="timing-item"><span class="route-text">Strokkur 間歇泉＋快速午餐</span><span class="timing-badge">精簡約 45 分鐘</span><span class="timing-note">看 2–3 次地熱噴發，遊客中心吃熱湯暖身</span></div><div class="timing-item"><span class="route-text">Gullfoss 黃金瀑布＋紀念品店</span><span class="timing-badge">精簡約 50 分鐘</span><span class="timing-note">穿雨衣近距離看水霧噴濺，快速逛紀念品店</span></div></div></div></div></div>
 
 <div class="day-grid">
 <div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
-<div class="time-row"><div class="time">06:45</div><div><b>Berg 2 自理早餐</b><p>提早起床用餐、整裝行李、裝滿保溫壺熱水。</p></div></div>
-<div class="time-row"><div class="time">07:35</div><div><b>出發南下黃金圈（235 km）</b><p>從 Berg 2 Grundarfjörður 出發經一號公路南下，車程約 3 小時 15 分鐘。</p></div></div>
-<div class="time-row"><div class="time">10:50–11:20</div><div><b>Brúarfoss 秘境藍瀑布（停留 30 分鐘）</b><p>步行前往欣賞著名的牛奶Tiffany藍水流，拍照欣賞獨特冰川融水色澤。</p></div></div>
-<div class="time-row"><div class="time">11:35–12:20</div><div><b>Strokkur / Geysir 間歇泉 ＆ 快速午餐（45 分鐘）</b><p>車程約 15 分鐘。近距離觀看震撼噴發，隨後在遊客中心享用熱湯與簡餐補充熱量。</p></div></div>
-<div class="time-row"><div class="time">12:30–13:20</div><div><b>Gullfoss 黃金瀑布（雨衣全套防護，停留 50 分鐘）</b><p>車程僅 10 分鐘。<b>穿戴好完整雨衣與防雨配備</b>走向懸崖步道，感受雙層瀑布轟鳴與磅礴水霧的極致包覆！逛完紀念品店後準備離開。</p></div></div>
-<div class="time-row"><div class="time">13:35</div><div><b>啟程直奔 ION Adventure Hotel</b><p>車程約 1 小時 15 分鐘，沿途欣賞壯麗苔原火山風貌。</p></div></div>
-<div class="time-row"><div class="time">15:00</div><div><b>準時抵達 ION Adventure Hotel 辦理入住</b><p>3 點準時 check-in！剛好走完瀑布濕透回房沖熱水澡換裝，下午有極充裕時間享受招牌露天溫泉池。</p></div></div>
+<div class="time-row"><div class="time">06:30</div><div><b>Berg Horse Farm 自理早餐</b><p>早起用餐、整裝行李、裝滿保溫壺熱水。</p></div></div>
+<div class="time-row"><div class="time">07:15</div><div><b>出發南下前往 Borgarnes</b><p>退房出發，車程約 1 小時 25 分鐘。</p></div></div>
+<div class="time-row"><div class="time">08:40–08:55</div><div><b>N1 Borgarnes 加油站休整（停留 15 分鐘）</b><p>地址：Brúartorg 1, 310 Borgarnes。兩台車加油、上洗手間，補給熱咖啡後出發直奔黃金圈。</p></div></div>
+<div class="time-row"><div class="time">10:45–11:15</div><div><b>Brúarfoss 秘境藍瀑布（停留 30 分鐘）</b><p>車程約 1 小時 50 分。步行前往欣賞著名的牛奶Tiffany藍水流與冰川融水色澤。</p></div></div>
+<div class="time-row"><div class="time">11:30–12:15</div><div><b>Strokkur / Geysir 間歇泉 ＆ 快速午餐（45 分鐘）</b><p>車程約 15 分鐘。近距離觀看震撼噴發，隨後在遊客中心享用熱湯與簡餐補充熱量。</p></div></div>
+<div class="time-row"><div class="time">12:25–13:15</div><div><b>Gullfoss 黃金瀑布（雨衣全套防護，停留 50 分鐘）</b><p>車程僅 10 分鐘。<b>穿戴好完整雨衣與防雨配備</b>走向步道感受磅礴水霧，逛完紀念品店後離開。</p></div></div>
+<div class="time-row"><div class="time">13:30</div><div><b>啟程直奔 ION Adventure Hotel</b><p>車程約 1 小時 15 分鐘，沿途欣賞壯麗苔原火山風貌。</p></div></div>
+<div class="time-row"><div class="time">15:00</div><div><b>準時抵達 ION Adventure Hotel 辦理入住</b><p>3 點準時 check-in！剛好走完瀑布濕透回房沖熱水澡換裝，下午享受招牌露天溫泉池。</p></div></div>
 <div class="time-row"><div class="time">晚間</div><div><b>Silfra / ION 晚餐</b><p>原表 Ni 預定；晚間若天候晴朗無雲，直接在飯店周遭守候極光。</p></div></div>
 </div>
 <div class="side-stack">
-<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">瀑布水氣激盪＋結束後直接泡湯</div><div class="feel">體感規劃：約 1–7°C；Gullfoss 水霧區風強水氣密，體感會大幅下降。</div><ul class="wear-list"><li>保暖排汗底層＋刷毛中層</li><li><b>高規格防水雨衣／硬殼衝鋒衣＋防水雨褲（Gullfoss 必備）</b></li><li>防滑防水登山鞋＋保暖毛帽手套</li><li>泳衣放在隨身包內，抵達 ION 後可直接泡湯</li></ul></div>
-<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Berg 2 自炊</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">Geysir Center 遊客中心簡餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">ION Silfra 精緻晚餐</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>ION Adventure Hotel 黃金圈</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>ION Adventure：5 人住宿皆已安排；房型依各自已完成訂單。Silfra 晚餐依原行程預定。</p></div></div>
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">瀑布水氣激盪＋結束後直接泡湯</div>
+<div class="wear-metrics">
+<div class="wear-metric-item">預估天氣：<b>局部多雲短暫陣雨</b></div>
+<div class="wear-metric-item">預估風速：<b>內陸陣風 11 mph</b></div>
+<div class="wear-metric-item">預估降雨：<b>35%</b></div>
+<div class="wear-metric-item">預估溫度：<b>約 2°C ~ 6°C</b></div>
+<div class="wear-metric-item" style="grid-column:1/-1">預估體感溫度：<b>約 0°C ~ 4°C</b></div>
+</div>
+<div class="feel">體感規劃：約 2°C ~ 6°C、體感 0°C ~ 4°C；Gullfoss 水霧區風強水氣密集，體感會急降，務必穿著全套防水雨衣雨褲與防滑高筒鞋。</div><ul class="wear-list"><li>保暖排汗底層＋刷毛中層</li><li><b>高規格防水雨衣／硬殼衝鋒衣＋防水雨褲（Gullfoss 必備）</b></li><li>防滑防水登山鞋＋保暖毛帽手套</li><li>泳衣放在隨身包內，抵達 ION 後可直接泡湯</li></ul></div>
+<div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Berg Horse Farm 自炊</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">Geysir Center 遊客中心簡餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">ION Silfra 精緻晚餐</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>ION Adventure Hotel 黃金圈</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>ION Adventure：5 人住宿皆已安排；房型依各自已完成訂單。Silfra 晚餐依原行程預定。</p></div></div>
 </div>
 </div>
-<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li><b>實際車程更新</b>：Berg 2 至 Brúarfoss 距離為 <b>235 km（約 3 小時 15 分）</b>，今日務必於 <b>07:35 準時出發</b>，方可確保在 15:00 順利入住 ION。</li><li>黃金瀑布水氣極大、極易濕透，剛好走完就可以上車直奔 ION 換裝洗熱水澡，最為舒爽。</li></ul></div>
+<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li><b>先去 N1 Borgarnes 加油</b>：今日 07:15 出發，先在 Borgarnes 樞紐加滿油，後面進入黃金圈景點區無後顧之憂，確保 15:00 準時入住 ION。</li><li>黃金瀑布水氣極大，走完即可直接上車開往 ION 換裝洗熱水澡。</li></ul></div>
 </section>
 
 <!-- DAY 5 -->
@@ -552,42 +588,50 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 <div class="time-row"><div class="time">15:00</div><div><b>準時抵達 Seljalandsfoss Horizons 入住</b><p>下午 3 點準時 check-in！入住豪華景觀別墅，使用齊全廚房料理下午茶或悠閒準備今晚晚餐。</p></div></div>
 </div>
 <div class="side-stack">
-<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">全套雨裝＋快節奏行動裝束</div><div class="feel">體感規劃：約 1–7°C；瀑布水霧濃，請將雨衣雨褲隨身穿好。</div><ul class="wear-list"><li>機能／羊毛打底＋保暖中層</li><li>連帽防水外套＋防水長褲</li><li>高筒防水登山鞋＋備用羊毛襪</li><li>相機／手機防水袋</li></ul></div>
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">全套雨裝＋快節奏行動裝束</div>
+<div class="wear-metrics">
+<div class="wear-metric-item">預估天氣：<b>陰天偶陣雨</b></div>
+<div class="wear-metric-item">預估風速：<b>南岸強風 14 mph</b></div>
+<div class="wear-metric-item">預估降雨：<b>45%</b></div>
+<div class="wear-metric-item">預估溫度：<b>約 3°C ~ 7°C</b></div>
+<div class="wear-metric-item" style="grid-column:1/-1">預估體感溫度：<b>約 0°C ~ 4°C</b></div>
+</div>
+<div class="feel">體感規劃：約 3°C ~ 7°C、體感 0°C ~ 4°C；南岸強風達 14 mph 且降雨機率 45%，各大瀑布水霧極濃，請務必隨身穿著連帽防水衝鋒衣褲並備妥相機防水袋。</div><ul class="wear-list"><li>機能／羊毛打底＋保暖中層</li><li>連帽防水外套＋防水長褲</li><li>高筒防水登山鞋＋備用羊毛襪</li><li>相機／手機防水袋</li></ul></div>
 <div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">ION 早餐 (悠閒享用)</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">Hvolsvöllur 採買車上簡餐／點心</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Seljalandsfoss Horizons 自炊料理</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Seljalandsfoss Horizons ｜豪華 Villa、含齊全廚房</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>Seljalandsfoss Horizons：5 人住宿皆已安排，預計 15:00 入住。</p></div></div>
 </div>
 </div>
 <div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li><b>實際路況更新</b>：Kerið 至超市為 <b>63 km（約 51 分）</b>，DC-3 至彩虹瀑布為 <b>35 km（約 32 分）</b>。今日各景點緊湊快拍，確保在 15:00 準時入住 Seljalandsfoss Horizons。</li><li>Seljalandsfoss 與 Skógafoss 上下車時請隨身穿好防風防水外層，確保相機與手機不被水氣滲透。</li></ul></div>
 </section>
 
-<!-- DAY 6 (更新：10:30 離開 Villa，緊湊順遊黑沙灘與精選亮點，15:00 準時入住 Hótel Jökulsárlón) -->
+<!-- DAY 6 -->
 <section class="day" id="day-6">
 <div class="day-head">
 <div class="day-number">DAY 06</div>
 <div class="day-title-wrap">
 <div class="day-date">2026 / 10/07（三）</div>
-<h2>10:30 離開 Villa → 黑沙灘 → Suður-Vík → 冰川區直奔 → 15:00 準時入住 Hótel Jökulsárlón</h2>
+<h2>10:30 離開 Villa → 黑沙灘 → Suður-Vík → N1 Vík(加油) → 15:00 入住 Hótel Jökulsárlón</h2>
 <div class="meta-row"><span>📍 Vík → Glacier Lagoon</span><span>☀️ 約 07:53 / 18:38</span><span>🚗 約 3 小時 40 分</span></div>
 </div>
 </div>
-<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🏡 10:30 離開 Villa</span><span class="focus-chip">🌊 Reynisfjara 黑沙灘</span><span class="focus-chip">☕ Restaurant Suður-Vík 20分</span><span class="focus-chip">🚗 南岸景觀直奔</span><span class="focus-chip">🏨 15:00 入住冰川飯店</span><span class="focus-chip">💎 傍晚鑽石沙灘散步</span></div><p class="focus-note">早晨在 Villa 享受悠閒時光直到 10:30 出發！上午走訪黑沙灘並在 Vík 小鎮的 Restaurant Suður-Vík 短暫小憩，隨後沿 1 號公路直奔冰河湖，15:00 準時抵達奢華 Hótel Jökulsárlón 辦理入住；入住放好行李後，傍晚再漫步至鄰近的冰河湖與鑽石沙灘享受最美夕陽！</p></div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🏡 10:30 離開 Villa</span><span class="focus-chip">🌊 Reynisfjara 黑沙灘</span><span class="focus-chip">☕ Restaurant Suður-Vík 20分</span><span class="focus-chip">⛽ N1 Vík 加油</span><span class="focus-chip">🏨 15:00 入住冰川飯店</span><span class="focus-chip">💎 傍晚鑽石沙灘散步</span></div><p class="focus-note">早晨在 Villa 享受悠閒時光直到 10:30 出發！上午走訪黑沙灘並在 Vík 小鎮的 Restaurant Suður-Vík 短暫小憩，餐後在 N1 Vík 將兩台車加滿油，隨後沿 1 號公路直奔冰河湖，15:00 準時抵達奢華 Hótel Jökulsárlón 辦理入住；入住後傍晚漫步至鑽石沙灘享受最美夕陽！</p></div>
 
 <div class="card photo-gallery-card">
 <div class="photo-gallery-head"><div class="photo-gallery-title">📸 今日沿途景點</div><div class="photo-online-note">有網路時載入縮圖</div></div>
 <div class="photo-strip">
 <div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🌊 Reynisfjara 黑沙灘</div><img alt="🌊 Reynisfjara 黑沙灘" loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🌊</span>Reynisfjara 黑沙灘</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Reynisfjara+Black+Sand+Beach">📍 Google Map</a></div></div></div>
 <div class="photo-item"><div class="photo-frame"><div class="photo-fallback">☕ Restaurant Suður-Vík</div><img alt="☕ Restaurant Suður-Vík" loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">☕</span>Restaurant Suður-Vík</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Restaurant+Sudur+Vik">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">⛽ N1 Vík 加油站</div><img alt="⛽ N1 Vík 加油站" loading="lazy" src="https://images.unsplash.com/photo-1545459720-aac8509eb02c?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">⛽</span>N1 Vík (Austurvegur 18)</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=N1+Austurvegur+18+870+Vik">📍 Google Map</a></div></div></div>
 <div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🧊 Svínafellsjökull 冰川舌</div><img alt="🧊 Svínafellsjökull 冰川舌" loading="lazy" src="https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🧊</span>Svínafellsjökull 冰川舌</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Svinafellsjokull">📍 Google Map</a></div></div></div>
-<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🚤 Jökulsárlón 冰河湖</div><img alt="🚤 Jökulsárlón 冰河湖" loading="lazy" src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🚤</span>Jökulsárlón 冰河湖</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Jokulsarlon">📍 Google Map</a></div></div></div>
 <div class="photo-item"><div class="photo-frame"><div class="photo-fallback">💎 Diamond Beach 鑽石沙灘</div><img alt="💎 Diamond Beach 鑽石沙灘" loading="lazy" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">💎</span>Diamond Beach 鑽石沙灘</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Diamond+Beach+Iceland">📍 Google Map</a></div></div></div>
 </div>
 </div>
 
 <div class="card route-card">
-<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Seljalandsfoss+Horizons&amp;destination=Hotel+Jokulsarlon&amp;travelmode=driving&amp;waypoints=Reynisfjara+Black+Sand+Beach%7CRestaurant+Sudur+Vik" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a></div>
-<div class="route-line"><span class="route-stop">1<b>Seljalandsfoss Horizons</b></span><span class="route-stop">2<b>Reynisfjara 黑沙灘</b></span><span class="route-stop">3<b>Restaurant Suður-Vík</b></span><span class="route-stop">4<b>Hótel Jökulsárlón (15:00 入住)</b></span><span class="route-stop">5<b>鑽石沙灘 & 冰河湖</b></span></div>
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Seljalandsfoss+Horizons&amp;destination=Hotel+Jokulsarlon&amp;travelmode=driving&amp;waypoints=Reynisfjara+Black+Sand+Beach%7CRestaurant+Sudur+Vik%7CN1+Austurvegur+18+870+Vik" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>Seljalandsfoss Horizons</b></span><span class="route-stop">2<b>Reynisfjara 黑沙灘</b></span><span class="route-stop">3<b>Restaurant Suður-Vík</b></span><span class="route-stop">4<b>N1 Vík (加油)</b></span><span class="route-stop">5<b>Hótel Jökulsárlón (15:00 入住)</b></span></div>
 </div>
 
-<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">依「10:30 離開 Villa、經黑沙灘與 Suður-Vík、長途行車約 2 小時 20 分直奔、15:00 準時入住」快速掌握節奏。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Seljalandsfoss Horizons → Reynisfjara</span><span class="timing-badge">約 50 分鐘</span><span class="timing-note">60 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Seljalandsfoss+Horizons&amp;destination=Reynisfjara+Black+Sand+Beach" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Reynisfjara → Restaurant Suður-Vík</span><span class="timing-badge">約 10 分鐘</span><span class="timing-note">11 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Reynisfjara+Black+Sand+Beach&amp;destination=Restaurant+Sudur+Vik" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Restaurant Suður-Vík → Hótel Jökulsárlón</span><span class="timing-badge">約 2 小時 20 分</span><span class="timing-note">195 km；沿途景觀公路直達 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Restaurant+Sudur+Vik&amp;destination=Hotel+Jokulsarlon" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Hótel Jökulsárlón ⇆ Diamond Beach / 冰河湖</span><span class="timing-badge">約 12 分鐘</span><span class="timing-note">入住後下午輕鬆前往 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Jokulsarlon&amp;destination=Diamond+Beach+Iceland" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">Reynisfjara 黑沙灘</span><span class="timing-badge">精簡約 25 分鐘</span><span class="timing-note">快拍玄武岩壁與海蝕柱，嚴禁靠近浪邊</span></div><div class="timing-item"><span class="route-text">Restaurant Suður-Vík</span><span class="timing-badge">約 20 分鐘</span><span class="timing-note">小憩、外帶咖啡熱飲、品嚐點心與俯瞰海灣</span></div><div class="timing-item"><span class="route-text">Hótel Jökulsárlón 入住</span><span class="timing-badge">15:00 準時辦理</span><span class="timing-note">放行李、沖熱水澡、享受飯店設施</span></div><div class="timing-item"><span class="route-text">Diamond Beach ＆ 冰河湖漫步</span><span class="timing-badge">傍晚彈性（約 1.5 小時）</span><span class="timing-note">入住後無行李負擔，漫步拍攝最美夕陽與冰塊</span></div></div></div></div></div>
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">依「10:30 離開 Villa、黑沙灘 ➔ Suður-Vík ➔ N1 Vík 加油 ➔ 直奔飯店 15:00 準時入住」快速掌握節奏。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Seljalandsfoss Horizons → Reynisfjara</span><span class="timing-badge">約 50 分鐘</span><span class="timing-note">60 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Seljalandsfoss+Horizons&amp;destination=Reynisfjara+Black+Sand+Beach" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Reynisfjara → Restaurant Suður-Vík</span><span class="timing-badge">約 10 分鐘</span><span class="timing-note">11 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Reynisfjara+Black+Sand+Beach&amp;destination=Restaurant+Sudur+Vik" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Restaurant Suður-Vík → N1 Vík 加油站</span><span class="timing-badge">約 2 分鐘</span><span class="timing-note">1 km <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Restaurant+Sudur+Vik&amp;destination=N1+Austurvegur+18+870+Vik" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">N1 Vík → Hótel Jökulsárlón</span><span class="timing-badge">約 2 小時 15 分</span><span class="timing-note">193 km；沿途景觀公路直達 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=N1+Austurvegur+18+870+Vik&amp;destination=Hotel+Jokulsarlon" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Hótel Jökulsárlón ⇆ Diamond Beach / 冰河湖</span><span class="timing-badge">約 12 分鐘</span><span class="timing-note">入住後下午輕鬆前往 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Jokulsarlon&amp;destination=Diamond+Beach+Iceland" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">Reynisfjara 黑沙灘</span><span class="timing-badge">精簡約 25 分鐘</span><span class="timing-note">快拍玄武岩壁與海蝕柱，嚴禁靠近浪邊</span></div><div class="timing-item"><span class="route-text">Restaurant Suður-Vík</span><span class="timing-badge">約 20 分鐘</span><span class="timing-note">小憩、外帶咖啡熱飲、品嚐點心與俯瞰海灣</span></div><div class="timing-item"><span class="route-text">N1 Vík 加油站</span><span class="timing-badge">約 10 分鐘</span><span class="timing-note">兩台車加滿油，補給長途行車飲水零食</span></div><div class="timing-item"><span class="route-text">Hótel Jökulsárlón 入住</span><span class="timing-badge">15:00 準時辦理</span><span class="timing-note">放行李、沖熱水澡、享受飯店設施</span></div><div class="timing-item"><span class="route-text">Diamond Beach ＆ 冰河湖漫步</span><span class="timing-badge">傍晚彈性（約 1.5 小時）</span><span class="timing-note">入住後無行李負擔，漫步拍攝最美夕陽與冰塊</span></div></div></div></div></div>
 
 <div class="day-grid">
 <div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
@@ -595,17 +639,26 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 <div class="time-row"><div class="time">10:30</div><div><b>準時退房離開 Villa</b><p>自駕前往 Vík 黑沙灘，車程約 50 分鐘。</p></div></div>
 <div class="time-row"><div class="time">11:20–11:45</div><div><b>Reynisfjara 黑沙灘（快拍 25 分鐘）</b><p>欣賞玄武岩柱與黑色沙灘；請隨時留意海浪，切勿背對大海。</p></div></div>
 <div class="time-row"><div class="time">11:55–12:15</div><div><b>Restaurant Suður-Vík（停留 20 分鐘）</b><p>開車 10 分鐘進入 Vík 小鎮山丘上。外帶熱咖啡、點心輕食與使用洗手間，居高臨下欣賞小鎮美景。</p></div></div>
-<div class="time-row"><div class="time">12:15–14:40</div><div><b>公路長途直奔冰川區（車上享用輕食）</b><p>沿著 Ring Road 1 直奔東方，沿途欣賞熔岩原與遠方瓦特納冰原壯闊風光（車程約 2 小時 20 分）。</p></div></div>
+<div class="time-row"><div class="time">12:17–12:27</div><div><b>N1 Vík 加油站（停留 10 分鐘）</b><p>地址：Austurvegur 18, 870 Vík。在小鎮中心 N1 將兩台車加滿油，準備展開南岸長途路段。</p></div></div>
+<div class="time-row"><div class="time">12:30–14:45</div><div><b>公路長途直奔冰川區（車上享用輕食）</b><p>沿著 Ring Road 1 直奔東方，沿途欣賞熔岩原與遠方瓦特納冰原壯闊風光（車程約 2 小時 15 分）。</p></div></div>
 <div class="time-row"><div class="time">15:00</div><div><b>準時抵達 Hótel Jökulsárlón 辦理入住</b><p>下午 15:00 準時到達！辦理 Check-in，進房卸下大件行李、沖熱水澡、喝下午茶放鬆。</p></div></div>
 <div class="time-row"><div class="time">16:15–17:45</div><div><b>Jökulsárlón 冰河湖 ＆ 鑽石沙灘夕陽漫步</b><p>一身輕裝開車 10 分鐘前往冰河湖與鑽石沙灘，在柔和的低角度夕陽金色光線下拍攝晶瑩浮冰！</p></div></div>
 <div class="time-row"><div class="time">18:15</div><div><b>返回飯店享受晚餐 ＆ 等候極光</b><p>返回飯店享用晚餐與桑拿，入夜後在房間大窗前靜待極光舞動。</p></div></div>
 </div>
 <div class="side-stack">
-<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">黑沙灘與冰河湖的強風保暖</div><div class="feel">體感規劃：約 0–6°C；冰河湖與海邊風強時體感接近 0°C 以下。</div><ul class="wear-list"><li>羊毛底層＋抓絨＋輕羽絨</li><li>防風防水硬殼＋防水登山鞋</li><li>厚襪＋保暖帽＋手套＋脖圍</li></ul></div>
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">黑沙灘與冰河湖的強風保暖</div>
+<div class="wear-metrics">
+<div class="wear-metric-item">預估天氣：<b>晴時多雲風大</b></div>
+<div class="wear-metric-item">預估風速：<b>黑沙灘海岸強風 18 mph</b></div>
+<div class="wear-metric-item">預估降雨：<b>20%</b></div>
+<div class="wear-metric-item">預估溫度：<b>約 1°C ~ 6°C</b></div>
+<div class="wear-metric-item" style="grid-column:1/-1">預估體感溫度：<b>約 -3°C ~ 2°C</b></div>
+</div>
+<div class="feel">體感規劃：約 1°C ~ 6°C，但海邊與冰河湖受 18 mph 強陣風影響，體感顯著下探至 -3°C ~ 2°C；防風保暖硬殼衝鋒衣、厚羊毛襪與毛帽手套必不可少。</div><ul class="wear-list"><li>羊毛底層＋抓絨＋輕羽絨</li><li>防風防水硬殼＋防水登山鞋</li><li>厚襪＋保暖帽＋手套＋脖圍</li></ul></div>
 <div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Villa 悠閒早餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">☕ 點心</div><div class="daily-meal-value">Restaurant Suður-Vík 咖啡熱飲／外帶小點</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">車上輕食便當／點心</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Hótel Jökulsárlón 飯店晚餐</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Hótel Jökulsárlón - Glacier Lagoon Hotel 冰川景觀</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>Hótel Jökulsárlón：5 人住宿皆已安排，預計 15:00 準時入住。</p></div></div>
 </div>
 </div>
-<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li><b>10:30 準時離開 Villa</b>：黑沙灘快拍 25 分、Suður-Vík 停留 20 分後即直奔冰川區，方可確保在 <b>15:00 準時入住 Hótel Jökulsárlón</b>。</li><li>冰河湖與鑽石沙灘安排在入住卸下行李後（約 16:15）前往，正好迎上冰島十月最美的低角度夕陽金光，旅行感更從容舒適！</li></ul></div>
+<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li><b>10:30 準時離開 Villa</b>：黑沙灘快拍 25 分、Suður-Vík 停留 20 分後於 N1 Vík (Austurvegur 18) 加油，隨後直奔冰川區，確保在 <b>15:00 準時入住 Hótel Jökulsárlón</b>。</li><li>冰河湖與鑽石沙灘安排在入住卸下行李後（約 16:15）前往，正好迎上冰島十月最美的低角度夕陽金光，旅行感更從容舒適！</li></ul></div>
 </section>
 
 <!-- DAY 7 -->
@@ -646,7 +699,15 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 <div class="time-row"><div class="time">19:00</div><div><b>Gunna á Leiti 慶功晚宴</b><p>原表 晚宴預定完成。</p></div></div>
 </div>
 <div class="side-stack">
-<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">冰川健行專用：分層、無棉質</div><div class="feel">體感規劃：冰面接近或低於 0°C，風一吹更冷；避免穿到流汗。</div><ul class="wear-list"><li>羊毛／合成纖維貼身層</li><li>抓絨或保暖中層＋防水防風外殼</li><li>高筒防水登山鞋＋羊毛襪</li><li>保暖手套＋毛帽／脖圍＋太陽眼鏡</li></ul></div>
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">冰川健行專用：分層、無棉質</div>
+<div class="wear-metrics">
+<div class="wear-metric-item">預估天氣：<b>晴到多雲</b></div>
+<div class="wear-metric-item">預估風速：<b>冰原微風 8 mph</b></div>
+<div class="wear-metric-item">預估降雨：<b>15%</b></div>
+<div class="wear-metric-item">預估溫度：<b>約 -1°C ~ 4°C</b></div>
+<div class="wear-metric-item" style="grid-column:1/-1">預估體感溫度：<b>約 -4°C ~ 1°C</b></div>
+</div>
+<div class="feel">體感規劃：冰面溫度約 -1°C ~ 4°C，體感低至 -4°C ~ 1°C；健行時嚴禁穿著棉質衣物，必備排汗底層、抓絨中層、防水耐磨外殼及防滑高筒登山鞋。</div><ul class="wear-list"><li>羊毛／合成纖維貼身層</li><li>抓絨或保暖中層＋防水防風外殼</li><li>高筒防水登山鞋＋羊毛襪</li><li>保暖手套＋毛帽／脖圍＋太陽眼鏡</li></ul></div>
 <div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Hótel Jökulsárlón 早餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">冰川上自備可攜食物</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Gunna á Leiti 19:00</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Hótel Jökulsárlón - Glacier Lagoon Hotel 連住第 2 晚</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>Glacier Adventure Confirmation 完畢；09:10 前報到。Hótel Jökulsárlón 連住。</p></div></div>
 </div>
 </div>
@@ -694,7 +755,15 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 <div class="time-row"><div class="time">18:00</div><div><b>Hrafnavellir Guest House 入住</b><p>入住休息，確認兩台車大橋過路費繳款完成。</p></div></div>
 </div>
 <div class="side-stack">
-<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">快艇風寒最明顯的一天</div><div class="feel">體感規劃：岸上約 0–7°C；快艇移動時風寒體感會再下降。</div><ul class="wear-list"><li>保暖底層＋抓絨＋薄羽絨</li><li>防風防水外層＋防水鞋厚襪</li><li>毛帽／脖圍＋薄手套＋暖暖包</li><li>太陽眼鏡</li></ul></div>
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">快艇風寒最明顯的一天</div>
+<div class="wear-metrics">
+<div class="wear-metric-item">預估天氣：<b>晴朗多雲</b></div>
+<div class="wear-metric-item">預估風速：<b>水面強風 15 mph</b></div>
+<div class="wear-metric-item">預估降雨：<b>10%</b></div>
+<div class="wear-metric-item">預估溫度：<b>約 2°C ~ 6°C</b></div>
+<div class="wear-metric-item" style="grid-column:1/-1">預估體感溫度：<b>約 -2°C ~ 3°C</b></div>
+</div>
+<div class="feel">體感規劃：水面體感約 -2°C ~ 3°C，快艇高速破風風寒效應極為強烈；務必穿著防風防水外殼並包覆頭頸部、配戴護目鏡或太陽眼鏡。</div><ul class="wear-list"><li>保暖底層＋抓絨＋薄羽絨</li><li>防風防水外層＋防水鞋厚襪</li><li>毛帽／脖圍＋薄手套＋暖暖包</li><li>太陽眼鏡</li></ul></div>
 <div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Hótel Jökulsárlón 早餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">Jökulsárlón Cafe / 自備</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Pakkhús Restaurant 龍蝦餐</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Hrafnavellir Guest House 含早餐</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>Jökulsárlón Booking Nr: JOK-00051568。11:40 出發，11:10 報到。Hrafnavellir：5 人住宿皆已安排。</p></div></div>
 </div>
 </div>
@@ -707,48 +776,56 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 <div class="day-number">DAY 09</div>
 <div class="day-title-wrap">
 <div class="day-date">2026 / 10/10（六）</div>
-<h2>東部峽灣 → 彩虹小鎮漫遊 → 埃基斯蒂爾湖濱飯店入住 → Aldan 晚餐 → 加油</h2>
-<div class="meta-row"><span>📍 Eastfjords → Seyðisfjörður → Egilsstaðir</span><span>☀️ 約 08:02 / 18:28</span><span>🚗 約 3 小時 40 分</span></div>
+<h2>東部峽灣 → 先去埃基斯蒂爾湖濱飯店寄放行李 → 彩虹小鎮漫遊 → Aldan 晚餐 → 加油 → 湖濱飯店 Check in</h2>
+<div class="meta-row"><span>📍 Eastfjords → Egilsstaðir → Seyðisfjörður</span><span>☀️ 約 08:02 / 18:28</span><span>🚗 約 4 小時</span></div>
 </div>
 </div>
-<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🚗 東部峽灣海岸公路</span><span class="focus-chip">🌈 Seyðisfjörður 小鎮漫遊</span><span class="focus-chip">🏨 Lake Hótel Egilsstaðir</span><span class="focus-chip">🍽️ 18:00 Aldan 晚餐</span><span class="focus-chip">⛽ 餐後順路加油</span></div><p class="focus-note">午後漫步美麗的 Seyðisfjörður 彩虹小鎮，隨後翻越山口前往 Egilsstaðir 湖濱飯店辦理入住放鬆；17:15 前往小鎮享用已預訂的 Aldan 盛宴，餐後回飯店前先將兩台車加滿油，為隔日搭機還車做好萬全準備！</p></div>
+<div class="card focus-card"><h3>✨ 行程焦點</h3><div class="focus-chips"><span class="focus-chip">🚗 東部峽灣海岸公路</span><span class="focus-chip">🏨 湖濱飯店先寄放行李</span><span class="focus-chip">🌈 Seyðisfjörður 小鎮漫遊</span><span class="focus-chip">🍽️ 18:00 Aldan 晚餐</span><span class="focus-chip">⛽ N1 加滿油</span><span class="focus-chip">🏨 湖濱飯店正式 Check in</span></div><p class="focus-note">上午沿東部峽灣海岸北上，午後抵達 Egilsstaðir 先至 Lake Hótel 寄放大件行李，隨後一身輕裝翻越山口漫步 Seyðisfjörður 彩虹小鎮與藍教堂；晚間享用 Aldan 晚宴，餐後回 Egilsstaðir 在 N1 加滿油，再從容返回湖濱飯店辦理入住手續！</p></div>
 
 <div class="card photo-gallery-card">
 <div class="photo-gallery-head"><div class="photo-gallery-title">📸 今日沿途景點</div><div class="photo-online-note">有網路時載入縮圖</div></div>
 <div class="photo-strip">
 <div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🌊 Hvalnes 燈塔機動</div><img alt="🌊 Hvalnes 燈塔" loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🌊</span>Hvalnes Lighthouse 機動</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Hvalnes+Lighthouse">📍 Google Map</a></div></div></div>
-<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🥚 Eggin í Gleðivík 機動</div><img alt="🥚 巨蛋雕塑" loading="lazy" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🥚</span>Eggin í Gleðivík 機動</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Eggin+i+Gledivik">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🏨 Lake Hótel Egilsstaðir</div><img alt="🏨 Lake Hótel Egilsstaðir" loading="lazy" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🏨</span>湖濱飯店 (先寄行李)</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Lake+Hotel+Egilsstadir">📍 Google Map</a></div></div></div>
 <div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🌈 Seyðisfjörður 彩虹街</div><img alt="🌈 彩虹街" loading="lazy" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🌈</span>Seyðisfjörður 彩虹街</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Seydisfjordur+Rainbow+Street">📍 Google Map</a></div></div></div>
 <div class="photo-item"><div class="photo-frame"><div class="photo-fallback">⛪ Seyðisfjörður 藍教堂</div><img alt="⛪ 藍教堂" loading="lazy" src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">⛪</span>Seyðisfjörður 藍教堂</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Seydisfjordur+Church">📍 Google Map</a></div></div></div>
-<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">🏨 Lake Hótel Egilsstaðir</div><img alt="🏨 Lake Hótel Egilsstaðir" loading="lazy" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">🏨</span>Lake Hótel Egilsstaðir</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Lake+Hotel+Egilsstadir">📍 Google Map</a></div></div></div>
+<div class="photo-item"><div class="photo-frame"><div class="photo-fallback">⛽ N1 Egilsstaðir</div><img alt="⛽ N1 Egilsstaðir" loading="lazy" src="https://images.unsplash.com/photo-1545459720-aac8509eb02c?w=700" onerror="this.style.display='none'" decoding="async"></div><div class="photo-caption"><div><span class="poi-chip">⛽</span>N1 Egilsstaðir 加油站</div><div class="photo-links"><a class="photo-map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=N1+Kaupvangur+4+700+Egilsstadir">📍 Google Map</a></div></div></div>
 </div>
 </div>
 
 <div class="card route-card">
-<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hrafnavellir+Guest+House&amp;destination=Gistihusid+-+Lake+Hotel+Egilsstadir&amp;travelmode=driving&amp;waypoints=Seydisfjordur+Rainbow+Street%7CGistihusid+-+Lake+Hotel+Egilsstadir%7CAldan+Restaurant+Seydisfjordur" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a></div>
-<div class="route-line"><span class="route-stop">1<b>Hrafnavellir</b></span><span class="route-stop">2<b>Seyðisfjörður 小鎮</b></span><span class="route-stop">3<b>Lake Hótel 入住</b></span><span class="route-stop">4<b>Aldan 晚宴</b></span><span class="route-stop">5<b>加油站 (Egilsstaðir)</b></span><span class="route-stop">6<b>Lake Hótel 休息</b></span></div>
+<div class="card-title-row"><h3>🗺️ 路線與地圖</h3><a class="map-btn" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hrafnavellir+Guest+House&amp;destination=Gistihusid+-+Lake+Hotel+Egilsstadir&amp;travelmode=driving&amp;waypoints=Gistihusid+-+Lake+Hotel+Egilsstadir%7CSeydisfjordur+Rainbow+Street%7CAldan+Restaurant+Seydisfjordur%7CN1+Kaupvangur+4+700+Egilsstadir" rel="noopener noreferrer">📍 開啟 Google Maps 自駕路線 ↗</a></div>
+<div class="route-line"><span class="route-stop">1<b>Hrafnavellir</b></span><span class="route-stop">2<b>Lake Hótel (寄放行李)</b></span><span class="route-stop">3<b>Seyðisfjörður 彩虹小鎮</b></span><span class="route-stop">4<b>Aldan 晚宴</b></span><span class="route-stop">5<b>N1 Egilsstaðir (加油)</b></span><span class="route-stop">6<b>Lake Hótel (正式 Check in)</b></span></div>
 </div>
 
-<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">依「小鎮漫遊 ➔ 湖濱飯店入住 ➔ 前往晚宴 ➔ 餐後加油回飯店」動線整理行車節奏。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Hrafnavellir → Seyðisfjörður 小鎮</span><span class="timing-badge">約 3 小時</span><span class="timing-note">210 km；經 Egilsstaðir 翻越 Road 93 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hrafnavellir+Guest+House&amp;destination=Seydisfjordur+Rainbow+Street" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Seyðisfjörður → Lake Hótel Egilsstaðir</span><span class="timing-badge">約 30 分鐘</span><span class="timing-note">27 km；翻越山口返回市區辦理入住 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Seydisfjordur+Rainbow+Street&amp;destination=Gistihusid+-+Lake+Hotel+Egilsstadir" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Lake Hótel → Aldan Restaurant</span><span class="timing-badge">約 30 分鐘</span><span class="timing-note">27 km；17:15 出發前往用餐 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Gistihusid+-+Lake+Hotel+Egilsstadir&amp;destination=Aldan+Restaurant+Seydisfjordur" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Aldan → 加油站 (N1/Orkan) → Lake Hótel</span><span class="timing-badge">約 35 分鐘</span><span class="timing-note">餐後順道把兩台車加滿油再回飯店 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Aldan+Restaurant+Seydisfjordur&amp;destination=Gistihusid+-+Lake+Hotel+Egilsstadir&amp;waypoints=N1+Egilsstadir" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">Seyðisfjörður 小鎮散步</span><span class="timing-badge">約 1.5–2 小時</span><span class="timing-note">彩虹街、藍教堂、港灣風景</span></div><div class="timing-item"><span class="route-text">Lake Hótel Egilsstaðir 入住整理</span><span class="timing-badge">16:30–17:15</span><span class="timing-note">卸行李、洗漱、換穿保暖整齊服裝</span></div><div class="timing-item"><span class="route-text">Aldan Restaurant 晚餐</span><span class="timing-badge">18:00–20:00</span><span class="timing-note">已訂位：5 位 (Cami | Confirm 完畢)</span></div></div></div></div></div>
+<div class="card timing-card"><h3>🚗 車程＆⏱️ 景點停留</h3><p class="timing-sub">依「先至飯店寄放行李 ➔ 輕車漫遊彩虹小鎮 ➔ 晚宴 ➔ 加油 ➔ 正式 Check in 入住」最新調整內容整理。</p><div class="timing-columns"><div class="timing-group move"><div class="timing-group-title">🚗 從哪裡到哪裡</div><div class="timing-list"><div class="timing-item"><span class="route-text">Hrafnavellir → Lake Hótel Egilsstaðir</span><span class="timing-badge">約 2 小時 40 分</span><span class="timing-note">185 km；經 1 號公路北上抵達市區 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hrafnavellir+Guest+House&amp;destination=Gistihusid+-+Lake+Hotel+Egilsstadir" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Lake Hótel → Seyðisfjörður 小鎮</span><span class="timing-badge">約 30 分鐘</span><span class="timing-note">27 km；輕車翻越白日夢公路 Road 93 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Gistihusid+-+Lake+Hotel+Egilsstadir&amp;destination=Seydisfjordur+Rainbow+Street" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">Aldan → N1 Egilsstaðir 加油站</span><span class="timing-badge">約 30 分鐘</span><span class="timing-note">27 km；夜間翻越山口返回市區 <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Aldan+Restaurant+Seydisfjordur&amp;destination=N1+Kaupvangur+4+700+Egilsstadir" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div><div class="timing-item"><span class="route-text">N1 Egilsstaðir → Lake Hótel</span><span class="timing-badge">約 3 分鐘</span><span class="timing-note">1.5 km；加油完直達飯店辦理 Check in <a class="timing-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=N1+Kaupvangur+4+700+Egilsstadir&amp;destination=Gistihusid+-+Lake+Hotel+Egilsstadir" target="_blank" rel="noopener noreferrer">Google Maps 路線 ↗</a></span></div></div></div><div class="timing-group stay"><div class="timing-group-title">⏱️ 這一站待多久</div><div class="timing-list"><div class="timing-item"><span class="route-text">Lake Hótel 寄放大件行李</span><span class="timing-badge">約 20 分鐘</span><span class="timing-note">卸下後車廂行李減輕重量、上洗手間</span></div><div class="timing-item"><span class="route-text">Seyðisfjörður 小鎮漫遊</span><span class="timing-badge">約 2.5–3 小時</span><span class="timing-note">彩虹步道、經典藍教堂、港灣風景漫步</span></div><div class="timing-item"><span class="route-text">Aldan Restaurant 晚餐</span><span class="timing-badge">18:00–20:00</span><span class="timing-note">已訂位：5 位 (Cami | Confirm 完畢)</span></div><div class="timing-item"><span class="route-text">N1 Egilsstaðir (加油)</span><span class="timing-badge">約 10 分鐘</span><span class="timing-note">Kaupvangur 4。兩台車加滿油</span></div><div class="timing-item"><span class="route-text">Lake Hótel 正式 Check in</span><span class="timing-badge">20:50 正式入住</span><span class="timing-note">領取鑰匙與大件行李進房休息</span></div></div></div></div></div>
 
 <div class="day-grid">
 <div class="card timeline-card"><h3>⏱️ 當日時間軸</h3>
 <div class="time-row"><div class="time">08:00</div><div><b>Hrafnavellir 早餐</b><p>退房前補足熱水與隨身乾糧。</p></div></div>
-<div class="time-row"><div class="time">09:00</div><div><b>沿 Ring Road 往東部峽灣前進</b><p>欣賞壯麗峽灣海景，中途短暫停靠觀景休整。</p></div></div>
-<div class="time-row"><div class="time">13:30</div><div><b>Seyðisfjörður 彩虹小鎮漫遊</b><p>翻越著名的白日夢冒險王滑板公路 Road 93 進入峽灣小鎮，漫步彩虹步道、拍攝經典藍色木造教堂與寧靜峽灣海港。</p></div></div>
-<div class="time-row"><div class="time">15:50</div><div><b>啟程前往埃伊爾斯塔濟</b><p>開車翻越山口返回 Egilsstaðir，車程約 30 分鐘。</p></div></div>
-<div class="time-row"><div class="time">16:30</div><div><b>埃基斯蒂爾湖濱飯店辦理入住</b><p>入住 Gistihúsið - Lake Hótel Egilsstaðir，房間開箱、卸下大件行李、稍作休息整理。</p></div></div>
-<div class="time-row"><div class="time">17:15</div><div><b>出發前往晚餐</b><p>再次出發翻越山口前往 Seyðisfjörður，車程約 30 分鐘。</p></div></div>
+<div class="time-row"><div class="time">09:00</div><div><b>沿海岸公路出發往東部前進</b><p>欣賞壯麗峽灣海景，中途短暫停靠觀景休整（車程約 2 小時 40 分）。</p></div></div>
+<div class="time-row"><div class="time">13:30–13:50</div><div><b>先去埃基斯蒂爾湖濱飯店寄放行李</b><p>抵達 Gistihúsið - Lake Hótel Egilsstaðir，先將 5 人的大件行李統一寄放櫃檯，後車廂卸重後輕裝出遊！</p></div></div>
+<div class="time-row"><div class="time">13:50</div><div><b>出發前往 Seyðisfjörður</b><p>一身輕裝翻越著名的白日夢冒險王滑板公路 Road 93，車程約 30 分鐘。</p></div></div>
+<div class="time-row"><div class="time">14:30–17:30</div><div><b>彩虹小鎮漫遊</b><p>午後充裕漫步彩虹步道、拍攝經典藍色木造教堂、探索峽灣港邊木造老屋與手工藝小店。</p></div></div>
 <div class="time-row"><div class="time">18:00–20:00</div><div><b>Aldan Restaurant 晚餐（已訂位）</b><p>在典雅溫馨的木造建築中享用東部峽灣特色佳餚。5 位訂位人: Cami | Confirm 完畢。</p></div></div>
-<div class="time-row"><div class="time">20:15</div><div><b>返程並於 Egilsstaðir 加油</b><p>安全開回 Egilsstaðir，在市區加油站（如 N1 / Orkan）<b>先將兩台車油箱加滿</b>，避免隔天一早趕飛機匆忙。</p></div></div>
-<div class="time-row"><div class="time">21:00</div><div><b>返回 Lake Hótel Egilsstaðir</b><p>享受舒適的湖畔夜色，整理隔日搭機行李早點就寢。</p></div></div>
+<div class="time-row"><div class="time">20:00</div><div><b>返程翻越山口回市區</b><p>開車翻越 Road 93 返回 Egilsstaðir，車程約 30 分鐘。</p></div></div>
+<div class="time-row"><div class="time">20:35–20:45</div><div><b>N1 Egilsstaðir 加油站加油</b><p>在市區 <b>N1 Egilsstaðir (Kaupvangur 4, 700 Egilsstaðir) 先將兩台車油箱加滿</b>，避免隔天一早搭機還車匆忙找加油站！</p></div></div>
+<div class="time-row"><div class="time">20:50</div><div><b>湖濱飯店 Check in</b><p>返回 Gistihúsið - Lake Hótel Egilsstaðir 正式辦理 Check in 入住、領取行李進房，享受湖畔寧靜之夜。</p></div></div>
 </div>
 <div class="side-stack">
-<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">山口防風防凍＋晚宴舒適整齊</div><div class="feel">體感規劃：湖邊約 1–7°C；山口海拔高可能遇霧、風雪與黑冰。</div><ul class="wear-list"><li>保暖排汗打底＋羊毛針織中層</li><li>防風防水硬殼衝鋒衣＋好走防水鞋</li><li>毛帽、厚手套放車上隨時取用</li><li>晚餐可換穿保暖乾淨便服</li></ul></div>
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">山口防風防凍＋晚宴舒適整齊</div>
+<div class="wear-metrics">
+<div class="wear-metric-item">預估天氣：<b>晴多雲微陰</b></div>
+<div class="wear-metric-item">預估風速：<b>峽灣山口強風 14 mph</b></div>
+<div class="wear-metric-item">預估降雨：<b>20%</b></div>
+<div class="wear-metric-item">預估溫度：<b>約 0°C ~ 5°C</b></div>
+<div class="wear-metric-item" style="grid-column:1/-1">預估體感溫度：<b>約 -3°C ~ 2°C</b></div>
+</div>
+<div class="feel">體感規劃：東部峽灣約 0°C ~ 5°C，翻越 Road 93 山口時風速達 14 mph，體感降至 -3°C ~ 2°C；防風防潑水衝鋒衣必備，晚間餐廳內可換穿整齊保暖針織便服。</div><ul class="wear-list"><li>保暖排汗打底＋羊毛針織中層</li><li>防風防水硬殼衝鋒衣＋好走防水鞋</li><li>毛帽、厚手套放車上隨時取用</li><li>晚餐可換穿保暖乾淨便服</li></ul></div>
 <div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Hrafnavellir 早餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">Egilsstaðir 或小鎮特色輕食</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Aldan Restaurant 18:00–20:00 (已訂位)</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Gistihúsið - Lake Hótel Egilsstaðir（埃伊爾斯塔濟埃基斯蒂爾湖濱飯店）</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>Lake Hótel Egilsstaðir 住宿。Aldan Restaurant 18:00–20:00 已訂位。</p></div></div>
 </div>
 </div>
-<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li><b>16:30 先回飯店 Check-in 整理</b>：五點多再出門赴宴，避免帶著整車大件行李去餐廳。</li><li><b>今晚吃完飯務必先加油</b>：回飯店前在 Egilsstaðir 加滿兩台車的油箱，明天一早還車直奔機場不用再找加油站！</li><li>Road 93 山口入夜後氣溫驟降容易起霧或結冰，夜間行車請開啟霧燈並保持大車距。</li></ul></div>
+<div class="card alert-card"><h3>⚠️ 今天特別注意</h3><ul class="alert-list"><li><b>先去湖濱飯店寄放行李</b>：約 13:30 先到 Lake Hótel 卸下整車行李，輕車翻越 Road 93 山口更輕鬆安全，不必整天提防車內大件行李。</li><li><b>晚餐後先至 N1 加滿油再 Check in</b>：回飯店前在 N1 Egilsstaðir (Kaupvangur 4) 加滿油，隔天一早搭國內線還車直達機場無壓力！</li><li>Road 93 山口入夜後氣溫驟降容易起霧或結冰，夜間行車請開啟霧燈並保持大車距。</li></ul></div>
 </section>
 
 <!-- DAY 10 -->
@@ -794,7 +871,15 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 <div class="time-row"><div class="time">18:00</div><div><b>Sjávargrillið 晚餐</b><p>品嚐頂級冰島海鮮烤物料理，原表 Ni 預定。</p></div></div>
 </div>
 <div class="side-stack">
-<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">搭機輕便＋城市質感散步</div><div class="feel">體感規劃：約 2–7°C；市區步行舒適，海邊 Harpa 仍有微風。</div><ul class="wear-list"><li>保暖透氣長袖打底＋輕盈針織衫</li><li>防風防水中長版大衣或防風外套</li><li>休閒好走的防水運動鞋或便鞋</li><li>隨身斜背包方便裝護照與戰利品</li></ul></div>
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">搭機輕便＋城市質感散步</div>
+<div class="wear-metrics">
+<div class="wear-metric-item">預估天氣：<b>晴時多雲</b></div>
+<div class="wear-metric-item">預估風速：<b>市區微風 9 mph</b></div>
+<div class="wear-metric-item">預估降雨：<b>15%</b></div>
+<div class="wear-metric-item">預估溫度：<b>約 2°C ~ 7°C</b></div>
+<div class="wear-metric-item" style="grid-column:1/-1">預估體感溫度：<b>約 1°C ~ 5°C</b></div>
+</div>
+<div class="feel">體感規劃：首都約 2°C ~ 7°C、體感 1°C ~ 5°C；市區步行舒適，海邊 Harpa 仍有微風，建議以保暖透氣打底配質感中長版防風大衣。</div><ul class="wear-list"><li>保暖透氣長袖打底＋輕盈針織衫</li><li>防風防水中長版大衣或防風外套</li><li>休閒好走的防水運動鞋或便鞋</li><li>隨身斜背包方便裝護照與戰利品</li></ul></div>
 <div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐與特色美食</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">Lake Hótel 06:30 早餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐/點心</div><div class="daily-meal-value">Bæjarins Beztu Pylsur 經典 SS 羊肉熱狗</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Sjávargrillið 18:00 (海鮮烤物)</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Hotel Reykjavík Saga / ODDSSON Reykjavík</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>兩台 租車公司 統一於 EGS 還車。FI061 10:05–11:10。Sjávargrillið 18:00。</p></div></div>
 </div>
 </div>
@@ -845,7 +930,15 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 <div class="time-row"><div class="time">20:30</div><div><b>Courtyard by Marriott KEF 入住</b><p>辦理入住，設定好隔日 04:00 起床鬧鐘，無壓力好眠。</p></div></div>
 </div>
 <div class="side-stack">
-<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">文藝漫步＋高級餐廳裝束</div><div class="feel">體感規劃：約 2–7°C；市區多室內景點，洋蔥式穿法最便利。</div><ul class="wear-list"><li>保暖打底＋保暖毛衣／針織開襟衫</li><li>防風防水大衣＋俐落長褲</li><li>舒適好走的市區步行鞋</li><li>可戴今日在 MJÚK 採購的原創羊毛帽與圍巾</li></ul></div>
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">文藝漫步＋高級餐廳裝束</div>
+<div class="wear-metrics">
+<div class="wear-metric-item">預估天氣：<b>多雲時晴</b></div>
+<div class="wear-metric-item">預估風速：<b>市區溫和 8 mph</b></div>
+<div class="wear-metric-item">預估降雨：<b>20%</b></div>
+<div class="wear-metric-item">預估溫度：<b>約 2°C ~ 6°C</b></div>
+<div class="wear-metric-item" style="grid-column:1/-1">預估體感溫度：<b>約 1°C ~ 5°C</b></div>
+</div>
+<div class="feel">體感規劃：約 2°C ~ 6°C、體感 1°C ~ 5°C；市區多為室內展館與特色店鋪，洋蔥式穿法最便利，可戴今日在 MJÚK 採購的原創羊毛配件。</div><ul class="wear-list"><li>保暖打底＋保暖毛衣／針織開襟衫</li><li>防風防水大衣＋俐落長褲</li><li>舒適好走的市區步行鞋</li><li>可戴今日在 MJÚK 採購的原創羊毛帽與圍巾</li></ul></div>
 <div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐與特色點心</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">飯店早餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">🥐 雙名店評比</div><div class="daily-meal-value">Braud & Co. 濃郁酥脆 vs Sandholt 細膩層次肉桂捲</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">Grillmarkaðurinn 17:30 (炭烤盛宴)</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>Courtyard by Marriott Reykjavik Keflavik Airport ｜機場旁</p><span class="confirmed-five">👥 5 人住宿已安排</span></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>Grillmarkaðurinn 17:30。Courtyard by Marriott KEF 住宿。</p></div></div>
 </div>
 </div>
@@ -896,7 +989,15 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 <div class="time-row"><div class="time">21:10</div><div><b>CI0082 起飛</b><p>LHR ✈ TPE，10/14 17:50 抵達。</p></div></div>
 </div>
 <div class="side-stack">
-<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">冰島冬裝拆成倫敦可穿的模組</div><div class="feel">體感規劃：倫敦十月較溫和；以可快速增減的分層穿法最實用。</div><ul class="wear-list"><li>薄長袖／T-shirt</li><li>輕中層＋防水外套</li><li>好走鞋</li><li>厚羽絨可收進行李，不必整天穿</li></ul></div>
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">冰島冬裝拆成倫敦可穿的模組</div>
+<div class="wear-metrics">
+<div class="wear-metric-item">預估天氣：<b>晴時多雲溫和</b></div>
+<div class="wear-metric-item">預估風速：<b>微風約 6 mph</b></div>
+<div class="wear-metric-item">預估降雨：<b>15%</b></div>
+<div class="wear-metric-item">預估溫度：<b>約 9°C ~ 15°C</b></div>
+<div class="wear-metric-item" style="grid-column:1/-1">預估體感溫度：<b>約 8°C ~ 14°C</b></div>
+</div>
+<div class="feel">體感規劃：倫敦十月約 9°C ~ 15°C、體感 8°C ~ 14°C，遠比冰島溫暖；厚羽絨可收進行李箱，改穿輕便防風外套與好走休閒鞋。</div><ul class="wear-list"><li>薄長袖／T-shirt</li><li>輕中層＋防水外套</li><li>好走鞋</li><li>厚羽絨可收進行李，不必整天穿</li></ul></div>
 <div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">飯店早餐盒／KEF 機場</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">London 市區</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">LHR 或機上餐</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>機上</p></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>FI0450 07:40–11:55；CI0082 21:10 起飛。</p></div></div>
 </div>
 </div>
@@ -929,7 +1030,15 @@ main{max-width:1180px;margin:0 auto;padding:28px 18px 80px}.overview-grid{displa
 <div class="time-row"><div class="time">晚間</div><div><b>甜蜜的家</b><p>把濕鞋、雨衣、冰川裝備先攤開乾燥；隔天再整理照片與帳務。</p></div></div>
 </div>
 <div class="side-stack">
-<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">機艙舒適即可</div><div class="feel">體感規劃：台灣體感比冰島溫暖，抵達前可把厚層收回手提行李。</div><ul class="wear-list"><li>舒適長褲＋薄長袖／T-shirt</li><li>保暖薄外套</li></ul></div>
+<div class="card wear-card"><h3>🧥 當天建議穿搭</h3><div class="wear-title">機艙舒適即可</div>
+<div class="wear-metrics">
+<div class="wear-metric-item">預估天氣：<b>晴朗溫暖</b></div>
+<div class="wear-metric-item">預估風速：<b>微風約 5 mph</b></div>
+<div class="wear-metric-item">預估降雨：<b>10%</b></div>
+<div class="wear-metric-item">預估溫度：<b>約 24°C ~ 28°C</b></div>
+<div class="wear-metric-item" style="grid-column:1/-1">預估體感溫度：<b>約 25°C ~ 29°C</b></div>
+</div>
+<div class="feel">體感規劃：台灣體感約 25°C ~ 29°C 溫暖宜人，機艙以薄長袖搭配舒適長褲，落地前可將禦寒外套全數收進手提行李。</div><ul class="wear-list"><li>舒適長褲＋薄長袖／T-shirt</li><li>保暖薄外套</li></ul></div>
 <div class="card daily-info-card"><h3>🧾 今日生活資訊</h3><div class="daily-info-section meals-section"><h4>🍽️ 三餐</h4><div class="daily-meal-list"><div class="daily-meal-row"><div class="daily-meal-label">🌤️ 早餐</div><div class="daily-meal-value">機上餐</div></div><div class="daily-meal-row"><div class="daily-meal-label">☀️ 午餐</div><div class="daily-meal-value">機上餐／依航班供應</div></div><div class="daily-meal-row"><div class="daily-meal-label">🌙 晚餐</div><div class="daily-meal-value">抵台後自行安排</div></div></div></div><div class="daily-info-section stay-section"><h4>🏡 今晚住宿</h4><p>甜蜜的家</p></div><div class="daily-info-section booking-section"><h4>🎟️ 預訂資訊</h4><p>CI0082 預計 17:50 抵達桃園。</p></div></div>
 </div>
 </div>
